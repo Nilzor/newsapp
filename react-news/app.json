@@ -1,0 +1,7 @@
+{
+  "name": "TheNewsApp",
+  "displayName": "The News App",
+  "expo": {
+    "sdkVersion": "19.0.0"
+  }
+}
