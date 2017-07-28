@@ -6,6 +6,7 @@
 
 import React, { Component } from 'react';
 import ArticleService from './common/article-client';
+import ArticleTeaser from './components/article-teaser';
 import {
     AppRegistry,
     StyleSheet,
@@ -18,19 +19,20 @@ export default class reactnews extends Component {
     componentWillMount() {
         this.setState({articles: []});
         ArticleService.getArticleList().then(res => {
-            console.warn(JSON.stringify(res[0].id));
             this.setState({articles: res});
         });
     }
 
     render() {
+        let ids = [];
+        for (let article of this.state.articles) {
+            ids.push(<ArticleTeaser article={article} key={article.id}/>)
+        }
         return (
             <View style={styles.container}>
                 <Text style={styles.welcome}>
-                    Article IDs:
-                    {
-                        this.state.articles.length > 0 ? this.state.articles[0].id : ""
-                    }
+                    Article IDs:{"\n"}
+                    {ids}
                 </Text>
             </View>
         );
