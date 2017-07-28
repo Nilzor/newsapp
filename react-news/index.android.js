@@ -5,6 +5,7 @@
  */
 
 import React, { Component } from 'react';
+import ArticleService from './common/article-client';
 import {
     AppRegistry,
     StyleSheet,
@@ -14,18 +15,22 @@ import {
 
 export default class reactnews extends Component {
 
+    componentWillMount() {
+        this.setState({articles: []});
+        ArticleService.getArticleList().then(res => {
+            console.warn(JSON.stringify(res[0].id));
+            this.setState({articles: res});
+        });
+    }
+
     render() {
         return (
             <View style={styles.container}>
                 <Text style={styles.welcome}>
-                    Welcome to React Native!
-                </Text>
-                <Text style={styles.instructions}>
-                    To get started, edit index.android.js
-                </Text>
-                <Text style={styles.instructions}>
-                    Double tap R on your keyboard to reload,{'\n'}
-                    Shake or press menu button for dev menu
+                    Article IDs:
+                    {
+                        this.state.articles.length > 0 ? this.state.articles[0].id : ""
+                    }
                 </Text>
             </View>
         );
