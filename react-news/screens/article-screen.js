@@ -32,7 +32,7 @@ export default class ListScreen extends Component {
                 }
             }
             return (
-                <ScrollView>
+                <ScrollView style={{padding: 10 }} >
                     {elems}
                 </ScrollView>
             )
