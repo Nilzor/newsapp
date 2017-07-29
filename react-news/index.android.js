@@ -1,59 +1,18 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
-import ArticleService from './common/article-client';
-import ArticleTeaser from './components/article-teaser';
+import ArticleTeaser from './components/article-teaser';import {
+    StackNavigator,
+} from 'react-navigation';
+
 import {
     AppRegistry,
-    StyleSheet,
-    Text,
-    ScrollView,
-    View,
-    } from 'react-native';
+} from 'react-native';
 
-export default class reactnews extends Component {
+import ListScreen from './screens/list-screen';
+import ArticleScreen from './screens/article-screen';
 
-    componentWillMount() {
-        this.setState({articles: []});
-        ArticleService.getArticleList().then(res => {
-            this.setState({articles: res});
-        });
-    }
-
-    render() {
-        let ids = [];
-        for (let article of this.state.articles) {
-            ids.push(<ArticleTeaser article={article} key={article.id} onClick={this.onArticleClicked}/>)
-        }
-        return (
-            <ScrollView style={styles.container}>
-                <Text style={styles.header}>Latest news:</Text>
-                {ids}
-            </ScrollView>
-        );
-    }
-
-    onArticleClicked(articleId) {
-        alert('Article clicked: ' + articleId);
-    }
-}
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#F5FCFF',
-        margin: 10,
-    },
-    header: {
-        color: '#000',
-        fontSize: 20,
-        fontWeight: 'bold',
-        margin: 4,
-    },
+const App = StackNavigator({
+    Home: { screen: ListScreen },
+    Article: { screen: ArticleScreen }
 });
 
-AppRegistry.registerComponent('reactnews', () => reactnews);
+AppRegistry.registerComponent('reactnews', () => App);
