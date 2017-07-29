@@ -11,7 +11,8 @@ import {
     AppRegistry,
     StyleSheet,
     Text,
-    View
+    ScrollView,
+    View,
     } from 'react-native';
 
 export default class reactnews extends Component {
@@ -29,12 +30,10 @@ export default class reactnews extends Component {
             ids.push(<ArticleTeaser article={article} key={article.id}/>)
         }
         return (
-            <View style={styles.container}>
-                <Text style={styles.welcome}>
-                    Article IDs:{"\n"}
-                    {ids}
-                </Text>
-            </View>
+            <ScrollView style={styles.container}>
+                <Text style={styles.header}>Latest news:</Text>
+                {ids}
+            </ScrollView>
         );
     }
 }
@@ -42,19 +41,13 @@ export default class reactnews extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
         backgroundColor: '#F5FCFF',
-    },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
         margin: 10,
     },
-    instructions: {
-        textAlign: 'center',
-        color: '#333333',
-        marginBottom: 5,
+    header: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        margin: 4,
     },
 });
 
