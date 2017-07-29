@@ -6,11 +6,13 @@ import {
     Image,
     TouchableHighlight,
     } from 'react-native';
+import _ImageHelper from '../common/imagehelper';
+const ImageHelper = new _ImageHelper();
 
 export default class ArticleTeaser extends Component {
     render() {
         const article = this.props.article;
-        const image = this.getFittingImage(article);
+        const image = ImageHelper.getFittingImage(article.promotionContent.imageAsset, 300);
         // Improvement: Instead of wrapping flex's: https://codepen.io/vkjgr/pen/OPRPRR
         return (
             <TouchableHighlight onPress={() => this.onClick()} underlayColor="white">
@@ -49,16 +51,6 @@ export default class ArticleTeaser extends Component {
         if (this.props.onClick) {
             this.props.onClick(this.props.article.id);
         }
-    }
-
-    getFittingImage(article) {
-        const minWidth = 300;
-        for (var asset of article.promotionContent.imageAsset.urls) {
-            if (asset.width > minWidth) {
-                return asset;
-            }
-        }
-        return {};
     }
 }
 
