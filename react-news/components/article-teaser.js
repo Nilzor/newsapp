@@ -4,6 +4,7 @@ import {
     Text,
     View,
     Image,
+    TouchableHighlight,
     } from 'react-native';
 
 export default class ArticleTeaser extends Component {
@@ -12,34 +13,42 @@ export default class ArticleTeaser extends Component {
         const image = this.getFittingImage(article);
         // Improvement: Instead of wrapping flex's: https://codepen.io/vkjgr/pen/OPRPRR
         return (
-            <View
-                style={{
-                    flex: 1,
-                    flexDirection: 'row',
-                    //borderColor: '#ccc',
-                    //borderWidth: 1,
-                    margin: 4,
-                    shadowColor: '#777',
-                    // alignItems: 'flex-start'
-                }}>
-                <Image
-                   style={{
-                       width: 100,
-                       height: undefined,
-                       margin: 4,
-                       borderWidth: 1,
-                       borderColor: '#777',
-                   }}
-                   source={{uri: image.url}}
-                   resizeMode='center'
-                />
-                <View style={{flex: 1, flexDirection: 'column', justifyContent: 'flex-start'}}>
-                    <Text style={styles.title}>{article.promotionContent.title.value}</Text>
-                    <Text style={styles.description}>{article.promotionContent.description.value}</Text>
+            <TouchableHighlight onPress={() => this.onClick()} underlayColor="white">
+                <View
+                    style={{
+                        flex: 1,
+                        flexDirection: 'row',
+                        //borderColor: '#ccc',
+                        //borderWidth: 1,
+                        margin: 4,
+                        shadowColor: '#777',
+                        // alignItems: 'flex-start'
+                    }}
+                 >
+                    <Image
+                       style={{
+                           width: 100,
+                           height: undefined,
+                           margin: 4,
+                           borderWidth: 1,
+                           borderColor: '#777',
+                       }}
+                       source={{uri: image.url}}
+                       resizeMode='center'
+                    />
+                    <View style={{flex: 1, flexDirection: 'column', justifyContent: 'flex-start'}}>
+                        <Text style={styles.title}>{article.promotionContent.title.value}</Text>
+                        <Text style={styles.description}>{article.promotionContent.description.value}</Text>
+                    </View>
                 </View>
-            </View>
-
+            </TouchableHighlight>
         )
+    }
+
+    onClick() {
+        if (this.props.onClick) {
+            this.props.onClick(this.props.article.id);
+        }
     }
 
     getFittingImage(article) {

@@ -27,7 +27,7 @@ export default class reactnews extends Component {
     render() {
         let ids = [];
         for (let article of this.state.articles) {
-            ids.push(<ArticleTeaser article={article} key={article.id}/>)
+            ids.push(<ArticleTeaser article={article} key={article.id} onClick={this.onArticleClicked}/>)
         }
         return (
             <ScrollView style={styles.container}>
@@ -35,6 +35,10 @@ export default class reactnews extends Component {
                 {ids}
             </ScrollView>
         );
+    }
+
+    onArticleClicked(articleId) {
+        alert('Article clicked: ' + articleId);
     }
 }
 
