@@ -2,22 +2,34 @@ import React, { Component } from 'react';
 import {
     StyleSheet,
     Text,
-    View
+    View,
+    Image,
     } from 'react-native';
 
 export default class ArticleTeaser extends Component {
     render() {
         const article = this.props.article;
-        var image = getFittingImage(article);
+        const image = this.getFittingImage(article);
         // Improvement: Instead of wrapping flex's: https://codepen.io/vkjgr/pen/OPRPRR
         return (
             <View
-                style={{flex: 1, flexDirection: 'row', justifyContent: 'center'}}>
+                style={{
+                    flex: 1,
+                    flexDirection: 'row',
+                    // alignItems: 'flex-start'
+                }}>
                 <Image
-                    style={{width: 300, margin: 4}}
-                    source={{uri: image.url}}
-                    />
-                <View style={{flex: 1, flexDirection: 'column'}}>
+                   style={{
+                       width: 100,
+                       height: undefined,
+                       margin: 4,
+                       // borderWidth: 1,
+                       // borderColor: '#777',
+                   }}
+                   source={{uri: image.url}}
+                   resizeMode='center'
+                />
+                <View style={{flex: 1, flexDirection: 'column', justifyContent: 'flex-start'}}>
                     <Text style={styles.title}>{article.promotionContent.title.value}</Text>
                     <Text style={styles.description}>{article.promotionContent.description.value}</Text>
                 </View>
@@ -28,12 +40,12 @@ export default class ArticleTeaser extends Component {
 
     getFittingImage(article) {
         const minWidth = 300;
-        for (var asset in article.promotionContent.imageAsset) {
+        for (var asset of article.promotionContent.imageAsset.urls) {
             if (asset.width > minWidth) {
                 return asset;
             }
         }
-        return null;
+        return {};
     }
 }
 
@@ -44,7 +56,9 @@ const styles = StyleSheet.create({
         fontSize: 16
     },
     description: {
-        margin: 4,
+        marginLeft: 4,
+        marginRight: 4,
+        marginBottom: 4,
         fontSize: 14
     },
 });
