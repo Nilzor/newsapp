@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
-import {
-    Text,
-} from 'react-native';
+
+import ArticleText from '../components/article/article-text';
 
 export default class ComponentResolver {
     renderComponent(componentData, key) {
-        if (componentData.type === 'text') {
-            return (
-                <Text key={key}>
-                    {componentData.text.value}
-                </Text>
+        switch (componentData.type) {
+            case 'text' : return (
+                <ArticleText data={componentData} key={key} />  
             )
         }
         return null;
