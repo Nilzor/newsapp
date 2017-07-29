@@ -1,12 +1,10 @@
-
 import React, { Component } from 'react';
 import ArticleService from '../common/article-client';
+import ComponentResolver from '../common/component-resolver';
+const cr = new ComponentResolver();
 
 import {
-    StyleSheet,
     ScrollView,
-    Text,
-    View,
     ActivityIndicator ,
 } from 'react-native';
 
@@ -28,7 +26,7 @@ export default class ListScreen extends Component {
         if (this.state.article) {
             var i = 0;
             for (let componentRaw of this.state.article.components) {
-                const componentRendered = this.renderComponent(componentRaw, i++);
+                const componentRendered = cr.renderComponent(componentRaw, i++);
                 if (componentRendered != null) {
                     elems.push(componentRendered);
                 }
@@ -42,16 +40,5 @@ export default class ListScreen extends Component {
         return (
             <ActivityIndicator size='large' style={{margin: 50 }} />
         )
-    }
-
-    renderComponent(comp, key) {
-        if (comp.type === 'text') {
-            return (
-                <Text key={key}>
-                    {comp.text.value}
-                </Text>
-            )
-        }
-        return null;
     }
 };
