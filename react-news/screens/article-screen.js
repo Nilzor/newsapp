@@ -14,14 +14,16 @@ export default class ArticleScreen extends Component {
     }
 
     componentWillMount() {
-        this.setState({articles: []});
+        this.setState({});
     }
 
     componentDidMount() {
         const articleId = this.props.navigation.state.params.articleId;
-        if (articleId == null) console.error("No article ID specified for ArticleScreen");
+        if (articleId == null) console.error('No article ID specified for ArticleScreen');
         if (articleId != null) {
+            console.log('Loading article ' + articleId);
             ArticleService.getArticle(articleId).then(res => {
+                console.log('Article loaded');
                 this.setState({article: res});
             }).catch(err => {
                 console.error(err);
@@ -35,6 +37,7 @@ export default class ArticleScreen extends Component {
             var i = 0;
             for (let componentRaw of this.state.article.components) {
                 const componentRendered = cr.renderComponent(componentRaw, i++);
+                console.log('Adding component ' + i + ': ' + componentRaw.type);
                 if (componentRendered != null) {
                     elems.push(componentRendered);
                 }

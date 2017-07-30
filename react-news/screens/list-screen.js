@@ -37,7 +37,6 @@ export default class ListScreen extends Component {
     static navigationOptions = {
         title: 'The Times',
         headerStyle: styles.actionBar
-
     }
 
     componentWillMount() {
@@ -45,9 +44,11 @@ export default class ListScreen extends Component {
     }
 
     componentDidMount() {
-        ArticleService.getArticleList().then(res => {
-            this.setState({articles: res});
-        });
+        if (this.state.articles.length === 0) {
+            ArticleService.getArticleList().then(res => {
+                this.setState({articles: res});
+            });
+        }
     }
 
     render() {
