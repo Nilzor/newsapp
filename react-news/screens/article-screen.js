@@ -8,7 +8,7 @@ import {
     ActivityIndicator ,
 } from 'react-native';
 
-export default class ListScreen extends Component {
+export default class ArticleScreen extends Component {
     static navigationOptions = {
         title: 'The Times',
     }

@@ -26,6 +26,9 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         margin: 4,
     },
+    actionBar: {
+        backgroundColor: '#99F'
+    }
 });
 
 export default class ListScreen extends Component {
@@ -33,7 +36,8 @@ export default class ListScreen extends Component {
     // https://reactnavigation.org/docs/navigators/stack
     static navigationOptions = {
         title: 'The Times',
-        headerMode: 'none'
+        headerStyle: styles.actionBar
+
     }
 
     componentWillMount() {
