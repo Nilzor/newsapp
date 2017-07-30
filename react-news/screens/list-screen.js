@@ -29,8 +29,18 @@ const styles = StyleSheet.create({
 });
 
 export default class ListScreen extends Component {
+    // Read more about navigation configuration at
+    // https://reactnavigation.org/docs/navigators/stack
+    static navigationOptions = {
+        title: 'The Times',
+        headerMode: 'none'
+    }
+
     componentWillMount() {
         this.setState({articles: []});
+    }
+
+    componentDidMount() {
         ArticleService.getArticleList().then(res => {
             this.setState({articles: res});
         });

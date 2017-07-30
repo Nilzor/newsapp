@@ -9,8 +9,15 @@ import {
 } from 'react-native';
 
 export default class ListScreen extends Component {
+    static navigationOptions = {
+        title: 'The Times',
+    }
+
     componentWillMount() {
         this.setState({articles: []});
+    }
+
+    componentDidMount() {
         const articleId = this.props.navigation.state.params.articleId;
         if (articleId != null) {
             ArticleService.getArticle(articleId).then(res => {
