@@ -11,11 +11,18 @@ import {
 import ListScreen from './screens/list-screen';
 import ArticleScreen from './screens/article-screen';
 
-const App = StackNavigator({
+const StackNav = StackNavigator({
     Home: { screen: ListScreen },
-    Article: { screen: ArticleScreen },
+    Article: {
+        screen: ArticleScreen,
+        // Test path with for instance 'adb shell am start "news://app/article/8yk1E"'
+        path: 'article/:articleId',
+    },
 }, {
     headerMode: 'screen' // Other options: float and none
 });
+
+const uriPrefix = 'news://app/';
+const App = () => <StackNav uriPrefix={uriPrefix}/>
 
 AppRegistry.registerComponent('reactnews', () => App);

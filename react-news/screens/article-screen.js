@@ -19,6 +19,7 @@ export default class ArticleScreen extends Component {
 
     componentDidMount() {
         const articleId = this.props.navigation.state.params.articleId;
+        if (articleId == null) console.error("No article ID specified for ArticleScreen");
         if (articleId != null) {
             ArticleService.getArticle(articleId).then(res => {
                 this.setState({article: res});
