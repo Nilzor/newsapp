@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ArticleService from '../common/article-client';
 import ComponentResolver from '../common/component-resolver';
 const cr = new ComponentResolver();
+import getAppState from '../common/state';
 
 import {
     ScrollView,
@@ -25,9 +26,19 @@ export default class ArticleScreen extends Component {
             ArticleService.getArticle(articleId).then(res => {
                 console.log('Article loaded');
                 this.setState({article: res});
+                this.saveAppState();
             }).catch(err => {
                 console.error(err);
             });
+        }
+    }
+
+    async saveAppState() {
+        const appState = await getAppState();
+        console.log('saveAppState: ', appState);
+        appState.currentArticleId = this.state.article.id;
+        if (appState.currentArticleId != null) {
+            await appState.save();
         }
     }
 

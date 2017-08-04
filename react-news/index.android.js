@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ArticleTeaser from './components/article-teaser';
+import getAppState from './common/state';
 import {
     StackNavigator,
 } from 'react-navigation';
@@ -26,22 +27,36 @@ const uriPrefix = 'news://app/';
 class App extends React.Component {
     componentDidMount() {
         // Perform initial navigation
-        const storedState = {} ; // Todo: Load and global save state
-        if (storedState.currentArticleId != null) {
-            this.navigator.dispatch({
-                type: 'Navigation/NAVIGATE',
-                routeName: 'Article',
-                params: {
-                    articleId: storedState.currentArticleId
-                }
-            });
-        }
+        loadState(this.navigator);
+        console.warn("cdm");
     }
+
     render() {
         return (
                 <StackNav uriPrefix={uriPrefix}  ref={nav => { this.navigator = nav; }}  />
         );
     }
 }
+
+const loadState = async (navigator) => {
+    const storedState = await getAppState();
+    console.log("GOT STATE: ", storedState)
+    if (storedState && storedState.currentArticleId != null) {
+        navigator.dispatch({
+            type: 'Navigation/NAVIGATE',
+            routeName: 'Article',
+            params: {
+                articleId: storedState.currentArticleId
+            }
+        });
+    }
+};
+
+// Todo: Find a way to invoke this when navigated to , back from article
+const saveAppState = async() => {
+    const appState = await getAppState();
+    appState.currentArticleId = null;
+    await appState.save();
+};
 
 AppRegistry.registerComponent('reactnews', () => App);
