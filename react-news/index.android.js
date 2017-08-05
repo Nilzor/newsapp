@@ -27,8 +27,8 @@ const uriPrefix = 'news://app/';
 class App extends React.Component {
     componentDidMount() {
         // Perform initial navigation
+        console.log("COMPONENT MOUNT")
         loadState(this.navigator);
-        console.warn("cdm");
     }
 
     render() {
@@ -52,11 +52,29 @@ const loadState = async (navigator) => {
     }
 };
 
-// Todo: Find a way to invoke this when navigated to , back from article
 const saveAppState = async() => {
     const appState = await getAppState();
     appState.currentArticleId = null;
     await appState.save();
 };
+
+const defaultGetStateForAction = StackNav.router.getStateForAction;
+
+// Hook onto all navigation events
+// Improvement point: Do all state saving here, remove from article-screen.js
+StackNav.router.getStateForAction = (action, state) => {
+
+    if (state) {
+        var route = state.routes ? state.routes[state.index].routeName : "UNKNOWN";
+        if (action.type === 'Navigation/BACK' && route === 'Article') {
+            // Navigating BACK from Article
+            console.log("HOME!");
+            saveAppState();
+        }
+    }
+
+    return defaultGetStateForAction(action, state);
+};
+
 
 AppRegistry.registerComponent('reactnews', () => App);
