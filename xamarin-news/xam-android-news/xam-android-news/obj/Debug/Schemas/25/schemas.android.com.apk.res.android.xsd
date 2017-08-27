@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" elementFormDefault="unqualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
-    <xs:documentation>v23</xs:documentation>
-    <xs:documentation>27.08.2017 15:57:04</xs:documentation>
+    <xs:documentation>v25</xs:documentation>
+    <xs:documentation>27.08.2017 16:05:09</xs:documentation>
   </xs:annotation>
   <xs:attribute name="accessibilityLiveRegion">
     <xs:annotation>
@@ -11,7 +11,11 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="assertive" />
+            <xs:enumeration value="none" />
+            <xs:enumeration value="polite" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -47,7 +51,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -59,7 +66,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -71,7 +81,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="alignBounds" />
+            <xs:enumeration value="alignMargins" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -83,7 +96,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -95,7 +111,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -119,7 +138,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -155,7 +177,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -167,7 +192,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -179,7 +207,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -191,7 +222,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -227,7 +261,14 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="all" />
+            <xs:enumeration value="email" />
+            <xs:enumeration value="map" />
+            <xs:enumeration value="none" />
+            <xs:enumeration value="phone" />
+            <xs:enumeration value="web" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -239,7 +280,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -251,7 +295,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -287,7 +334,14 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="add" />
+            <xs:enumeration value="multiply" />
+            <xs:enumeration value="screen" />
+            <xs:enumeration value="src_atop" />
+            <xs:enumeration value="src_in" />
+            <xs:enumeration value="src_over" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -311,7 +365,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -323,7 +380,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -359,7 +419,11 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="balanced" />
+            <xs:enumeration value="high_quality" />
+            <xs:enumeration value="simple" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -371,7 +435,11 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="editable" />
+            <xs:enumeration value="normal" />
+            <xs:enumeration value="spannable" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -395,7 +463,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="bottom" />
+            <xs:enumeration value="top" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -419,7 +490,14 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="add" />
+            <xs:enumeration value="multiply" />
+            <xs:enumeration value="screen" />
+            <xs:enumeration value="src_atop" />
+            <xs:enumeration value="src_in" />
+            <xs:enumeration value="src_over" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -455,7 +533,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="holo" />
+            <xs:enumeration value="material" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -467,7 +548,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -479,19 +563,52 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="characters" />
+            <xs:enumeration value="none" />
+            <xs:enumeration value="sentences" />
+            <xs:enumeration value="words" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
   </xs:attribute>
   <xs:attribute name="checked">
     <xs:annotation>
-      <xs:documentation>Indicates the initial checked state of this button.</xs:documentation>
+      <xs:documentation></xs:documentation>
     </xs:annotation>
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+            <xs:enumeration value="?android:attr/alertDialogCenterButtons" />
+            <xs:enumeration value="?android:attr/backgroundDimEnabled" />
+            <xs:enumeration value="?android:attr/isLightTheme" />
+            <xs:enumeration value="?android:attr/panelMenuIsCompact" />
+            <xs:enumeration value="?android:attr/windowActionBar" />
+            <xs:enumeration value="?android:attr/windowActionBarOverlay" />
+            <xs:enumeration value="?android:attr/windowActionModeOverlay" />
+            <xs:enumeration value="?android:attr/windowActivityTransitions" />
+            <xs:enumeration value="?android:attr/windowAllowEnterTransitionOverlap" />
+            <xs:enumeration value="?android:attr/windowAllowReturnTransitionOverlap" />
+            <xs:enumeration value="?android:attr/windowCloseOnTouchOutside" />
+            <xs:enumeration value="?android:attr/windowContentTransitions" />
+            <xs:enumeration value="?android:attr/windowDisablePreview" />
+            <xs:enumeration value="?android:attr/windowEnableSplitTouch" />
+            <xs:enumeration value="?android:attr/windowFullscreen" />
+            <xs:enumeration value="?android:attr/windowIsFloating" />
+            <xs:enumeration value="?android:attr/windowIsTranslucent" />
+            <xs:enumeration value="?android:attr/windowNoDisplay" />
+            <xs:enumeration value="?android:attr/windowNoTitle" />
+            <xs:enumeration value="?android:attr/windowOverscan" />
+            <xs:enumeration value="?android:attr/windowSharedElementsUseOverlay" />
+            <xs:enumeration value="?android:attr/windowShowWallpaper" />
+            <xs:enumeration value="?android:attr/windowSwipeToDismiss" />
+            <xs:enumeration value="?android:attr/windowTranslucentNavigation" />
+            <xs:enumeration value="?android:attr/windowTranslucentStatus" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -515,7 +632,229 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@android:drawable/alert_dark_frame" />
+            <xs:enumeration value="@android:drawable/alert_light_frame" />
+            <xs:enumeration value="@android:drawable/arrow_down_float" />
+            <xs:enumeration value="@android:drawable/arrow_up_float" />
+            <xs:enumeration value="@android:drawable/bottom_bar" />
+            <xs:enumeration value="@android:drawable/btn_default" />
+            <xs:enumeration value="@android:drawable/btn_default_small" />
+            <xs:enumeration value="@android:drawable/btn_dialog" />
+            <xs:enumeration value="@android:drawable/btn_dropdown" />
+            <xs:enumeration value="@android:drawable/btn_minus" />
+            <xs:enumeration value="@android:drawable/btn_plus" />
+            <xs:enumeration value="@android:drawable/btn_radio" />
+            <xs:enumeration value="@android:drawable/btn_star" />
+            <xs:enumeration value="@android:drawable/btn_star_big_off" />
+            <xs:enumeration value="@android:drawable/btn_star_big_on" />
+            <xs:enumeration value="@android:drawable/button_onoff_indicator_off" />
+            <xs:enumeration value="@android:drawable/button_onoff_indicator_on" />
+            <xs:enumeration value="@android:drawable/checkbox_off_background" />
+            <xs:enumeration value="@android:drawable/checkbox_on_background" />
+            <xs:enumeration value="@android:drawable/dark_header" />
+            <xs:enumeration value="@android:drawable/dialog_frame" />
+            <xs:enumeration value="@android:drawable/dialog_holo_dark_frame" />
+            <xs:enumeration value="@android:drawable/dialog_holo_light_frame" />
+            <xs:enumeration value="@android:drawable/divider_horizontal_bright" />
+            <xs:enumeration value="@android:drawable/divider_horizontal_dark" />
+            <xs:enumeration value="@android:drawable/divider_horizontal_dim_dark" />
+            <xs:enumeration value="@android:drawable/divider_horizontal_textfield" />
+            <xs:enumeration value="@android:drawable/edit_text" />
+            <xs:enumeration value="@android:drawable/editbox_background" />
+            <xs:enumeration value="@android:drawable/editbox_background_normal" />
+            <xs:enumeration value="@android:drawable/editbox_dropdown_dark_frame" />
+            <xs:enumeration value="@android:drawable/editbox_dropdown_light_frame" />
+            <xs:enumeration value="@android:drawable/gallery_thumb" />
+            <xs:enumeration value="@android:drawable/ic_btn_speak_now" />
+            <xs:enumeration value="@android:drawable/ic_delete" />
+            <xs:enumeration value="@android:drawable/ic_dialog_alert" />
+            <xs:enumeration value="@android:drawable/ic_dialog_dialer" />
+            <xs:enumeration value="@android:drawable/ic_dialog_email" />
+            <xs:enumeration value="@android:drawable/ic_dialog_info" />
+            <xs:enumeration value="@android:drawable/ic_dialog_map" />
+            <xs:enumeration value="@android:drawable/ic_input_add" />
+            <xs:enumeration value="@android:drawable/ic_input_delete" />
+            <xs:enumeration value="@android:drawable/ic_input_get" />
+            <xs:enumeration value="@android:drawable/ic_lock_idle_alarm" />
+            <xs:enumeration value="@android:drawable/ic_lock_idle_charging" />
+            <xs:enumeration value="@android:drawable/ic_lock_idle_lock" />
+            <xs:enumeration value="@android:drawable/ic_lock_idle_low_battery" />
+            <xs:enumeration value="@android:drawable/ic_lock_lock" />
+            <xs:enumeration value="@android:drawable/ic_lock_power_off" />
+            <xs:enumeration value="@android:drawable/ic_lock_silent_mode" />
+            <xs:enumeration value="@android:drawable/ic_lock_silent_mode_off" />
+            <xs:enumeration value="@android:drawable/ic_media_ff" />
+            <xs:enumeration value="@android:drawable/ic_media_next" />
+            <xs:enumeration value="@android:drawable/ic_media_pause" />
+            <xs:enumeration value="@android:drawable/ic_media_play" />
+            <xs:enumeration value="@android:drawable/ic_media_previous" />
+            <xs:enumeration value="@android:drawable/ic_media_rew" />
+            <xs:enumeration value="@android:drawable/ic_menu_add" />
+            <xs:enumeration value="@android:drawable/ic_menu_agenda" />
+            <xs:enumeration value="@android:drawable/ic_menu_always_landscape_portrait" />
+            <xs:enumeration value="@android:drawable/ic_menu_call" />
+            <xs:enumeration value="@android:drawable/ic_menu_camera" />
+            <xs:enumeration value="@android:drawable/ic_menu_close_clear_cancel" />
+            <xs:enumeration value="@android:drawable/ic_menu_compass" />
+            <xs:enumeration value="@android:drawable/ic_menu_crop" />
+            <xs:enumeration value="@android:drawable/ic_menu_day" />
+            <xs:enumeration value="@android:drawable/ic_menu_delete" />
+            <xs:enumeration value="@android:drawable/ic_menu_directions" />
+            <xs:enumeration value="@android:drawable/ic_menu_edit" />
+            <xs:enumeration value="@android:drawable/ic_menu_gallery" />
+            <xs:enumeration value="@android:drawable/ic_menu_help" />
+            <xs:enumeration value="@android:drawable/ic_menu_info_details" />
+            <xs:enumeration value="@android:drawable/ic_menu_manage" />
+            <xs:enumeration value="@android:drawable/ic_menu_mapmode" />
+            <xs:enumeration value="@android:drawable/ic_menu_month" />
+            <xs:enumeration value="@android:drawable/ic_menu_more" />
+            <xs:enumeration value="@android:drawable/ic_menu_my_calendar" />
+            <xs:enumeration value="@android:drawable/ic_menu_mylocation" />
+            <xs:enumeration value="@android:drawable/ic_menu_myplaces" />
+            <xs:enumeration value="@android:drawable/ic_menu_preferences" />
+            <xs:enumeration value="@android:drawable/ic_menu_recent_history" />
+            <xs:enumeration value="@android:drawable/ic_menu_report_image" />
+            <xs:enumeration value="@android:drawable/ic_menu_revert" />
+            <xs:enumeration value="@android:drawable/ic_menu_rotate" />
+            <xs:enumeration value="@android:drawable/ic_menu_save" />
+            <xs:enumeration value="@android:drawable/ic_menu_search" />
+            <xs:enumeration value="@android:drawable/ic_menu_send" />
+            <xs:enumeration value="@android:drawable/ic_menu_set_as" />
+            <xs:enumeration value="@android:drawable/ic_menu_share" />
+            <xs:enumeration value="@android:drawable/ic_menu_slideshow" />
+            <xs:enumeration value="@android:drawable/ic_menu_sort_alphabetically" />
+            <xs:enumeration value="@android:drawable/ic_menu_sort_by_size" />
+            <xs:enumeration value="@android:drawable/ic_menu_today" />
+            <xs:enumeration value="@android:drawable/ic_menu_upload" />
+            <xs:enumeration value="@android:drawable/ic_menu_upload_you_tube" />
+            <xs:enumeration value="@android:drawable/ic_menu_view" />
+            <xs:enumeration value="@android:drawable/ic_menu_week" />
+            <xs:enumeration value="@android:drawable/ic_menu_zoom" />
+            <xs:enumeration value="@android:drawable/ic_notification_clear_all" />
+            <xs:enumeration value="@android:drawable/ic_notification_overlay" />
+            <xs:enumeration value="@android:drawable/ic_partial_secure" />
+            <xs:enumeration value="@android:drawable/ic_popup_disk_full" />
+            <xs:enumeration value="@android:drawable/ic_popup_reminder" />
+            <xs:enumeration value="@android:drawable/ic_popup_sync" />
+            <xs:enumeration value="@android:drawable/ic_search_category_default" />
+            <xs:enumeration value="@android:drawable/ic_secure" />
+            <xs:enumeration value="@android:drawable/list_selector_background" />
+            <xs:enumeration value="@android:drawable/menu_frame" />
+            <xs:enumeration value="@android:drawable/menu_full_frame" />
+            <xs:enumeration value="@android:drawable/menuitem_background" />
+            <xs:enumeration value="@android:drawable/picture_frame" />
+            <xs:enumeration value="@android:drawable/presence_audio_away" />
+            <xs:enumeration value="@android:drawable/presence_audio_busy" />
+            <xs:enumeration value="@android:drawable/presence_audio_online" />
+            <xs:enumeration value="@android:drawable/presence_away" />
+            <xs:enumeration value="@android:drawable/presence_busy" />
+            <xs:enumeration value="@android:drawable/presence_invisible" />
+            <xs:enumeration value="@android:drawable/presence_offline" />
+            <xs:enumeration value="@android:drawable/presence_online" />
+            <xs:enumeration value="@android:drawable/presence_video_away" />
+            <xs:enumeration value="@android:drawable/presence_video_busy" />
+            <xs:enumeration value="@android:drawable/presence_video_online" />
+            <xs:enumeration value="@android:drawable/progress_horizontal" />
+            <xs:enumeration value="@android:drawable/progress_indeterminate_horizontal" />
+            <xs:enumeration value="@android:drawable/radiobutton_off_background" />
+            <xs:enumeration value="@android:drawable/radiobutton_on_background" />
+            <xs:enumeration value="@android:drawable/screen_background_dark" />
+            <xs:enumeration value="@android:drawable/screen_background_dark_transparent" />
+            <xs:enumeration value="@android:drawable/screen_background_light" />
+            <xs:enumeration value="@android:drawable/screen_background_light_transparent" />
+            <xs:enumeration value="@android:drawable/spinner_background" />
+            <xs:enumeration value="@android:drawable/spinner_dropdown_background" />
+            <xs:enumeration value="@android:drawable/star_big_off" />
+            <xs:enumeration value="@android:drawable/star_big_on" />
+            <xs:enumeration value="@android:drawable/star_off" />
+            <xs:enumeration value="@android:drawable/star_on" />
+            <xs:enumeration value="@android:drawable/stat_notify_call_mute" />
+            <xs:enumeration value="@android:drawable/stat_notify_chat" />
+            <xs:enumeration value="@android:drawable/stat_notify_error" />
+            <xs:enumeration value="@android:drawable/stat_notify_missed_call" />
+            <xs:enumeration value="@android:drawable/stat_notify_more" />
+            <xs:enumeration value="@android:drawable/stat_notify_sdcard" />
+            <xs:enumeration value="@android:drawable/stat_notify_sdcard_prepare" />
+            <xs:enumeration value="@android:drawable/stat_notify_sdcard_usb" />
+            <xs:enumeration value="@android:drawable/stat_notify_sync" />
+            <xs:enumeration value="@android:drawable/stat_notify_sync_noanim" />
+            <xs:enumeration value="@android:drawable/stat_notify_voicemail" />
+            <xs:enumeration value="@android:drawable/stat_sys_data_bluetooth" />
+            <xs:enumeration value="@android:drawable/stat_sys_download" />
+            <xs:enumeration value="@android:drawable/stat_sys_download_done" />
+            <xs:enumeration value="@android:drawable/stat_sys_headset" />
+            <xs:enumeration value="@android:drawable/stat_sys_phone_call" />
+            <xs:enumeration value="@android:drawable/stat_sys_phone_call_forward" />
+            <xs:enumeration value="@android:drawable/stat_sys_phone_call_on_hold" />
+            <xs:enumeration value="@android:drawable/stat_sys_speakerphone" />
+            <xs:enumeration value="@android:drawable/stat_sys_upload" />
+            <xs:enumeration value="@android:drawable/stat_sys_upload_done" />
+            <xs:enumeration value="@android:drawable/stat_sys_vp_phone_call" />
+            <xs:enumeration value="@android:drawable/stat_sys_vp_phone_call_on_hold" />
+            <xs:enumeration value="@android:drawable/stat_sys_warning" />
+            <xs:enumeration value="@android:drawable/status_bar_item_app_background" />
+            <xs:enumeration value="@android:drawable/status_bar_item_background" />
+            <xs:enumeration value="@android:drawable/sym_action_call" />
+            <xs:enumeration value="@android:drawable/sym_action_chat" />
+            <xs:enumeration value="@android:drawable/sym_action_email" />
+            <xs:enumeration value="@android:drawable/sym_call_incoming" />
+            <xs:enumeration value="@android:drawable/sym_call_missed" />
+            <xs:enumeration value="@android:drawable/sym_call_outgoing" />
+            <xs:enumeration value="@android:drawable/sym_contact_card" />
+            <xs:enumeration value="@android:drawable/sym_def_app_icon" />
+            <xs:enumeration value="@android:drawable/title_bar" />
+            <xs:enumeration value="@android:drawable/title_bar_tall" />
+            <xs:enumeration value="@android:drawable/toast_frame" />
+            <xs:enumeration value="@android:drawable/zoom_plate" />
+            <xs:enumeration value="?android:attr/accessibilityFocusedDrawable" />
+            <xs:enumeration value="?android:attr/actionBarDivider" />
+            <xs:enumeration value="?android:attr/actionBarItemBackground" />
+            <xs:enumeration value="?android:attr/actionModeBackground" />
+            <xs:enumeration value="?android:attr/actionModeCloseDrawable" />
+            <xs:enumeration value="?android:attr/actionModeCopyDrawable" />
+            <xs:enumeration value="?android:attr/actionModeCutDrawable" />
+            <xs:enumeration value="?android:attr/actionModeFindDrawable" />
+            <xs:enumeration value="?android:attr/actionModePasteDrawable" />
+            <xs:enumeration value="?android:attr/actionModeSelectAllDrawable" />
+            <xs:enumeration value="?android:attr/actionModeShareDrawable" />
+            <xs:enumeration value="?android:attr/actionModeSplitBackground" />
+            <xs:enumeration value="?android:attr/actionModeWebSearchDrawable" />
+            <xs:enumeration value="?android:attr/activatedBackgroundIndicator" />
+            <xs:enumeration value="?android:attr/alertDialogIcon" />
+            <xs:enumeration value="?android:attr/dividerHorizontal" />
+            <xs:enumeration value="?android:attr/dividerVertical" />
+            <xs:enumeration value="?android:attr/editTextBackground" />
+            <xs:enumeration value="?android:attr/errorMessageAboveBackground" />
+            <xs:enumeration value="?android:attr/errorMessageBackground" />
+            <xs:enumeration value="?android:attr/fastScrollPreviewBackgroundLeft" />
+            <xs:enumeration value="?android:attr/fastScrollPreviewBackgroundRight" />
+            <xs:enumeration value="?android:attr/fastScrollThumbDrawable" />
+            <xs:enumeration value="?android:attr/fastScrollTrackDrawable" />
+            <xs:enumeration value="?android:attr/fingerprintAuthDrawable" />
+            <xs:enumeration value="?android:attr/floatingToolbarCloseDrawable" />
+            <xs:enumeration value="?android:attr/floatingToolbarItemBackgroundBorderlessDrawable" />
+            <xs:enumeration value="?android:attr/floatingToolbarItemBackgroundDrawable" />
+            <xs:enumeration value="?android:attr/floatingToolbarOpenDrawable" />
+            <xs:enumeration value="?android:attr/floatingToolbarPopupBackgroundDrawable" />
+            <xs:enumeration value="?android:attr/galleryItemBackground" />
+            <xs:enumeration value="?android:attr/homeAsUpIndicator" />
+            <xs:enumeration value="?android:attr/listChoiceBackgroundIndicator" />
+            <xs:enumeration value="?android:attr/listChoiceIndicatorMultiple" />
+            <xs:enumeration value="?android:attr/listChoiceIndicatorSingle" />
+            <xs:enumeration value="?android:attr/listDivider" />
+            <xs:enumeration value="?android:attr/panelFullBackground" />
+            <xs:enumeration value="?android:attr/quickContactBadgeOverlay" />
+            <xs:enumeration value="?android:attr/selectableItemBackground" />
+            <xs:enumeration value="?android:attr/selectableItemBackgroundBorderless" />
+            <xs:enumeration value="?android:attr/textCheckMark" />
+            <xs:enumeration value="?android:attr/textCheckMarkInverse" />
+            <xs:enumeration value="?android:attr/textSelectHandle" />
+            <xs:enumeration value="?android:attr/textSelectHandleLeft" />
+            <xs:enumeration value="?android:attr/textSelectHandleRight" />
+            <xs:enumeration value="?android:attr/toastFrameBackground" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -527,7 +866,12 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="end" />
+            <xs:enumeration value="left" />
+            <xs:enumeration value="right" />
+            <xs:enumeration value="start" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -539,7 +883,87 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="@android:color/background_dark" />
+            <xs:enumeration value="@android:color/background_light" />
+            <xs:enumeration value="@android:color/black" />
+            <xs:enumeration value="@android:color/darker_gray" />
+            <xs:enumeration value="@android:color/holo_blue_bright" />
+            <xs:enumeration value="@android:color/holo_blue_dark" />
+            <xs:enumeration value="@android:color/holo_blue_light" />
+            <xs:enumeration value="@android:color/holo_green_dark" />
+            <xs:enumeration value="@android:color/holo_green_light" />
+            <xs:enumeration value="@android:color/holo_orange_dark" />
+            <xs:enumeration value="@android:color/holo_orange_light" />
+            <xs:enumeration value="@android:color/holo_purple" />
+            <xs:enumeration value="@android:color/holo_red_dark" />
+            <xs:enumeration value="@android:color/holo_red_light" />
+            <xs:enumeration value="@android:color/primary_text_dark" />
+            <xs:enumeration value="@android:color/primary_text_dark_nodisable" />
+            <xs:enumeration value="@android:color/primary_text_light" />
+            <xs:enumeration value="@android:color/primary_text_light_nodisable" />
+            <xs:enumeration value="@android:color/secondary_text_dark" />
+            <xs:enumeration value="@android:color/secondary_text_dark_nodisable" />
+            <xs:enumeration value="@android:color/secondary_text_light" />
+            <xs:enumeration value="@android:color/secondary_text_light_nodisable" />
+            <xs:enumeration value="@android:color/tab_indicator_text" />
+            <xs:enumeration value="@android:color/tertiary_text_dark" />
+            <xs:enumeration value="@android:color/tertiary_text_light" />
+            <xs:enumeration value="@android:color/transparent" />
+            <xs:enumeration value="@android:color/white" />
+            <xs:enumeration value="@android:color/widget_edittext_dark" />
+            <xs:enumeration value="?android:attr/actionMenuTextColor" />
+            <xs:enumeration value="?android:attr/colorAccent" />
+            <xs:enumeration value="?android:attr/colorActivatedHighlight" />
+            <xs:enumeration value="?android:attr/colorBackground" />
+            <xs:enumeration value="?android:attr/colorBackgroundCacheHint" />
+            <xs:enumeration value="?android:attr/colorBackgroundFloating" />
+            <xs:enumeration value="?android:attr/colorButtonNormal" />
+            <xs:enumeration value="?android:attr/colorControlActivated" />
+            <xs:enumeration value="?android:attr/colorControlHighlight" />
+            <xs:enumeration value="?android:attr/colorControlNormal" />
+            <xs:enumeration value="?android:attr/colorEdgeEffect" />
+            <xs:enumeration value="?android:attr/colorFocusedHighlight" />
+            <xs:enumeration value="?android:attr/colorForeground" />
+            <xs:enumeration value="?android:attr/colorForegroundInverse" />
+            <xs:enumeration value="?android:attr/colorLongPressedHighlight" />
+            <xs:enumeration value="?android:attr/colorMultiSelectHighlight" />
+            <xs:enumeration value="?android:attr/colorPressedHighlight" />
+            <xs:enumeration value="?android:attr/colorPrimary" />
+            <xs:enumeration value="?android:attr/colorPrimaryDark" />
+            <xs:enumeration value="?android:attr/colorSecondary" />
+            <xs:enumeration value="?android:attr/colorSwitchThumbNormal" />
+            <xs:enumeration value="?android:attr/detailsElementBackground" />
+            <xs:enumeration value="?android:attr/editTextColor" />
+            <xs:enumeration value="?android:attr/fastScrollTextColor" />
+            <xs:enumeration value="?android:attr/floatingToolbarForegroundColor" />
+            <xs:enumeration value="?android:attr/panelBackground" />
+            <xs:enumeration value="?android:attr/panelColorBackground" />
+            <xs:enumeration value="?android:attr/panelColorForeground" />
+            <xs:enumeration value="?android:attr/panelFullBackground" />
+            <xs:enumeration value="?android:attr/searchWidgetCorpusItemBackground" />
+            <xs:enumeration value="?android:attr/textColorAlertDialogListItem" />
+            <xs:enumeration value="?android:attr/textColorHighlightInverse" />
+            <xs:enumeration value="?android:attr/textColorHintInverse" />
+            <xs:enumeration value="?android:attr/textColorLinkInverse" />
+            <xs:enumeration value="?android:attr/textColorPrimary" />
+            <xs:enumeration value="?android:attr/textColorPrimaryActivated" />
+            <xs:enumeration value="?android:attr/textColorPrimaryDisableOnly" />
+            <xs:enumeration value="?android:attr/textColorPrimaryInverse" />
+            <xs:enumeration value="?android:attr/textColorPrimaryInverseDisableOnly" />
+            <xs:enumeration value="?android:attr/textColorPrimaryInverseNoDisable" />
+            <xs:enumeration value="?android:attr/textColorPrimaryNoDisable" />
+            <xs:enumeration value="?android:attr/textColorSecondary" />
+            <xs:enumeration value="?android:attr/textColorSecondaryActivated" />
+            <xs:enumeration value="?android:attr/textColorSecondaryInverse" />
+            <xs:enumeration value="?android:attr/textColorSecondaryInverseNoDisable" />
+            <xs:enumeration value="?android:attr/textColorSecondaryNoDisable" />
+            <xs:enumeration value="?android:attr/textColorTertiary" />
+            <xs:enumeration value="?android:attr/textColorTertiaryInverse" />
+            <xs:enumeration value="?android:attr/textUnderlineColor" />
+            <xs:enumeration value="?android:attr/windowBackground" />
+            <xs:enumeration value="?android:attr/windowBackgroundFallback" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -551,7 +975,14 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="add" />
+            <xs:enumeration value="multiply" />
+            <xs:enumeration value="screen" />
+            <xs:enumeration value="src_atop" />
+            <xs:enumeration value="src_in" />
+            <xs:enumeration value="src_over" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -635,7 +1066,12 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="multipleChoice" />
+            <xs:enumeration value="multipleChoiceModal" />
+            <xs:enumeration value="none" />
+            <xs:enumeration value="singleChoice" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -647,7 +1083,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -671,7 +1110,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -683,7 +1125,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -755,7 +1200,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -856,6 +1304,18 @@
       </xs:union>
     </xs:simpleType>
   </xs:attribute>
+  <xs:attribute name="contentInsetEndWithActions">
+    <xs:annotation>
+      <xs:documentation></xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:string">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:attribute>
   <xs:attribute name="contentInsetLeft">
     <xs:annotation>
       <xs:documentation></xs:documentation>
@@ -892,6 +1352,18 @@
       </xs:union>
     </xs:simpleType>
   </xs:attribute>
+  <xs:attribute name="contentInsetStartWithNavigation">
+    <xs:annotation>
+      <xs:documentation></xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:string">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:attribute>
   <xs:attribute name="contextClickable">
     <xs:annotation>
       <xs:documentation>Defines whether this view reacts to context click events.</xs:documentation>
@@ -899,7 +1371,25 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:attribute name="countDown">
+    <xs:annotation>
+      <xs:documentation>Specifies whether this Chronometer counts down or counts up from the base. If not specified this is false and the Chronometer counts up.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:string">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -911,7 +1401,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -923,7 +1416,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -935,7 +1431,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="calendar" />
+            <xs:enumeration value="spinner" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1019,7 +1518,11 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="afterDescendants" />
+            <xs:enumeration value="beforeDescendants" />
+            <xs:enumeration value="blocksDescendants" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1032,6 +1535,21 @@
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
           <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:attribute name="dialogMode">
+    <xs:annotation>
+      <xs:documentation></xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:string">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1055,7 +1573,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1211,7 +1732,14 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="add" />
+            <xs:enumeration value="multiply" />
+            <xs:enumeration value="screen" />
+            <xs:enumeration value="src_atop" />
+            <xs:enumeration value="src_in" />
+            <xs:enumeration value="src_over" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1235,7 +1763,11 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="auto" />
+            <xs:enumeration value="high" />
+            <xs:enumeration value="low" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1247,7 +1779,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1271,7 +1806,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="match_parent" />
+            <xs:enumeration value="wrap_content" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1295,7 +1833,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="match_parent" />
+            <xs:enumeration value="wrap_content" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1307,7 +1848,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1319,7 +1863,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1343,7 +1890,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1367,7 +1917,13 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="end" />
+            <xs:enumeration value="marquee" />
+            <xs:enumeration value="middle" />
+            <xs:enumeration value="none" />
+            <xs:enumeration value="start" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1391,7 +1947,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1427,7 +1986,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1451,7 +2013,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1475,7 +2040,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1487,7 +2055,11 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="horizontal" />
+            <xs:enumeration value="none" />
+            <xs:enumeration value="vertical" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1511,7 +2083,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1523,7 +2098,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1542,12 +2120,15 @@
   </xs:attribute>
   <xs:attribute name="fillViewport">
     <xs:annotation>
-      <xs:documentation>Defines whether the scrollview should stretch its content to fill the viewport.</xs:documentation>
+      <xs:documentation></xs:documentation>
     </xs:annotation>
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1559,7 +2140,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1583,7 +2167,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1607,7 +2194,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1619,7 +2209,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1667,7 +2260,25 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:attribute name="forceHasOverlappingRendering">
+    <xs:annotation>
+      <xs:documentation>Whether this view has elements that may overlap when drawn. See android.view.View.forceHasOverlappingRendering(boolean).</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:string">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1691,7 +2302,20 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="bottom" />
+            <xs:enumeration value="center" />
+            <xs:enumeration value="center_horizontal" />
+            <xs:enumeration value="center_vertical" />
+            <xs:enumeration value="clip_horizontal" />
+            <xs:enumeration value="clip_vertical" />
+            <xs:enumeration value="fill" />
+            <xs:enumeration value="fill_horizontal" />
+            <xs:enumeration value="fill_vertical" />
+            <xs:enumeration value="left" />
+            <xs:enumeration value="right" />
+            <xs:enumeration value="top" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1703,7 +2327,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1727,7 +2354,14 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="add" />
+            <xs:enumeration value="multiply" />
+            <xs:enumeration value="screen" />
+            <xs:enumeration value="src_atop" />
+            <xs:enumeration value="src_in" />
+            <xs:enumeration value="src_over" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1866,12 +2500,15 @@
   </xs:attribute>
   <xs:attribute name="freezesText">
     <xs:annotation>
-      <xs:documentation>If set, the text view will include its current complete text inside of its frozen icicle in addition to meta-data such as the current cursor position. By default this is disabled; it can be useful when the contents of a text view is not stored in a persistent place such as a content provider.</xs:documentation>
+      <xs:documentation>If set, the text view will include its current complete text inside of its frozen icicle in addition to meta-data such as the current cursor position. By default this is disabled; it can be useful when the contents of a text view is not stored in a persistent place such as a content provider. For android.widget.EditText it is always enabled, regardless of the value of the attribute.</xs:documentation>
     </xs:annotation>
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1931,7 +2568,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="multiple" />
+            <xs:enumeration value="single" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -1967,7 +2607,22 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="bottom" />
+            <xs:enumeration value="center" />
+            <xs:enumeration value="center_horizontal" />
+            <xs:enumeration value="center_vertical" />
+            <xs:enumeration value="clip_horizontal" />
+            <xs:enumeration value="clip_vertical" />
+            <xs:enumeration value="end" />
+            <xs:enumeration value="fill" />
+            <xs:enumeration value="fill_horizontal" />
+            <xs:enumeration value="fill_vertical" />
+            <xs:enumeration value="left" />
+            <xs:enumeration value="right" />
+            <xs:enumeration value="start" />
+            <xs:enumeration value="top" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -2027,7 +2682,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -2075,7 +2733,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -2147,7 +2808,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -2159,7 +2823,36 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/Hello" />
+            <xs:enumeration value="@android:string/cancel" />
+            <xs:enumeration value="@android:string/copy" />
+            <xs:enumeration value="@android:string/copyUrl" />
+            <xs:enumeration value="@android:string/cut" />
+            <xs:enumeration value="@android:string/defaultMsisdnAlphaTag" />
+            <xs:enumeration value="@android:string/defaultVoiceMailAlphaTag" />
+            <xs:enumeration value="@android:string/dialog_alert_title" />
+            <xs:enumeration value="@android:string/emptyPhoneNumber" />
+            <xs:enumeration value="@android:string/fingerprint_icon_content_description" />
+            <xs:enumeration value="@android:string/httpErrorBadUrl" />
+            <xs:enumeration value="@android:string/httpErrorUnsupportedScheme" />
+            <xs:enumeration value="@android:string/no" />
+            <xs:enumeration value="@android:string/ok" />
+            <xs:enumeration value="@android:string/paste" />
+            <xs:enumeration value="@android:string/search_go" />
+            <xs:enumeration value="@android:string/selectAll" />
+            <xs:enumeration value="@android:string/selectTextMode" />
+            <xs:enumeration value="@android:string/status_bar_notification_info_overflow" />
+            <xs:enumeration value="@android:string/unknownName" />
+            <xs:enumeration value="@android:string/untitled" />
+            <xs:enumeration value="@android:string/VideoView_error_button" />
+            <xs:enumeration value="@android:string/VideoView_error_text_invalid_progressive_playback" />
+            <xs:enumeration value="@android:string/VideoView_error_text_unknown" />
+            <xs:enumeration value="@android:string/VideoView_error_title" />
+            <xs:enumeration value="@android:string/yes" />
+            <xs:enumeration value="?android:attr/candidatesTextStyleSpans" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -2183,7 +2876,11 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="full" />
+            <xs:enumeration value="none" />
+            <xs:enumeration value="normal" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -2195,7 +2892,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -2207,7 +2907,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="@+id/" />
+            <xs:enumeration value="@+id/checkedTextView1" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -2255,19 +2958,41 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="actionDone" />
+            <xs:enumeration value="actionGo" />
+            <xs:enumeration value="actionNext" />
+            <xs:enumeration value="actionNone" />
+            <xs:enumeration value="actionPrevious" />
+            <xs:enumeration value="actionSearch" />
+            <xs:enumeration value="actionSend" />
+            <xs:enumeration value="actionUnspecified" />
+            <xs:enumeration value="flagForceAscii" />
+            <xs:enumeration value="flagNavigateNext" />
+            <xs:enumeration value="flagNavigatePrevious" />
+            <xs:enumeration value="flagNoAccessoryAction" />
+            <xs:enumeration value="flagNoEnterAction" />
+            <xs:enumeration value="flagNoExtractUi" />
+            <xs:enumeration value="flagNoFullscreen" />
+            <xs:enumeration value="normal" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
   </xs:attribute>
   <xs:attribute name="importantForAccessibility">
     <xs:annotation>
-      <xs:documentation>Controls how this View is important for accessibility which is if it fires accessibility events and if it is reported to accessibility services that query the screen. Note: While not recommended, an accessibility service may decide to ignore this attribute and operate on all views in the view tree.</xs:documentation>
+      <xs:documentation>Describes whether or not this view is important for accessibility. If it is important, the view fires accessibility events and is reported to accessibility services that query the screen. Note: While not recommended, an accessibility service may decide to ignore this attribute and operate on all views in the view tree.</xs:documentation>
     </xs:annotation>
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="auto" />
+            <xs:enumeration value="no" />
+            <xs:enumeration value="noHideDescendants" />
+            <xs:enumeration value="yes" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -2291,7 +3016,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -2303,7 +3031,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -2315,7 +3046,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="cycle" />
+            <xs:enumeration value="repeat" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -2351,7 +3085,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -2375,7 +3112,14 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="add" />
+            <xs:enumeration value="multiply" />
+            <xs:enumeration value="screen" />
+            <xs:enumeration value="src_atop" />
+            <xs:enumeration value="src_in" />
+            <xs:enumeration value="src_over" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -2459,7 +3203,40 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="date" />
+            <xs:enumeration value="datetime" />
+            <xs:enumeration value="none" />
+            <xs:enumeration value="number" />
+            <xs:enumeration value="numberDecimal" />
+            <xs:enumeration value="numberPassword" />
+            <xs:enumeration value="numberSigned" />
+            <xs:enumeration value="phone" />
+            <xs:enumeration value="text" />
+            <xs:enumeration value="textAutoComplete" />
+            <xs:enumeration value="textAutoCorrect" />
+            <xs:enumeration value="textCapCharacters" />
+            <xs:enumeration value="textCapSentences" />
+            <xs:enumeration value="textCapWords" />
+            <xs:enumeration value="textEmailAddress" />
+            <xs:enumeration value="textEmailSubject" />
+            <xs:enumeration value="textFilter" />
+            <xs:enumeration value="textImeMultiLine" />
+            <xs:enumeration value="textLongMessage" />
+            <xs:enumeration value="textMultiLine" />
+            <xs:enumeration value="textNoSuggestions" />
+            <xs:enumeration value="textPassword" />
+            <xs:enumeration value="textPersonName" />
+            <xs:enumeration value="textPhonetic" />
+            <xs:enumeration value="textPostalAddress" />
+            <xs:enumeration value="textShortMessage" />
+            <xs:enumeration value="textUri" />
+            <xs:enumeration value="textVisiblePassword" />
+            <xs:enumeration value="textWebEditText" />
+            <xs:enumeration value="textWebEmailAddress" />
+            <xs:enumeration value="textWebPassword" />
+            <xs:enumeration value="time" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -2543,7 +3320,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -2555,7 +3335,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -2567,7 +3350,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -2591,7 +3377,11 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="hardware" />
+            <xs:enumeration value="none" />
+            <xs:enumeration value="software" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -2615,7 +3405,22 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="bottom" />
+            <xs:enumeration value="center" />
+            <xs:enumeration value="center_horizontal" />
+            <xs:enumeration value="center_vertical" />
+            <xs:enumeration value="clip_horizontal" />
+            <xs:enumeration value="clip_vertical" />
+            <xs:enumeration value="end" />
+            <xs:enumeration value="fill" />
+            <xs:enumeration value="fill_horizontal" />
+            <xs:enumeration value="fill_vertical" />
+            <xs:enumeration value="left" />
+            <xs:enumeration value="right" />
+            <xs:enumeration value="start" />
+            <xs:enumeration value="top" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -2627,7 +3432,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="match_parent" />
+            <xs:enumeration value="wrap_content" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -2735,7 +3543,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="match_parent" />
+            <xs:enumeration value="wrap_content" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -2759,7 +3570,12 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="inherit" />
+            <xs:enumeration value="locale" />
+            <xs:enumeration value="ltr" />
+            <xs:enumeration value="rtl" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -2771,7 +3587,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="clipBounds" />
+            <xs:enumeration value="opticalBounds" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -2843,7 +3662,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -2891,7 +3713,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -2903,7 +3728,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -2915,7 +3743,9 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="marquee_forever" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -3023,7 +3853,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -3035,7 +3868,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -3107,7 +3943,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -3119,7 +3958,11 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="collapsing" />
+            <xs:enumeration value="oneLine" />
+            <xs:enumeration value="twoLine" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -3191,7 +4034,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -3311,7 +4157,9 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="auto_fit" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -3323,7 +4171,11 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="decimal" />
+            <xs:enumeration value="integer" />
+            <xs:enumeration value="signed" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -3359,7 +4211,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="horizontal" />
+            <xs:enumeration value="vertical" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -3383,7 +4238,12 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="background" />
+            <xs:enumeration value="bounds" />
+            <xs:enumeration value="none" />
+            <xs:enumeration value="paddedBounds" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -3419,7 +4279,11 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="always" />
+            <xs:enumeration value="ifContentScrolls" />
+            <xs:enumeration value="never" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -3515,7 +4379,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -3527,7 +4394,12 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="all" />
+            <xs:enumeration value="animation" />
+            <xs:enumeration value="none" />
+            <xs:enumeration value="scrolling" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -3539,7 +4411,45 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:attribute name="pointerIcon">
+    <xs:annotation>
+      <xs:documentation></xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:string">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="alias" />
+            <xs:enumeration value="all_scroll" />
+            <xs:enumeration value="arrow" />
+            <xs:enumeration value="cell" />
+            <xs:enumeration value="context_menu" />
+            <xs:enumeration value="copy" />
+            <xs:enumeration value="crosshair" />
+            <xs:enumeration value="grab" />
+            <xs:enumeration value="grabbing" />
+            <xs:enumeration value="hand" />
+            <xs:enumeration value="help" />
+            <xs:enumeration value="horizontal_double_arrow" />
+            <xs:enumeration value="no_drop" />
+            <xs:enumeration value="none" />
+            <xs:enumeration value="text" />
+            <xs:enumeration value="top_left_diagonal_double_arrow" />
+            <xs:enumeration value="top_right_diagonal_double_arrow" />
+            <xs:enumeration value="vertical_double_arrow" />
+            <xs:enumeration value="vertical_text" />
+            <xs:enumeration value="wait" />
+            <xs:enumeration value="zoom_in" />
+            <xs:enumeration value="zoom_out" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -3582,7 +4492,7 @@
   </xs:attribute>
   <xs:attribute name="popupTheme">
     <xs:annotation>
-      <xs:documentation>Theme to use for the drop-down or dialog popup window.</xs:documentation>
+      <xs:documentation>Theme to use for the completion popup window.</xs:documentation>
     </xs:annotation>
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
@@ -3635,7 +4545,14 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="add" />
+            <xs:enumeration value="multiply" />
+            <xs:enumeration value="screen" />
+            <xs:enumeration value="src_atop" />
+            <xs:enumeration value="src_in" />
+            <xs:enumeration value="src_over" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -3671,7 +4588,14 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="add" />
+            <xs:enumeration value="multiply" />
+            <xs:enumeration value="screen" />
+            <xs:enumeration value="src_atop" />
+            <xs:enumeration value="src_in" />
+            <xs:enumeration value="src_over" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -3719,7 +4643,11 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="modeLarge" />
+            <xs:enumeration value="modeMedium" />
+            <xs:enumeration value="modeSmall" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -3743,7 +4671,11 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="horizontal" />
+            <xs:enumeration value="none" />
+            <xs:enumeration value="vertical" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -3815,7 +4747,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -3827,7 +4762,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -3839,7 +4777,16 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="center" />
+            <xs:enumeration value="centerCrop" />
+            <xs:enumeration value="centerInside" />
+            <xs:enumeration value="fitCenter" />
+            <xs:enumeration value="fitEnd" />
+            <xs:enumeration value="fitStart" />
+            <xs:enumeration value="fitXY" />
+            <xs:enumeration value="matrix" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -3875,7 +4822,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -3887,7 +4837,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -3923,7 +4876,11 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="horizontal" />
+            <xs:enumeration value="none" />
+            <xs:enumeration value="vertical" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -3947,7 +4904,12 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="insideInset" />
+            <xs:enumeration value="insideOverlay" />
+            <xs:enumeration value="outsideInset" />
+            <xs:enumeration value="outsideOverlay" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -4007,7 +4969,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -4019,7 +4984,15 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="bottom" />
+            <xs:enumeration value="end" />
+            <xs:enumeration value="left" />
+            <xs:enumeration value="none" />
+            <xs:enumeration value="right" />
+            <xs:enumeration value="start" />
+            <xs:enumeration value="top" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -4031,7 +5004,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -4115,7 +5091,14 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="add" />
+            <xs:enumeration value="multiply" />
+            <xs:enumeration value="screen" />
+            <xs:enumeration value="src_atop" />
+            <xs:enumeration value="src_in" />
+            <xs:enumeration value="src_over" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -4127,7 +5110,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -4247,7 +5233,12 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="beginning" />
+            <xs:enumeration value="end" />
+            <xs:enumeration value="middle" />
+            <xs:enumeration value="none" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -4271,7 +5262,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -4283,7 +5277,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -4307,19 +5304,25 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
   </xs:attribute>
   <xs:attribute name="smoothScrollbar">
     <xs:annotation>
-      <xs:documentation>When set to true, the list will use a more refined calculation method based on the pixels height of the items visible on screen. This property is set to true by default but should be set to false if your adapter will display items of varying heights. When this property is set to true and your adapter displays items of varying heights, the scrollbar thumb will change size as the user scrolls through the list. When set to fale, the list will use only the number of items in the adapter and the number of items visible on screen to determine the scrollbar's properties.</xs:documentation>
+      <xs:documentation>When set to true, the list will use a more refined calculation method based on the pixels height of the items visible on screen. This property is set to true by default but should be set to false if your adapter will display items of varying heights. When this property is set to true and your adapter displays items of varying heights, the scrollbar thumb will change size as the user scrolls through the list. When set to false, the list will use only the number of items in the adapter and the number of items visible on screen to determine the scrollbar's properties.</xs:documentation>
     </xs:annotation>
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -4343,7 +5346,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -4367,7 +5373,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="dialog" />
+            <xs:enumeration value="dropdown" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -4379,7 +5388,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -4391,19 +5403,25 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
   </xs:attribute>
   <xs:attribute name="splitTrack">
     <xs:annotation>
-      <xs:documentation>Whether to split the track and leave a gap for the thumb drawable.</xs:documentation>
+      <xs:documentation></xs:documentation>
     </xs:annotation>
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -4427,7 +5445,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -4487,7 +5508,12 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="columnWidth" />
+            <xs:enumeration value="none" />
+            <xs:enumeration value="spacingWidth" />
+            <xs:enumeration value="spacingWidthUniform" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -4619,7 +5645,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -4667,7 +5696,36 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/Hello" />
+            <xs:enumeration value="@android:string/cancel" />
+            <xs:enumeration value="@android:string/copy" />
+            <xs:enumeration value="@android:string/copyUrl" />
+            <xs:enumeration value="@android:string/cut" />
+            <xs:enumeration value="@android:string/defaultMsisdnAlphaTag" />
+            <xs:enumeration value="@android:string/defaultVoiceMailAlphaTag" />
+            <xs:enumeration value="@android:string/dialog_alert_title" />
+            <xs:enumeration value="@android:string/emptyPhoneNumber" />
+            <xs:enumeration value="@android:string/fingerprint_icon_content_description" />
+            <xs:enumeration value="@android:string/httpErrorBadUrl" />
+            <xs:enumeration value="@android:string/httpErrorUnsupportedScheme" />
+            <xs:enumeration value="@android:string/no" />
+            <xs:enumeration value="@android:string/ok" />
+            <xs:enumeration value="@android:string/paste" />
+            <xs:enumeration value="@android:string/search_go" />
+            <xs:enumeration value="@android:string/selectAll" />
+            <xs:enumeration value="@android:string/selectTextMode" />
+            <xs:enumeration value="@android:string/status_bar_notification_info_overflow" />
+            <xs:enumeration value="@android:string/unknownName" />
+            <xs:enumeration value="@android:string/untitled" />
+            <xs:enumeration value="@android:string/VideoView_error_button" />
+            <xs:enumeration value="@android:string/VideoView_error_text_invalid_progressive_playback" />
+            <xs:enumeration value="@android:string/VideoView_error_text_unknown" />
+            <xs:enumeration value="@android:string/VideoView_error_title" />
+            <xs:enumeration value="@android:string/yes" />
+            <xs:enumeration value="?android:attr/candidatesTextStyleSpans" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -4679,7 +5737,15 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="center" />
+            <xs:enumeration value="gravity" />
+            <xs:enumeration value="inherit" />
+            <xs:enumeration value="textEnd" />
+            <xs:enumeration value="textStart" />
+            <xs:enumeration value="viewEnd" />
+            <xs:enumeration value="viewStart" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -4691,7 +5757,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -4715,7 +5784,308 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@android:color/background_dark" />
+            <xs:enumeration value="@android:color/background_light" />
+            <xs:enumeration value="@android:color/black" />
+            <xs:enumeration value="@android:color/darker_gray" />
+            <xs:enumeration value="@android:color/holo_blue_bright" />
+            <xs:enumeration value="@android:color/holo_blue_dark" />
+            <xs:enumeration value="@android:color/holo_blue_light" />
+            <xs:enumeration value="@android:color/holo_green_dark" />
+            <xs:enumeration value="@android:color/holo_green_light" />
+            <xs:enumeration value="@android:color/holo_orange_dark" />
+            <xs:enumeration value="@android:color/holo_orange_light" />
+            <xs:enumeration value="@android:color/holo_purple" />
+            <xs:enumeration value="@android:color/holo_red_dark" />
+            <xs:enumeration value="@android:color/holo_red_light" />
+            <xs:enumeration value="@android:color/primary_text_dark" />
+            <xs:enumeration value="@android:color/primary_text_dark_nodisable" />
+            <xs:enumeration value="@android:color/primary_text_light" />
+            <xs:enumeration value="@android:color/primary_text_light_nodisable" />
+            <xs:enumeration value="@android:color/secondary_text_dark" />
+            <xs:enumeration value="@android:color/secondary_text_dark_nodisable" />
+            <xs:enumeration value="@android:color/secondary_text_light" />
+            <xs:enumeration value="@android:color/secondary_text_light_nodisable" />
+            <xs:enumeration value="@android:color/tab_indicator_text" />
+            <xs:enumeration value="@android:color/tertiary_text_dark" />
+            <xs:enumeration value="@android:color/tertiary_text_light" />
+            <xs:enumeration value="@android:color/transparent" />
+            <xs:enumeration value="@android:color/white" />
+            <xs:enumeration value="@android:color/widget_edittext_dark" />
+            <xs:enumeration value="@android:drawable/alert_dark_frame" />
+            <xs:enumeration value="@android:drawable/alert_light_frame" />
+            <xs:enumeration value="@android:drawable/arrow_down_float" />
+            <xs:enumeration value="@android:drawable/arrow_up_float" />
+            <xs:enumeration value="@android:drawable/bottom_bar" />
+            <xs:enumeration value="@android:drawable/btn_default" />
+            <xs:enumeration value="@android:drawable/btn_default_small" />
+            <xs:enumeration value="@android:drawable/btn_dialog" />
+            <xs:enumeration value="@android:drawable/btn_dropdown" />
+            <xs:enumeration value="@android:drawable/btn_minus" />
+            <xs:enumeration value="@android:drawable/btn_plus" />
+            <xs:enumeration value="@android:drawable/btn_radio" />
+            <xs:enumeration value="@android:drawable/btn_star" />
+            <xs:enumeration value="@android:drawable/btn_star_big_off" />
+            <xs:enumeration value="@android:drawable/btn_star_big_on" />
+            <xs:enumeration value="@android:drawable/button_onoff_indicator_off" />
+            <xs:enumeration value="@android:drawable/button_onoff_indicator_on" />
+            <xs:enumeration value="@android:drawable/checkbox_off_background" />
+            <xs:enumeration value="@android:drawable/checkbox_on_background" />
+            <xs:enumeration value="@android:drawable/dark_header" />
+            <xs:enumeration value="@android:drawable/dialog_frame" />
+            <xs:enumeration value="@android:drawable/dialog_holo_dark_frame" />
+            <xs:enumeration value="@android:drawable/dialog_holo_light_frame" />
+            <xs:enumeration value="@android:drawable/divider_horizontal_bright" />
+            <xs:enumeration value="@android:drawable/divider_horizontal_dark" />
+            <xs:enumeration value="@android:drawable/divider_horizontal_dim_dark" />
+            <xs:enumeration value="@android:drawable/divider_horizontal_textfield" />
+            <xs:enumeration value="@android:drawable/edit_text" />
+            <xs:enumeration value="@android:drawable/editbox_background" />
+            <xs:enumeration value="@android:drawable/editbox_background_normal" />
+            <xs:enumeration value="@android:drawable/editbox_dropdown_dark_frame" />
+            <xs:enumeration value="@android:drawable/editbox_dropdown_light_frame" />
+            <xs:enumeration value="@android:drawable/gallery_thumb" />
+            <xs:enumeration value="@android:drawable/ic_btn_speak_now" />
+            <xs:enumeration value="@android:drawable/ic_delete" />
+            <xs:enumeration value="@android:drawable/ic_dialog_alert" />
+            <xs:enumeration value="@android:drawable/ic_dialog_dialer" />
+            <xs:enumeration value="@android:drawable/ic_dialog_email" />
+            <xs:enumeration value="@android:drawable/ic_dialog_info" />
+            <xs:enumeration value="@android:drawable/ic_dialog_map" />
+            <xs:enumeration value="@android:drawable/ic_input_add" />
+            <xs:enumeration value="@android:drawable/ic_input_delete" />
+            <xs:enumeration value="@android:drawable/ic_input_get" />
+            <xs:enumeration value="@android:drawable/ic_lock_idle_alarm" />
+            <xs:enumeration value="@android:drawable/ic_lock_idle_charging" />
+            <xs:enumeration value="@android:drawable/ic_lock_idle_lock" />
+            <xs:enumeration value="@android:drawable/ic_lock_idle_low_battery" />
+            <xs:enumeration value="@android:drawable/ic_lock_lock" />
+            <xs:enumeration value="@android:drawable/ic_lock_power_off" />
+            <xs:enumeration value="@android:drawable/ic_lock_silent_mode" />
+            <xs:enumeration value="@android:drawable/ic_lock_silent_mode_off" />
+            <xs:enumeration value="@android:drawable/ic_media_ff" />
+            <xs:enumeration value="@android:drawable/ic_media_next" />
+            <xs:enumeration value="@android:drawable/ic_media_pause" />
+            <xs:enumeration value="@android:drawable/ic_media_play" />
+            <xs:enumeration value="@android:drawable/ic_media_previous" />
+            <xs:enumeration value="@android:drawable/ic_media_rew" />
+            <xs:enumeration value="@android:drawable/ic_menu_add" />
+            <xs:enumeration value="@android:drawable/ic_menu_agenda" />
+            <xs:enumeration value="@android:drawable/ic_menu_always_landscape_portrait" />
+            <xs:enumeration value="@android:drawable/ic_menu_call" />
+            <xs:enumeration value="@android:drawable/ic_menu_camera" />
+            <xs:enumeration value="@android:drawable/ic_menu_close_clear_cancel" />
+            <xs:enumeration value="@android:drawable/ic_menu_compass" />
+            <xs:enumeration value="@android:drawable/ic_menu_crop" />
+            <xs:enumeration value="@android:drawable/ic_menu_day" />
+            <xs:enumeration value="@android:drawable/ic_menu_delete" />
+            <xs:enumeration value="@android:drawable/ic_menu_directions" />
+            <xs:enumeration value="@android:drawable/ic_menu_edit" />
+            <xs:enumeration value="@android:drawable/ic_menu_gallery" />
+            <xs:enumeration value="@android:drawable/ic_menu_help" />
+            <xs:enumeration value="@android:drawable/ic_menu_info_details" />
+            <xs:enumeration value="@android:drawable/ic_menu_manage" />
+            <xs:enumeration value="@android:drawable/ic_menu_mapmode" />
+            <xs:enumeration value="@android:drawable/ic_menu_month" />
+            <xs:enumeration value="@android:drawable/ic_menu_more" />
+            <xs:enumeration value="@android:drawable/ic_menu_my_calendar" />
+            <xs:enumeration value="@android:drawable/ic_menu_mylocation" />
+            <xs:enumeration value="@android:drawable/ic_menu_myplaces" />
+            <xs:enumeration value="@android:drawable/ic_menu_preferences" />
+            <xs:enumeration value="@android:drawable/ic_menu_recent_history" />
+            <xs:enumeration value="@android:drawable/ic_menu_report_image" />
+            <xs:enumeration value="@android:drawable/ic_menu_revert" />
+            <xs:enumeration value="@android:drawable/ic_menu_rotate" />
+            <xs:enumeration value="@android:drawable/ic_menu_save" />
+            <xs:enumeration value="@android:drawable/ic_menu_search" />
+            <xs:enumeration value="@android:drawable/ic_menu_send" />
+            <xs:enumeration value="@android:drawable/ic_menu_set_as" />
+            <xs:enumeration value="@android:drawable/ic_menu_share" />
+            <xs:enumeration value="@android:drawable/ic_menu_slideshow" />
+            <xs:enumeration value="@android:drawable/ic_menu_sort_alphabetically" />
+            <xs:enumeration value="@android:drawable/ic_menu_sort_by_size" />
+            <xs:enumeration value="@android:drawable/ic_menu_today" />
+            <xs:enumeration value="@android:drawable/ic_menu_upload" />
+            <xs:enumeration value="@android:drawable/ic_menu_upload_you_tube" />
+            <xs:enumeration value="@android:drawable/ic_menu_view" />
+            <xs:enumeration value="@android:drawable/ic_menu_week" />
+            <xs:enumeration value="@android:drawable/ic_menu_zoom" />
+            <xs:enumeration value="@android:drawable/ic_notification_clear_all" />
+            <xs:enumeration value="@android:drawable/ic_notification_overlay" />
+            <xs:enumeration value="@android:drawable/ic_partial_secure" />
+            <xs:enumeration value="@android:drawable/ic_popup_disk_full" />
+            <xs:enumeration value="@android:drawable/ic_popup_reminder" />
+            <xs:enumeration value="@android:drawable/ic_popup_sync" />
+            <xs:enumeration value="@android:drawable/ic_search_category_default" />
+            <xs:enumeration value="@android:drawable/ic_secure" />
+            <xs:enumeration value="@android:drawable/list_selector_background" />
+            <xs:enumeration value="@android:drawable/menu_frame" />
+            <xs:enumeration value="@android:drawable/menu_full_frame" />
+            <xs:enumeration value="@android:drawable/menuitem_background" />
+            <xs:enumeration value="@android:drawable/picture_frame" />
+            <xs:enumeration value="@android:drawable/presence_audio_away" />
+            <xs:enumeration value="@android:drawable/presence_audio_busy" />
+            <xs:enumeration value="@android:drawable/presence_audio_online" />
+            <xs:enumeration value="@android:drawable/presence_away" />
+            <xs:enumeration value="@android:drawable/presence_busy" />
+            <xs:enumeration value="@android:drawable/presence_invisible" />
+            <xs:enumeration value="@android:drawable/presence_offline" />
+            <xs:enumeration value="@android:drawable/presence_online" />
+            <xs:enumeration value="@android:drawable/presence_video_away" />
+            <xs:enumeration value="@android:drawable/presence_video_busy" />
+            <xs:enumeration value="@android:drawable/presence_video_online" />
+            <xs:enumeration value="@android:drawable/progress_horizontal" />
+            <xs:enumeration value="@android:drawable/progress_indeterminate_horizontal" />
+            <xs:enumeration value="@android:drawable/radiobutton_off_background" />
+            <xs:enumeration value="@android:drawable/radiobutton_on_background" />
+            <xs:enumeration value="@android:drawable/screen_background_dark" />
+            <xs:enumeration value="@android:drawable/screen_background_dark_transparent" />
+            <xs:enumeration value="@android:drawable/screen_background_light" />
+            <xs:enumeration value="@android:drawable/screen_background_light_transparent" />
+            <xs:enumeration value="@android:drawable/spinner_background" />
+            <xs:enumeration value="@android:drawable/spinner_dropdown_background" />
+            <xs:enumeration value="@android:drawable/star_big_off" />
+            <xs:enumeration value="@android:drawable/star_big_on" />
+            <xs:enumeration value="@android:drawable/star_off" />
+            <xs:enumeration value="@android:drawable/star_on" />
+            <xs:enumeration value="@android:drawable/stat_notify_call_mute" />
+            <xs:enumeration value="@android:drawable/stat_notify_chat" />
+            <xs:enumeration value="@android:drawable/stat_notify_error" />
+            <xs:enumeration value="@android:drawable/stat_notify_missed_call" />
+            <xs:enumeration value="@android:drawable/stat_notify_more" />
+            <xs:enumeration value="@android:drawable/stat_notify_sdcard" />
+            <xs:enumeration value="@android:drawable/stat_notify_sdcard_prepare" />
+            <xs:enumeration value="@android:drawable/stat_notify_sdcard_usb" />
+            <xs:enumeration value="@android:drawable/stat_notify_sync" />
+            <xs:enumeration value="@android:drawable/stat_notify_sync_noanim" />
+            <xs:enumeration value="@android:drawable/stat_notify_voicemail" />
+            <xs:enumeration value="@android:drawable/stat_sys_data_bluetooth" />
+            <xs:enumeration value="@android:drawable/stat_sys_download" />
+            <xs:enumeration value="@android:drawable/stat_sys_download_done" />
+            <xs:enumeration value="@android:drawable/stat_sys_headset" />
+            <xs:enumeration value="@android:drawable/stat_sys_phone_call" />
+            <xs:enumeration value="@android:drawable/stat_sys_phone_call_forward" />
+            <xs:enumeration value="@android:drawable/stat_sys_phone_call_on_hold" />
+            <xs:enumeration value="@android:drawable/stat_sys_speakerphone" />
+            <xs:enumeration value="@android:drawable/stat_sys_upload" />
+            <xs:enumeration value="@android:drawable/stat_sys_upload_done" />
+            <xs:enumeration value="@android:drawable/stat_sys_vp_phone_call" />
+            <xs:enumeration value="@android:drawable/stat_sys_vp_phone_call_on_hold" />
+            <xs:enumeration value="@android:drawable/stat_sys_warning" />
+            <xs:enumeration value="@android:drawable/status_bar_item_app_background" />
+            <xs:enumeration value="@android:drawable/status_bar_item_background" />
+            <xs:enumeration value="@android:drawable/sym_action_call" />
+            <xs:enumeration value="@android:drawable/sym_action_chat" />
+            <xs:enumeration value="@android:drawable/sym_action_email" />
+            <xs:enumeration value="@android:drawable/sym_call_incoming" />
+            <xs:enumeration value="@android:drawable/sym_call_missed" />
+            <xs:enumeration value="@android:drawable/sym_call_outgoing" />
+            <xs:enumeration value="@android:drawable/sym_contact_card" />
+            <xs:enumeration value="@android:drawable/sym_def_app_icon" />
+            <xs:enumeration value="@android:drawable/title_bar" />
+            <xs:enumeration value="@android:drawable/title_bar_tall" />
+            <xs:enumeration value="@android:drawable/toast_frame" />
+            <xs:enumeration value="@android:drawable/zoom_plate" />
+            <xs:enumeration value="?android:attr/accessibilityFocusedDrawable" />
+            <xs:enumeration value="?android:attr/actionBarDivider" />
+            <xs:enumeration value="?android:attr/actionBarItemBackground" />
+            <xs:enumeration value="?android:attr/actionMenuTextColor" />
+            <xs:enumeration value="?android:attr/actionModeBackground" />
+            <xs:enumeration value="?android:attr/actionModeCloseDrawable" />
+            <xs:enumeration value="?android:attr/actionModeCopyDrawable" />
+            <xs:enumeration value="?android:attr/actionModeCutDrawable" />
+            <xs:enumeration value="?android:attr/actionModeFindDrawable" />
+            <xs:enumeration value="?android:attr/actionModePasteDrawable" />
+            <xs:enumeration value="?android:attr/actionModeSelectAllDrawable" />
+            <xs:enumeration value="?android:attr/actionModeShareDrawable" />
+            <xs:enumeration value="?android:attr/actionModeSplitBackground" />
+            <xs:enumeration value="?android:attr/actionModeWebSearchDrawable" />
+            <xs:enumeration value="?android:attr/activatedBackgroundIndicator" />
+            <xs:enumeration value="?android:attr/alertDialogIcon" />
+            <xs:enumeration value="?android:attr/colorAccent" />
+            <xs:enumeration value="?android:attr/colorActivatedHighlight" />
+            <xs:enumeration value="?android:attr/colorBackground" />
+            <xs:enumeration value="?android:attr/colorBackgroundCacheHint" />
+            <xs:enumeration value="?android:attr/colorBackgroundFloating" />
+            <xs:enumeration value="?android:attr/colorButtonNormal" />
+            <xs:enumeration value="?android:attr/colorControlActivated" />
+            <xs:enumeration value="?android:attr/colorControlHighlight" />
+            <xs:enumeration value="?android:attr/colorControlNormal" />
+            <xs:enumeration value="?android:attr/colorEdgeEffect" />
+            <xs:enumeration value="?android:attr/colorFocusedHighlight" />
+            <xs:enumeration value="?android:attr/colorForeground" />
+            <xs:enumeration value="?android:attr/colorForegroundInverse" />
+            <xs:enumeration value="?android:attr/colorLongPressedHighlight" />
+            <xs:enumeration value="?android:attr/colorMultiSelectHighlight" />
+            <xs:enumeration value="?android:attr/colorPressedHighlight" />
+            <xs:enumeration value="?android:attr/colorPrimary" />
+            <xs:enumeration value="?android:attr/colorPrimaryDark" />
+            <xs:enumeration value="?android:attr/colorSecondary" />
+            <xs:enumeration value="?android:attr/colorSwitchThumbNormal" />
+            <xs:enumeration value="?android:attr/detailsElementBackground" />
+            <xs:enumeration value="?android:attr/dividerHorizontal" />
+            <xs:enumeration value="?android:attr/dividerVertical" />
+            <xs:enumeration value="?android:attr/editTextBackground" />
+            <xs:enumeration value="?android:attr/editTextColor" />
+            <xs:enumeration value="?android:attr/errorMessageAboveBackground" />
+            <xs:enumeration value="?android:attr/errorMessageBackground" />
+            <xs:enumeration value="?android:attr/fastScrollPreviewBackgroundLeft" />
+            <xs:enumeration value="?android:attr/fastScrollPreviewBackgroundRight" />
+            <xs:enumeration value="?android:attr/fastScrollTextColor" />
+            <xs:enumeration value="?android:attr/fastScrollThumbDrawable" />
+            <xs:enumeration value="?android:attr/fastScrollTrackDrawable" />
+            <xs:enumeration value="?android:attr/fingerprintAuthDrawable" />
+            <xs:enumeration value="?android:attr/floatingToolbarCloseDrawable" />
+            <xs:enumeration value="?android:attr/floatingToolbarForegroundColor" />
+            <xs:enumeration value="?android:attr/floatingToolbarItemBackgroundBorderlessDrawable" />
+            <xs:enumeration value="?android:attr/floatingToolbarItemBackgroundDrawable" />
+            <xs:enumeration value="?android:attr/floatingToolbarOpenDrawable" />
+            <xs:enumeration value="?android:attr/floatingToolbarPopupBackgroundDrawable" />
+            <xs:enumeration value="?android:attr/galleryItemBackground" />
+            <xs:enumeration value="?android:attr/homeAsUpIndicator" />
+            <xs:enumeration value="?android:attr/listChoiceBackgroundIndicator" />
+            <xs:enumeration value="?android:attr/listChoiceIndicatorMultiple" />
+            <xs:enumeration value="?android:attr/listChoiceIndicatorSingle" />
+            <xs:enumeration value="?android:attr/listDivider" />
+            <xs:enumeration value="?android:attr/panelBackground" />
+            <xs:enumeration value="?android:attr/panelColorBackground" />
+            <xs:enumeration value="?android:attr/panelColorForeground" />
+            <xs:enumeration value="?android:attr/panelFullBackground" />
+            <xs:enumeration value="?android:attr/panelFullBackground" />
+            <xs:enumeration value="?android:attr/quickContactBadgeOverlay" />
+            <xs:enumeration value="?android:attr/searchWidgetCorpusItemBackground" />
+            <xs:enumeration value="?android:attr/selectableItemBackground" />
+            <xs:enumeration value="?android:attr/selectableItemBackgroundBorderless" />
+            <xs:enumeration value="?android:attr/textCheckMark" />
+            <xs:enumeration value="?android:attr/textCheckMarkInverse" />
+            <xs:enumeration value="?android:attr/textColorAlertDialogListItem" />
+            <xs:enumeration value="?android:attr/textColorHighlightInverse" />
+            <xs:enumeration value="?android:attr/textColorHintInverse" />
+            <xs:enumeration value="?android:attr/textColorLinkInverse" />
+            <xs:enumeration value="?android:attr/textColorPrimary" />
+            <xs:enumeration value="?android:attr/textColorPrimaryActivated" />
+            <xs:enumeration value="?android:attr/textColorPrimaryDisableOnly" />
+            <xs:enumeration value="?android:attr/textColorPrimaryInverse" />
+            <xs:enumeration value="?android:attr/textColorPrimaryInverseDisableOnly" />
+            <xs:enumeration value="?android:attr/textColorPrimaryInverseNoDisable" />
+            <xs:enumeration value="?android:attr/textColorPrimaryNoDisable" />
+            <xs:enumeration value="?android:attr/textColorSecondary" />
+            <xs:enumeration value="?android:attr/textColorSecondaryActivated" />
+            <xs:enumeration value="?android:attr/textColorSecondaryInverse" />
+            <xs:enumeration value="?android:attr/textColorSecondaryInverseNoDisable" />
+            <xs:enumeration value="?android:attr/textColorSecondaryNoDisable" />
+            <xs:enumeration value="?android:attr/textColorTertiary" />
+            <xs:enumeration value="?android:attr/textColorTertiaryInverse" />
+            <xs:enumeration value="?android:attr/textSelectHandle" />
+            <xs:enumeration value="?android:attr/textSelectHandleLeft" />
+            <xs:enumeration value="?android:attr/textSelectHandleRight" />
+            <xs:enumeration value="?android:attr/textUnderlineColor" />
+            <xs:enumeration value="?android:attr/toastFrameBackground" />
+            <xs:enumeration value="?android:attr/windowBackground" />
+            <xs:enumeration value="?android:attr/windowBackgroundFallback" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -4727,7 +6097,308 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@android:color/background_dark" />
+            <xs:enumeration value="@android:color/background_light" />
+            <xs:enumeration value="@android:color/black" />
+            <xs:enumeration value="@android:color/darker_gray" />
+            <xs:enumeration value="@android:color/holo_blue_bright" />
+            <xs:enumeration value="@android:color/holo_blue_dark" />
+            <xs:enumeration value="@android:color/holo_blue_light" />
+            <xs:enumeration value="@android:color/holo_green_dark" />
+            <xs:enumeration value="@android:color/holo_green_light" />
+            <xs:enumeration value="@android:color/holo_orange_dark" />
+            <xs:enumeration value="@android:color/holo_orange_light" />
+            <xs:enumeration value="@android:color/holo_purple" />
+            <xs:enumeration value="@android:color/holo_red_dark" />
+            <xs:enumeration value="@android:color/holo_red_light" />
+            <xs:enumeration value="@android:color/primary_text_dark" />
+            <xs:enumeration value="@android:color/primary_text_dark_nodisable" />
+            <xs:enumeration value="@android:color/primary_text_light" />
+            <xs:enumeration value="@android:color/primary_text_light_nodisable" />
+            <xs:enumeration value="@android:color/secondary_text_dark" />
+            <xs:enumeration value="@android:color/secondary_text_dark_nodisable" />
+            <xs:enumeration value="@android:color/secondary_text_light" />
+            <xs:enumeration value="@android:color/secondary_text_light_nodisable" />
+            <xs:enumeration value="@android:color/tab_indicator_text" />
+            <xs:enumeration value="@android:color/tertiary_text_dark" />
+            <xs:enumeration value="@android:color/tertiary_text_light" />
+            <xs:enumeration value="@android:color/transparent" />
+            <xs:enumeration value="@android:color/white" />
+            <xs:enumeration value="@android:color/widget_edittext_dark" />
+            <xs:enumeration value="@android:drawable/alert_dark_frame" />
+            <xs:enumeration value="@android:drawable/alert_light_frame" />
+            <xs:enumeration value="@android:drawable/arrow_down_float" />
+            <xs:enumeration value="@android:drawable/arrow_up_float" />
+            <xs:enumeration value="@android:drawable/bottom_bar" />
+            <xs:enumeration value="@android:drawable/btn_default" />
+            <xs:enumeration value="@android:drawable/btn_default_small" />
+            <xs:enumeration value="@android:drawable/btn_dialog" />
+            <xs:enumeration value="@android:drawable/btn_dropdown" />
+            <xs:enumeration value="@android:drawable/btn_minus" />
+            <xs:enumeration value="@android:drawable/btn_plus" />
+            <xs:enumeration value="@android:drawable/btn_radio" />
+            <xs:enumeration value="@android:drawable/btn_star" />
+            <xs:enumeration value="@android:drawable/btn_star_big_off" />
+            <xs:enumeration value="@android:drawable/btn_star_big_on" />
+            <xs:enumeration value="@android:drawable/button_onoff_indicator_off" />
+            <xs:enumeration value="@android:drawable/button_onoff_indicator_on" />
+            <xs:enumeration value="@android:drawable/checkbox_off_background" />
+            <xs:enumeration value="@android:drawable/checkbox_on_background" />
+            <xs:enumeration value="@android:drawable/dark_header" />
+            <xs:enumeration value="@android:drawable/dialog_frame" />
+            <xs:enumeration value="@android:drawable/dialog_holo_dark_frame" />
+            <xs:enumeration value="@android:drawable/dialog_holo_light_frame" />
+            <xs:enumeration value="@android:drawable/divider_horizontal_bright" />
+            <xs:enumeration value="@android:drawable/divider_horizontal_dark" />
+            <xs:enumeration value="@android:drawable/divider_horizontal_dim_dark" />
+            <xs:enumeration value="@android:drawable/divider_horizontal_textfield" />
+            <xs:enumeration value="@android:drawable/edit_text" />
+            <xs:enumeration value="@android:drawable/editbox_background" />
+            <xs:enumeration value="@android:drawable/editbox_background_normal" />
+            <xs:enumeration value="@android:drawable/editbox_dropdown_dark_frame" />
+            <xs:enumeration value="@android:drawable/editbox_dropdown_light_frame" />
+            <xs:enumeration value="@android:drawable/gallery_thumb" />
+            <xs:enumeration value="@android:drawable/ic_btn_speak_now" />
+            <xs:enumeration value="@android:drawable/ic_delete" />
+            <xs:enumeration value="@android:drawable/ic_dialog_alert" />
+            <xs:enumeration value="@android:drawable/ic_dialog_dialer" />
+            <xs:enumeration value="@android:drawable/ic_dialog_email" />
+            <xs:enumeration value="@android:drawable/ic_dialog_info" />
+            <xs:enumeration value="@android:drawable/ic_dialog_map" />
+            <xs:enumeration value="@android:drawable/ic_input_add" />
+            <xs:enumeration value="@android:drawable/ic_input_delete" />
+            <xs:enumeration value="@android:drawable/ic_input_get" />
+            <xs:enumeration value="@android:drawable/ic_lock_idle_alarm" />
+            <xs:enumeration value="@android:drawable/ic_lock_idle_charging" />
+            <xs:enumeration value="@android:drawable/ic_lock_idle_lock" />
+            <xs:enumeration value="@android:drawable/ic_lock_idle_low_battery" />
+            <xs:enumeration value="@android:drawable/ic_lock_lock" />
+            <xs:enumeration value="@android:drawable/ic_lock_power_off" />
+            <xs:enumeration value="@android:drawable/ic_lock_silent_mode" />
+            <xs:enumeration value="@android:drawable/ic_lock_silent_mode_off" />
+            <xs:enumeration value="@android:drawable/ic_media_ff" />
+            <xs:enumeration value="@android:drawable/ic_media_next" />
+            <xs:enumeration value="@android:drawable/ic_media_pause" />
+            <xs:enumeration value="@android:drawable/ic_media_play" />
+            <xs:enumeration value="@android:drawable/ic_media_previous" />
+            <xs:enumeration value="@android:drawable/ic_media_rew" />
+            <xs:enumeration value="@android:drawable/ic_menu_add" />
+            <xs:enumeration value="@android:drawable/ic_menu_agenda" />
+            <xs:enumeration value="@android:drawable/ic_menu_always_landscape_portrait" />
+            <xs:enumeration value="@android:drawable/ic_menu_call" />
+            <xs:enumeration value="@android:drawable/ic_menu_camera" />
+            <xs:enumeration value="@android:drawable/ic_menu_close_clear_cancel" />
+            <xs:enumeration value="@android:drawable/ic_menu_compass" />
+            <xs:enumeration value="@android:drawable/ic_menu_crop" />
+            <xs:enumeration value="@android:drawable/ic_menu_day" />
+            <xs:enumeration value="@android:drawable/ic_menu_delete" />
+            <xs:enumeration value="@android:drawable/ic_menu_directions" />
+            <xs:enumeration value="@android:drawable/ic_menu_edit" />
+            <xs:enumeration value="@android:drawable/ic_menu_gallery" />
+            <xs:enumeration value="@android:drawable/ic_menu_help" />
+            <xs:enumeration value="@android:drawable/ic_menu_info_details" />
+            <xs:enumeration value="@android:drawable/ic_menu_manage" />
+            <xs:enumeration value="@android:drawable/ic_menu_mapmode" />
+            <xs:enumeration value="@android:drawable/ic_menu_month" />
+            <xs:enumeration value="@android:drawable/ic_menu_more" />
+            <xs:enumeration value="@android:drawable/ic_menu_my_calendar" />
+            <xs:enumeration value="@android:drawable/ic_menu_mylocation" />
+            <xs:enumeration value="@android:drawable/ic_menu_myplaces" />
+            <xs:enumeration value="@android:drawable/ic_menu_preferences" />
+            <xs:enumeration value="@android:drawable/ic_menu_recent_history" />
+            <xs:enumeration value="@android:drawable/ic_menu_report_image" />
+            <xs:enumeration value="@android:drawable/ic_menu_revert" />
+            <xs:enumeration value="@android:drawable/ic_menu_rotate" />
+            <xs:enumeration value="@android:drawable/ic_menu_save" />
+            <xs:enumeration value="@android:drawable/ic_menu_search" />
+            <xs:enumeration value="@android:drawable/ic_menu_send" />
+            <xs:enumeration value="@android:drawable/ic_menu_set_as" />
+            <xs:enumeration value="@android:drawable/ic_menu_share" />
+            <xs:enumeration value="@android:drawable/ic_menu_slideshow" />
+            <xs:enumeration value="@android:drawable/ic_menu_sort_alphabetically" />
+            <xs:enumeration value="@android:drawable/ic_menu_sort_by_size" />
+            <xs:enumeration value="@android:drawable/ic_menu_today" />
+            <xs:enumeration value="@android:drawable/ic_menu_upload" />
+            <xs:enumeration value="@android:drawable/ic_menu_upload_you_tube" />
+            <xs:enumeration value="@android:drawable/ic_menu_view" />
+            <xs:enumeration value="@android:drawable/ic_menu_week" />
+            <xs:enumeration value="@android:drawable/ic_menu_zoom" />
+            <xs:enumeration value="@android:drawable/ic_notification_clear_all" />
+            <xs:enumeration value="@android:drawable/ic_notification_overlay" />
+            <xs:enumeration value="@android:drawable/ic_partial_secure" />
+            <xs:enumeration value="@android:drawable/ic_popup_disk_full" />
+            <xs:enumeration value="@android:drawable/ic_popup_reminder" />
+            <xs:enumeration value="@android:drawable/ic_popup_sync" />
+            <xs:enumeration value="@android:drawable/ic_search_category_default" />
+            <xs:enumeration value="@android:drawable/ic_secure" />
+            <xs:enumeration value="@android:drawable/list_selector_background" />
+            <xs:enumeration value="@android:drawable/menu_frame" />
+            <xs:enumeration value="@android:drawable/menu_full_frame" />
+            <xs:enumeration value="@android:drawable/menuitem_background" />
+            <xs:enumeration value="@android:drawable/picture_frame" />
+            <xs:enumeration value="@android:drawable/presence_audio_away" />
+            <xs:enumeration value="@android:drawable/presence_audio_busy" />
+            <xs:enumeration value="@android:drawable/presence_audio_online" />
+            <xs:enumeration value="@android:drawable/presence_away" />
+            <xs:enumeration value="@android:drawable/presence_busy" />
+            <xs:enumeration value="@android:drawable/presence_invisible" />
+            <xs:enumeration value="@android:drawable/presence_offline" />
+            <xs:enumeration value="@android:drawable/presence_online" />
+            <xs:enumeration value="@android:drawable/presence_video_away" />
+            <xs:enumeration value="@android:drawable/presence_video_busy" />
+            <xs:enumeration value="@android:drawable/presence_video_online" />
+            <xs:enumeration value="@android:drawable/progress_horizontal" />
+            <xs:enumeration value="@android:drawable/progress_indeterminate_horizontal" />
+            <xs:enumeration value="@android:drawable/radiobutton_off_background" />
+            <xs:enumeration value="@android:drawable/radiobutton_on_background" />
+            <xs:enumeration value="@android:drawable/screen_background_dark" />
+            <xs:enumeration value="@android:drawable/screen_background_dark_transparent" />
+            <xs:enumeration value="@android:drawable/screen_background_light" />
+            <xs:enumeration value="@android:drawable/screen_background_light_transparent" />
+            <xs:enumeration value="@android:drawable/spinner_background" />
+            <xs:enumeration value="@android:drawable/spinner_dropdown_background" />
+            <xs:enumeration value="@android:drawable/star_big_off" />
+            <xs:enumeration value="@android:drawable/star_big_on" />
+            <xs:enumeration value="@android:drawable/star_off" />
+            <xs:enumeration value="@android:drawable/star_on" />
+            <xs:enumeration value="@android:drawable/stat_notify_call_mute" />
+            <xs:enumeration value="@android:drawable/stat_notify_chat" />
+            <xs:enumeration value="@android:drawable/stat_notify_error" />
+            <xs:enumeration value="@android:drawable/stat_notify_missed_call" />
+            <xs:enumeration value="@android:drawable/stat_notify_more" />
+            <xs:enumeration value="@android:drawable/stat_notify_sdcard" />
+            <xs:enumeration value="@android:drawable/stat_notify_sdcard_prepare" />
+            <xs:enumeration value="@android:drawable/stat_notify_sdcard_usb" />
+            <xs:enumeration value="@android:drawable/stat_notify_sync" />
+            <xs:enumeration value="@android:drawable/stat_notify_sync_noanim" />
+            <xs:enumeration value="@android:drawable/stat_notify_voicemail" />
+            <xs:enumeration value="@android:drawable/stat_sys_data_bluetooth" />
+            <xs:enumeration value="@android:drawable/stat_sys_download" />
+            <xs:enumeration value="@android:drawable/stat_sys_download_done" />
+            <xs:enumeration value="@android:drawable/stat_sys_headset" />
+            <xs:enumeration value="@android:drawable/stat_sys_phone_call" />
+            <xs:enumeration value="@android:drawable/stat_sys_phone_call_forward" />
+            <xs:enumeration value="@android:drawable/stat_sys_phone_call_on_hold" />
+            <xs:enumeration value="@android:drawable/stat_sys_speakerphone" />
+            <xs:enumeration value="@android:drawable/stat_sys_upload" />
+            <xs:enumeration value="@android:drawable/stat_sys_upload_done" />
+            <xs:enumeration value="@android:drawable/stat_sys_vp_phone_call" />
+            <xs:enumeration value="@android:drawable/stat_sys_vp_phone_call_on_hold" />
+            <xs:enumeration value="@android:drawable/stat_sys_warning" />
+            <xs:enumeration value="@android:drawable/status_bar_item_app_background" />
+            <xs:enumeration value="@android:drawable/status_bar_item_background" />
+            <xs:enumeration value="@android:drawable/sym_action_call" />
+            <xs:enumeration value="@android:drawable/sym_action_chat" />
+            <xs:enumeration value="@android:drawable/sym_action_email" />
+            <xs:enumeration value="@android:drawable/sym_call_incoming" />
+            <xs:enumeration value="@android:drawable/sym_call_missed" />
+            <xs:enumeration value="@android:drawable/sym_call_outgoing" />
+            <xs:enumeration value="@android:drawable/sym_contact_card" />
+            <xs:enumeration value="@android:drawable/sym_def_app_icon" />
+            <xs:enumeration value="@android:drawable/title_bar" />
+            <xs:enumeration value="@android:drawable/title_bar_tall" />
+            <xs:enumeration value="@android:drawable/toast_frame" />
+            <xs:enumeration value="@android:drawable/zoom_plate" />
+            <xs:enumeration value="?android:attr/accessibilityFocusedDrawable" />
+            <xs:enumeration value="?android:attr/actionBarDivider" />
+            <xs:enumeration value="?android:attr/actionBarItemBackground" />
+            <xs:enumeration value="?android:attr/actionMenuTextColor" />
+            <xs:enumeration value="?android:attr/actionModeBackground" />
+            <xs:enumeration value="?android:attr/actionModeCloseDrawable" />
+            <xs:enumeration value="?android:attr/actionModeCopyDrawable" />
+            <xs:enumeration value="?android:attr/actionModeCutDrawable" />
+            <xs:enumeration value="?android:attr/actionModeFindDrawable" />
+            <xs:enumeration value="?android:attr/actionModePasteDrawable" />
+            <xs:enumeration value="?android:attr/actionModeSelectAllDrawable" />
+            <xs:enumeration value="?android:attr/actionModeShareDrawable" />
+            <xs:enumeration value="?android:attr/actionModeSplitBackground" />
+            <xs:enumeration value="?android:attr/actionModeWebSearchDrawable" />
+            <xs:enumeration value="?android:attr/activatedBackgroundIndicator" />
+            <xs:enumeration value="?android:attr/alertDialogIcon" />
+            <xs:enumeration value="?android:attr/colorAccent" />
+            <xs:enumeration value="?android:attr/colorActivatedHighlight" />
+            <xs:enumeration value="?android:attr/colorBackground" />
+            <xs:enumeration value="?android:attr/colorBackgroundCacheHint" />
+            <xs:enumeration value="?android:attr/colorBackgroundFloating" />
+            <xs:enumeration value="?android:attr/colorButtonNormal" />
+            <xs:enumeration value="?android:attr/colorControlActivated" />
+            <xs:enumeration value="?android:attr/colorControlHighlight" />
+            <xs:enumeration value="?android:attr/colorControlNormal" />
+            <xs:enumeration value="?android:attr/colorEdgeEffect" />
+            <xs:enumeration value="?android:attr/colorFocusedHighlight" />
+            <xs:enumeration value="?android:attr/colorForeground" />
+            <xs:enumeration value="?android:attr/colorForegroundInverse" />
+            <xs:enumeration value="?android:attr/colorLongPressedHighlight" />
+            <xs:enumeration value="?android:attr/colorMultiSelectHighlight" />
+            <xs:enumeration value="?android:attr/colorPressedHighlight" />
+            <xs:enumeration value="?android:attr/colorPrimary" />
+            <xs:enumeration value="?android:attr/colorPrimaryDark" />
+            <xs:enumeration value="?android:attr/colorSecondary" />
+            <xs:enumeration value="?android:attr/colorSwitchThumbNormal" />
+            <xs:enumeration value="?android:attr/detailsElementBackground" />
+            <xs:enumeration value="?android:attr/dividerHorizontal" />
+            <xs:enumeration value="?android:attr/dividerVertical" />
+            <xs:enumeration value="?android:attr/editTextBackground" />
+            <xs:enumeration value="?android:attr/editTextColor" />
+            <xs:enumeration value="?android:attr/errorMessageAboveBackground" />
+            <xs:enumeration value="?android:attr/errorMessageBackground" />
+            <xs:enumeration value="?android:attr/fastScrollPreviewBackgroundLeft" />
+            <xs:enumeration value="?android:attr/fastScrollPreviewBackgroundRight" />
+            <xs:enumeration value="?android:attr/fastScrollTextColor" />
+            <xs:enumeration value="?android:attr/fastScrollThumbDrawable" />
+            <xs:enumeration value="?android:attr/fastScrollTrackDrawable" />
+            <xs:enumeration value="?android:attr/fingerprintAuthDrawable" />
+            <xs:enumeration value="?android:attr/floatingToolbarCloseDrawable" />
+            <xs:enumeration value="?android:attr/floatingToolbarForegroundColor" />
+            <xs:enumeration value="?android:attr/floatingToolbarItemBackgroundBorderlessDrawable" />
+            <xs:enumeration value="?android:attr/floatingToolbarItemBackgroundDrawable" />
+            <xs:enumeration value="?android:attr/floatingToolbarOpenDrawable" />
+            <xs:enumeration value="?android:attr/floatingToolbarPopupBackgroundDrawable" />
+            <xs:enumeration value="?android:attr/galleryItemBackground" />
+            <xs:enumeration value="?android:attr/homeAsUpIndicator" />
+            <xs:enumeration value="?android:attr/listChoiceBackgroundIndicator" />
+            <xs:enumeration value="?android:attr/listChoiceIndicatorMultiple" />
+            <xs:enumeration value="?android:attr/listChoiceIndicatorSingle" />
+            <xs:enumeration value="?android:attr/listDivider" />
+            <xs:enumeration value="?android:attr/panelBackground" />
+            <xs:enumeration value="?android:attr/panelColorBackground" />
+            <xs:enumeration value="?android:attr/panelColorForeground" />
+            <xs:enumeration value="?android:attr/panelFullBackground" />
+            <xs:enumeration value="?android:attr/panelFullBackground" />
+            <xs:enumeration value="?android:attr/quickContactBadgeOverlay" />
+            <xs:enumeration value="?android:attr/searchWidgetCorpusItemBackground" />
+            <xs:enumeration value="?android:attr/selectableItemBackground" />
+            <xs:enumeration value="?android:attr/selectableItemBackgroundBorderless" />
+            <xs:enumeration value="?android:attr/textCheckMark" />
+            <xs:enumeration value="?android:attr/textCheckMarkInverse" />
+            <xs:enumeration value="?android:attr/textColorAlertDialogListItem" />
+            <xs:enumeration value="?android:attr/textColorHighlightInverse" />
+            <xs:enumeration value="?android:attr/textColorHintInverse" />
+            <xs:enumeration value="?android:attr/textColorLinkInverse" />
+            <xs:enumeration value="?android:attr/textColorPrimary" />
+            <xs:enumeration value="?android:attr/textColorPrimaryActivated" />
+            <xs:enumeration value="?android:attr/textColorPrimaryDisableOnly" />
+            <xs:enumeration value="?android:attr/textColorPrimaryInverse" />
+            <xs:enumeration value="?android:attr/textColorPrimaryInverseDisableOnly" />
+            <xs:enumeration value="?android:attr/textColorPrimaryInverseNoDisable" />
+            <xs:enumeration value="?android:attr/textColorPrimaryNoDisable" />
+            <xs:enumeration value="?android:attr/textColorSecondary" />
+            <xs:enumeration value="?android:attr/textColorSecondaryActivated" />
+            <xs:enumeration value="?android:attr/textColorSecondaryInverse" />
+            <xs:enumeration value="?android:attr/textColorSecondaryInverseNoDisable" />
+            <xs:enumeration value="?android:attr/textColorSecondaryNoDisable" />
+            <xs:enumeration value="?android:attr/textColorTertiary" />
+            <xs:enumeration value="?android:attr/textColorTertiaryInverse" />
+            <xs:enumeration value="?android:attr/textSelectHandle" />
+            <xs:enumeration value="?android:attr/textSelectHandleLeft" />
+            <xs:enumeration value="?android:attr/textSelectHandleRight" />
+            <xs:enumeration value="?android:attr/textUnderlineColor" />
+            <xs:enumeration value="?android:attr/toastFrameBackground" />
+            <xs:enumeration value="?android:attr/windowBackground" />
+            <xs:enumeration value="?android:attr/windowBackgroundFallback" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -4739,7 +6410,308 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@android:color/background_dark" />
+            <xs:enumeration value="@android:color/background_light" />
+            <xs:enumeration value="@android:color/black" />
+            <xs:enumeration value="@android:color/darker_gray" />
+            <xs:enumeration value="@android:color/holo_blue_bright" />
+            <xs:enumeration value="@android:color/holo_blue_dark" />
+            <xs:enumeration value="@android:color/holo_blue_light" />
+            <xs:enumeration value="@android:color/holo_green_dark" />
+            <xs:enumeration value="@android:color/holo_green_light" />
+            <xs:enumeration value="@android:color/holo_orange_dark" />
+            <xs:enumeration value="@android:color/holo_orange_light" />
+            <xs:enumeration value="@android:color/holo_purple" />
+            <xs:enumeration value="@android:color/holo_red_dark" />
+            <xs:enumeration value="@android:color/holo_red_light" />
+            <xs:enumeration value="@android:color/primary_text_dark" />
+            <xs:enumeration value="@android:color/primary_text_dark_nodisable" />
+            <xs:enumeration value="@android:color/primary_text_light" />
+            <xs:enumeration value="@android:color/primary_text_light_nodisable" />
+            <xs:enumeration value="@android:color/secondary_text_dark" />
+            <xs:enumeration value="@android:color/secondary_text_dark_nodisable" />
+            <xs:enumeration value="@android:color/secondary_text_light" />
+            <xs:enumeration value="@android:color/secondary_text_light_nodisable" />
+            <xs:enumeration value="@android:color/tab_indicator_text" />
+            <xs:enumeration value="@android:color/tertiary_text_dark" />
+            <xs:enumeration value="@android:color/tertiary_text_light" />
+            <xs:enumeration value="@android:color/transparent" />
+            <xs:enumeration value="@android:color/white" />
+            <xs:enumeration value="@android:color/widget_edittext_dark" />
+            <xs:enumeration value="@android:drawable/alert_dark_frame" />
+            <xs:enumeration value="@android:drawable/alert_light_frame" />
+            <xs:enumeration value="@android:drawable/arrow_down_float" />
+            <xs:enumeration value="@android:drawable/arrow_up_float" />
+            <xs:enumeration value="@android:drawable/bottom_bar" />
+            <xs:enumeration value="@android:drawable/btn_default" />
+            <xs:enumeration value="@android:drawable/btn_default_small" />
+            <xs:enumeration value="@android:drawable/btn_dialog" />
+            <xs:enumeration value="@android:drawable/btn_dropdown" />
+            <xs:enumeration value="@android:drawable/btn_minus" />
+            <xs:enumeration value="@android:drawable/btn_plus" />
+            <xs:enumeration value="@android:drawable/btn_radio" />
+            <xs:enumeration value="@android:drawable/btn_star" />
+            <xs:enumeration value="@android:drawable/btn_star_big_off" />
+            <xs:enumeration value="@android:drawable/btn_star_big_on" />
+            <xs:enumeration value="@android:drawable/button_onoff_indicator_off" />
+            <xs:enumeration value="@android:drawable/button_onoff_indicator_on" />
+            <xs:enumeration value="@android:drawable/checkbox_off_background" />
+            <xs:enumeration value="@android:drawable/checkbox_on_background" />
+            <xs:enumeration value="@android:drawable/dark_header" />
+            <xs:enumeration value="@android:drawable/dialog_frame" />
+            <xs:enumeration value="@android:drawable/dialog_holo_dark_frame" />
+            <xs:enumeration value="@android:drawable/dialog_holo_light_frame" />
+            <xs:enumeration value="@android:drawable/divider_horizontal_bright" />
+            <xs:enumeration value="@android:drawable/divider_horizontal_dark" />
+            <xs:enumeration value="@android:drawable/divider_horizontal_dim_dark" />
+            <xs:enumeration value="@android:drawable/divider_horizontal_textfield" />
+            <xs:enumeration value="@android:drawable/edit_text" />
+            <xs:enumeration value="@android:drawable/editbox_background" />
+            <xs:enumeration value="@android:drawable/editbox_background_normal" />
+            <xs:enumeration value="@android:drawable/editbox_dropdown_dark_frame" />
+            <xs:enumeration value="@android:drawable/editbox_dropdown_light_frame" />
+            <xs:enumeration value="@android:drawable/gallery_thumb" />
+            <xs:enumeration value="@android:drawable/ic_btn_speak_now" />
+            <xs:enumeration value="@android:drawable/ic_delete" />
+            <xs:enumeration value="@android:drawable/ic_dialog_alert" />
+            <xs:enumeration value="@android:drawable/ic_dialog_dialer" />
+            <xs:enumeration value="@android:drawable/ic_dialog_email" />
+            <xs:enumeration value="@android:drawable/ic_dialog_info" />
+            <xs:enumeration value="@android:drawable/ic_dialog_map" />
+            <xs:enumeration value="@android:drawable/ic_input_add" />
+            <xs:enumeration value="@android:drawable/ic_input_delete" />
+            <xs:enumeration value="@android:drawable/ic_input_get" />
+            <xs:enumeration value="@android:drawable/ic_lock_idle_alarm" />
+            <xs:enumeration value="@android:drawable/ic_lock_idle_charging" />
+            <xs:enumeration value="@android:drawable/ic_lock_idle_lock" />
+            <xs:enumeration value="@android:drawable/ic_lock_idle_low_battery" />
+            <xs:enumeration value="@android:drawable/ic_lock_lock" />
+            <xs:enumeration value="@android:drawable/ic_lock_power_off" />
+            <xs:enumeration value="@android:drawable/ic_lock_silent_mode" />
+            <xs:enumeration value="@android:drawable/ic_lock_silent_mode_off" />
+            <xs:enumeration value="@android:drawable/ic_media_ff" />
+            <xs:enumeration value="@android:drawable/ic_media_next" />
+            <xs:enumeration value="@android:drawable/ic_media_pause" />
+            <xs:enumeration value="@android:drawable/ic_media_play" />
+            <xs:enumeration value="@android:drawable/ic_media_previous" />
+            <xs:enumeration value="@android:drawable/ic_media_rew" />
+            <xs:enumeration value="@android:drawable/ic_menu_add" />
+            <xs:enumeration value="@android:drawable/ic_menu_agenda" />
+            <xs:enumeration value="@android:drawable/ic_menu_always_landscape_portrait" />
+            <xs:enumeration value="@android:drawable/ic_menu_call" />
+            <xs:enumeration value="@android:drawable/ic_menu_camera" />
+            <xs:enumeration value="@android:drawable/ic_menu_close_clear_cancel" />
+            <xs:enumeration value="@android:drawable/ic_menu_compass" />
+            <xs:enumeration value="@android:drawable/ic_menu_crop" />
+            <xs:enumeration value="@android:drawable/ic_menu_day" />
+            <xs:enumeration value="@android:drawable/ic_menu_delete" />
+            <xs:enumeration value="@android:drawable/ic_menu_directions" />
+            <xs:enumeration value="@android:drawable/ic_menu_edit" />
+            <xs:enumeration value="@android:drawable/ic_menu_gallery" />
+            <xs:enumeration value="@android:drawable/ic_menu_help" />
+            <xs:enumeration value="@android:drawable/ic_menu_info_details" />
+            <xs:enumeration value="@android:drawable/ic_menu_manage" />
+            <xs:enumeration value="@android:drawable/ic_menu_mapmode" />
+            <xs:enumeration value="@android:drawable/ic_menu_month" />
+            <xs:enumeration value="@android:drawable/ic_menu_more" />
+            <xs:enumeration value="@android:drawable/ic_menu_my_calendar" />
+            <xs:enumeration value="@android:drawable/ic_menu_mylocation" />
+            <xs:enumeration value="@android:drawable/ic_menu_myplaces" />
+            <xs:enumeration value="@android:drawable/ic_menu_preferences" />
+            <xs:enumeration value="@android:drawable/ic_menu_recent_history" />
+            <xs:enumeration value="@android:drawable/ic_menu_report_image" />
+            <xs:enumeration value="@android:drawable/ic_menu_revert" />
+            <xs:enumeration value="@android:drawable/ic_menu_rotate" />
+            <xs:enumeration value="@android:drawable/ic_menu_save" />
+            <xs:enumeration value="@android:drawable/ic_menu_search" />
+            <xs:enumeration value="@android:drawable/ic_menu_send" />
+            <xs:enumeration value="@android:drawable/ic_menu_set_as" />
+            <xs:enumeration value="@android:drawable/ic_menu_share" />
+            <xs:enumeration value="@android:drawable/ic_menu_slideshow" />
+            <xs:enumeration value="@android:drawable/ic_menu_sort_alphabetically" />
+            <xs:enumeration value="@android:drawable/ic_menu_sort_by_size" />
+            <xs:enumeration value="@android:drawable/ic_menu_today" />
+            <xs:enumeration value="@android:drawable/ic_menu_upload" />
+            <xs:enumeration value="@android:drawable/ic_menu_upload_you_tube" />
+            <xs:enumeration value="@android:drawable/ic_menu_view" />
+            <xs:enumeration value="@android:drawable/ic_menu_week" />
+            <xs:enumeration value="@android:drawable/ic_menu_zoom" />
+            <xs:enumeration value="@android:drawable/ic_notification_clear_all" />
+            <xs:enumeration value="@android:drawable/ic_notification_overlay" />
+            <xs:enumeration value="@android:drawable/ic_partial_secure" />
+            <xs:enumeration value="@android:drawable/ic_popup_disk_full" />
+            <xs:enumeration value="@android:drawable/ic_popup_reminder" />
+            <xs:enumeration value="@android:drawable/ic_popup_sync" />
+            <xs:enumeration value="@android:drawable/ic_search_category_default" />
+            <xs:enumeration value="@android:drawable/ic_secure" />
+            <xs:enumeration value="@android:drawable/list_selector_background" />
+            <xs:enumeration value="@android:drawable/menu_frame" />
+            <xs:enumeration value="@android:drawable/menu_full_frame" />
+            <xs:enumeration value="@android:drawable/menuitem_background" />
+            <xs:enumeration value="@android:drawable/picture_frame" />
+            <xs:enumeration value="@android:drawable/presence_audio_away" />
+            <xs:enumeration value="@android:drawable/presence_audio_busy" />
+            <xs:enumeration value="@android:drawable/presence_audio_online" />
+            <xs:enumeration value="@android:drawable/presence_away" />
+            <xs:enumeration value="@android:drawable/presence_busy" />
+            <xs:enumeration value="@android:drawable/presence_invisible" />
+            <xs:enumeration value="@android:drawable/presence_offline" />
+            <xs:enumeration value="@android:drawable/presence_online" />
+            <xs:enumeration value="@android:drawable/presence_video_away" />
+            <xs:enumeration value="@android:drawable/presence_video_busy" />
+            <xs:enumeration value="@android:drawable/presence_video_online" />
+            <xs:enumeration value="@android:drawable/progress_horizontal" />
+            <xs:enumeration value="@android:drawable/progress_indeterminate_horizontal" />
+            <xs:enumeration value="@android:drawable/radiobutton_off_background" />
+            <xs:enumeration value="@android:drawable/radiobutton_on_background" />
+            <xs:enumeration value="@android:drawable/screen_background_dark" />
+            <xs:enumeration value="@android:drawable/screen_background_dark_transparent" />
+            <xs:enumeration value="@android:drawable/screen_background_light" />
+            <xs:enumeration value="@android:drawable/screen_background_light_transparent" />
+            <xs:enumeration value="@android:drawable/spinner_background" />
+            <xs:enumeration value="@android:drawable/spinner_dropdown_background" />
+            <xs:enumeration value="@android:drawable/star_big_off" />
+            <xs:enumeration value="@android:drawable/star_big_on" />
+            <xs:enumeration value="@android:drawable/star_off" />
+            <xs:enumeration value="@android:drawable/star_on" />
+            <xs:enumeration value="@android:drawable/stat_notify_call_mute" />
+            <xs:enumeration value="@android:drawable/stat_notify_chat" />
+            <xs:enumeration value="@android:drawable/stat_notify_error" />
+            <xs:enumeration value="@android:drawable/stat_notify_missed_call" />
+            <xs:enumeration value="@android:drawable/stat_notify_more" />
+            <xs:enumeration value="@android:drawable/stat_notify_sdcard" />
+            <xs:enumeration value="@android:drawable/stat_notify_sdcard_prepare" />
+            <xs:enumeration value="@android:drawable/stat_notify_sdcard_usb" />
+            <xs:enumeration value="@android:drawable/stat_notify_sync" />
+            <xs:enumeration value="@android:drawable/stat_notify_sync_noanim" />
+            <xs:enumeration value="@android:drawable/stat_notify_voicemail" />
+            <xs:enumeration value="@android:drawable/stat_sys_data_bluetooth" />
+            <xs:enumeration value="@android:drawable/stat_sys_download" />
+            <xs:enumeration value="@android:drawable/stat_sys_download_done" />
+            <xs:enumeration value="@android:drawable/stat_sys_headset" />
+            <xs:enumeration value="@android:drawable/stat_sys_phone_call" />
+            <xs:enumeration value="@android:drawable/stat_sys_phone_call_forward" />
+            <xs:enumeration value="@android:drawable/stat_sys_phone_call_on_hold" />
+            <xs:enumeration value="@android:drawable/stat_sys_speakerphone" />
+            <xs:enumeration value="@android:drawable/stat_sys_upload" />
+            <xs:enumeration value="@android:drawable/stat_sys_upload_done" />
+            <xs:enumeration value="@android:drawable/stat_sys_vp_phone_call" />
+            <xs:enumeration value="@android:drawable/stat_sys_vp_phone_call_on_hold" />
+            <xs:enumeration value="@android:drawable/stat_sys_warning" />
+            <xs:enumeration value="@android:drawable/status_bar_item_app_background" />
+            <xs:enumeration value="@android:drawable/status_bar_item_background" />
+            <xs:enumeration value="@android:drawable/sym_action_call" />
+            <xs:enumeration value="@android:drawable/sym_action_chat" />
+            <xs:enumeration value="@android:drawable/sym_action_email" />
+            <xs:enumeration value="@android:drawable/sym_call_incoming" />
+            <xs:enumeration value="@android:drawable/sym_call_missed" />
+            <xs:enumeration value="@android:drawable/sym_call_outgoing" />
+            <xs:enumeration value="@android:drawable/sym_contact_card" />
+            <xs:enumeration value="@android:drawable/sym_def_app_icon" />
+            <xs:enumeration value="@android:drawable/title_bar" />
+            <xs:enumeration value="@android:drawable/title_bar_tall" />
+            <xs:enumeration value="@android:drawable/toast_frame" />
+            <xs:enumeration value="@android:drawable/zoom_plate" />
+            <xs:enumeration value="?android:attr/accessibilityFocusedDrawable" />
+            <xs:enumeration value="?android:attr/actionBarDivider" />
+            <xs:enumeration value="?android:attr/actionBarItemBackground" />
+            <xs:enumeration value="?android:attr/actionMenuTextColor" />
+            <xs:enumeration value="?android:attr/actionModeBackground" />
+            <xs:enumeration value="?android:attr/actionModeCloseDrawable" />
+            <xs:enumeration value="?android:attr/actionModeCopyDrawable" />
+            <xs:enumeration value="?android:attr/actionModeCutDrawable" />
+            <xs:enumeration value="?android:attr/actionModeFindDrawable" />
+            <xs:enumeration value="?android:attr/actionModePasteDrawable" />
+            <xs:enumeration value="?android:attr/actionModeSelectAllDrawable" />
+            <xs:enumeration value="?android:attr/actionModeShareDrawable" />
+            <xs:enumeration value="?android:attr/actionModeSplitBackground" />
+            <xs:enumeration value="?android:attr/actionModeWebSearchDrawable" />
+            <xs:enumeration value="?android:attr/activatedBackgroundIndicator" />
+            <xs:enumeration value="?android:attr/alertDialogIcon" />
+            <xs:enumeration value="?android:attr/colorAccent" />
+            <xs:enumeration value="?android:attr/colorActivatedHighlight" />
+            <xs:enumeration value="?android:attr/colorBackground" />
+            <xs:enumeration value="?android:attr/colorBackgroundCacheHint" />
+            <xs:enumeration value="?android:attr/colorBackgroundFloating" />
+            <xs:enumeration value="?android:attr/colorButtonNormal" />
+            <xs:enumeration value="?android:attr/colorControlActivated" />
+            <xs:enumeration value="?android:attr/colorControlHighlight" />
+            <xs:enumeration value="?android:attr/colorControlNormal" />
+            <xs:enumeration value="?android:attr/colorEdgeEffect" />
+            <xs:enumeration value="?android:attr/colorFocusedHighlight" />
+            <xs:enumeration value="?android:attr/colorForeground" />
+            <xs:enumeration value="?android:attr/colorForegroundInverse" />
+            <xs:enumeration value="?android:attr/colorLongPressedHighlight" />
+            <xs:enumeration value="?android:attr/colorMultiSelectHighlight" />
+            <xs:enumeration value="?android:attr/colorPressedHighlight" />
+            <xs:enumeration value="?android:attr/colorPrimary" />
+            <xs:enumeration value="?android:attr/colorPrimaryDark" />
+            <xs:enumeration value="?android:attr/colorSecondary" />
+            <xs:enumeration value="?android:attr/colorSwitchThumbNormal" />
+            <xs:enumeration value="?android:attr/detailsElementBackground" />
+            <xs:enumeration value="?android:attr/dividerHorizontal" />
+            <xs:enumeration value="?android:attr/dividerVertical" />
+            <xs:enumeration value="?android:attr/editTextBackground" />
+            <xs:enumeration value="?android:attr/editTextColor" />
+            <xs:enumeration value="?android:attr/errorMessageAboveBackground" />
+            <xs:enumeration value="?android:attr/errorMessageBackground" />
+            <xs:enumeration value="?android:attr/fastScrollPreviewBackgroundLeft" />
+            <xs:enumeration value="?android:attr/fastScrollPreviewBackgroundRight" />
+            <xs:enumeration value="?android:attr/fastScrollTextColor" />
+            <xs:enumeration value="?android:attr/fastScrollThumbDrawable" />
+            <xs:enumeration value="?android:attr/fastScrollTrackDrawable" />
+            <xs:enumeration value="?android:attr/fingerprintAuthDrawable" />
+            <xs:enumeration value="?android:attr/floatingToolbarCloseDrawable" />
+            <xs:enumeration value="?android:attr/floatingToolbarForegroundColor" />
+            <xs:enumeration value="?android:attr/floatingToolbarItemBackgroundBorderlessDrawable" />
+            <xs:enumeration value="?android:attr/floatingToolbarItemBackgroundDrawable" />
+            <xs:enumeration value="?android:attr/floatingToolbarOpenDrawable" />
+            <xs:enumeration value="?android:attr/floatingToolbarPopupBackgroundDrawable" />
+            <xs:enumeration value="?android:attr/galleryItemBackground" />
+            <xs:enumeration value="?android:attr/homeAsUpIndicator" />
+            <xs:enumeration value="?android:attr/listChoiceBackgroundIndicator" />
+            <xs:enumeration value="?android:attr/listChoiceIndicatorMultiple" />
+            <xs:enumeration value="?android:attr/listChoiceIndicatorSingle" />
+            <xs:enumeration value="?android:attr/listDivider" />
+            <xs:enumeration value="?android:attr/panelBackground" />
+            <xs:enumeration value="?android:attr/panelColorBackground" />
+            <xs:enumeration value="?android:attr/panelColorForeground" />
+            <xs:enumeration value="?android:attr/panelFullBackground" />
+            <xs:enumeration value="?android:attr/panelFullBackground" />
+            <xs:enumeration value="?android:attr/quickContactBadgeOverlay" />
+            <xs:enumeration value="?android:attr/searchWidgetCorpusItemBackground" />
+            <xs:enumeration value="?android:attr/selectableItemBackground" />
+            <xs:enumeration value="?android:attr/selectableItemBackgroundBorderless" />
+            <xs:enumeration value="?android:attr/textCheckMark" />
+            <xs:enumeration value="?android:attr/textCheckMarkInverse" />
+            <xs:enumeration value="?android:attr/textColorAlertDialogListItem" />
+            <xs:enumeration value="?android:attr/textColorHighlightInverse" />
+            <xs:enumeration value="?android:attr/textColorHintInverse" />
+            <xs:enumeration value="?android:attr/textColorLinkInverse" />
+            <xs:enumeration value="?android:attr/textColorPrimary" />
+            <xs:enumeration value="?android:attr/textColorPrimaryActivated" />
+            <xs:enumeration value="?android:attr/textColorPrimaryDisableOnly" />
+            <xs:enumeration value="?android:attr/textColorPrimaryInverse" />
+            <xs:enumeration value="?android:attr/textColorPrimaryInverseDisableOnly" />
+            <xs:enumeration value="?android:attr/textColorPrimaryInverseNoDisable" />
+            <xs:enumeration value="?android:attr/textColorPrimaryNoDisable" />
+            <xs:enumeration value="?android:attr/textColorSecondary" />
+            <xs:enumeration value="?android:attr/textColorSecondaryActivated" />
+            <xs:enumeration value="?android:attr/textColorSecondaryInverse" />
+            <xs:enumeration value="?android:attr/textColorSecondaryInverseNoDisable" />
+            <xs:enumeration value="?android:attr/textColorSecondaryNoDisable" />
+            <xs:enumeration value="?android:attr/textColorTertiary" />
+            <xs:enumeration value="?android:attr/textColorTertiaryInverse" />
+            <xs:enumeration value="?android:attr/textSelectHandle" />
+            <xs:enumeration value="?android:attr/textSelectHandleLeft" />
+            <xs:enumeration value="?android:attr/textSelectHandleRight" />
+            <xs:enumeration value="?android:attr/textUnderlineColor" />
+            <xs:enumeration value="?android:attr/toastFrameBackground" />
+            <xs:enumeration value="?android:attr/windowBackground" />
+            <xs:enumeration value="?android:attr/windowBackgroundFallback" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -4775,7 +6747,16 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="anyRtl" />
+            <xs:enumeration value="firstStrong" />
+            <xs:enumeration value="firstStrongLtr" />
+            <xs:enumeration value="firstStrongRtl" />
+            <xs:enumeration value="inherit" />
+            <xs:enumeration value="locale" />
+            <xs:enumeration value="ltr" />
+            <xs:enumeration value="rtl" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -4828,6 +6809,30 @@
       </xs:union>
     </xs:simpleType>
   </xs:attribute>
+  <xs:attribute name="textEditSuggestionContainerLayout">
+    <xs:annotation>
+      <xs:documentation></xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:string">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:attribute name="textEditSuggestionHighlightStyle">
+    <xs:annotation>
+      <xs:documentation></xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:string">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:attribute>
   <xs:attribute name="textEditSuggestionItemLayout">
     <xs:annotation>
       <xs:documentation></xs:documentation>
@@ -4847,7 +6852,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -4859,14 +6867,17 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
   </xs:attribute>
   <xs:attribute name="textOff">
     <xs:annotation>
-      <xs:documentation>The text for the button when it is not checked.</xs:documentation>
+      <xs:documentation></xs:documentation>
     </xs:annotation>
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
@@ -4878,7 +6889,7 @@
   </xs:attribute>
   <xs:attribute name="textOn">
     <xs:annotation>
-      <xs:documentation>The text for the button when it is checked.</xs:documentation>
+      <xs:documentation></xs:documentation>
     </xs:annotation>
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
@@ -4955,7 +6966,11 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="bold" />
+            <xs:enumeration value="italic" />
+            <xs:enumeration value="normal" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -4974,7 +6989,7 @@
   </xs:attribute>
   <xs:attribute name="thumb">
     <xs:annotation>
-      <xs:documentation>Draws the thumb on a seekbar.</xs:documentation>
+      <xs:documentation></xs:documentation>
     </xs:annotation>
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
@@ -5010,7 +7025,7 @@
   </xs:attribute>
   <xs:attribute name="thumbTint">
     <xs:annotation>
-      <xs:documentation>Tint to apply to the button graphic.</xs:documentation>
+      <xs:documentation></xs:documentation>
     </xs:annotation>
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
@@ -5022,12 +7037,55 @@
   </xs:attribute>
   <xs:attribute name="thumbTintMode">
     <xs:annotation>
-      <xs:documentation>Blending mode used to apply the button graphic tint.</xs:documentation>
+      <xs:documentation>Blending mode used to apply the thumb tint.</xs:documentation>
     </xs:annotation>
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
           <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:attribute name="tickMark">
+    <xs:annotation>
+      <xs:documentation>Drawable displayed at each progress position on a seekbar.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:string">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:attribute name="tickMarkTint">
+    <xs:annotation>
+      <xs:documentation>Tint to apply to the tick mark drawable.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:string">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:attribute name="tickMarkTintMode">
+    <xs:annotation>
+      <xs:documentation>Blending mode used to apply the tick mark tint.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:string">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="add" />
+            <xs:enumeration value="multiply" />
+            <xs:enumeration value="screen" />
+            <xs:enumeration value="src_atop" />
+            <xs:enumeration value="src_in" />
+            <xs:enumeration value="src_over" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -5039,7 +7097,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="clock" />
+            <xs:enumeration value="spinner" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -5058,7 +7119,7 @@
   </xs:attribute>
   <xs:attribute name="tint">
     <xs:annotation>
-      <xs:documentation>Set a tinting color for the image. By default, the tint will blend using SRC_ATOP mode.</xs:documentation>
+      <xs:documentation>The tinting color for the image. By default, the tint will blend using SRC_ATOP mode. Please note that for compatibility reasons, this is NOT consistent with the default SRC_IN tint mode used by android.widget.ImageView.setImageTintList and by similar tint attributes on other views.</xs:documentation>
     </xs:annotation>
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
@@ -5092,9 +7153,21 @@
       </xs:union>
     </xs:simpleType>
   </xs:attribute>
+  <xs:attribute name="titleMargin">
+    <xs:annotation>
+      <xs:documentation>Specifies extra space on the left, start, right and end sides of the toolbar's title. Margin values should be positive.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:string">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:attribute>
   <xs:attribute name="titleMarginBottom">
     <xs:annotation>
-      <xs:documentation></xs:documentation>
+      <xs:documentation>Specifies extra space on the bottom side of the toolbar's title. If both this attribute and titleMargin are specified, then this attribute takes precedence. Margin values should be positive.</xs:documentation>
     </xs:annotation>
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
@@ -5106,19 +7179,7 @@
   </xs:attribute>
   <xs:attribute name="titleMarginEnd">
     <xs:annotation>
-      <xs:documentation></xs:documentation>
-    </xs:annotation>
-    <xs:simpleType>
-      <xs:union memberTypes="xs:string">
-        <xs:simpleType>
-          <xs:restriction base="xs:string" />
-        </xs:simpleType>
-      </xs:union>
-    </xs:simpleType>
-  </xs:attribute>
-  <xs:attribute name="titleMargins">
-    <xs:annotation>
-      <xs:documentation></xs:documentation>
+      <xs:documentation>Specifies extra space on the end side of the toolbar's title. If both this attribute and titleMargin are specified, then this attribute takes precedence. Margin values should be positive.</xs:documentation>
     </xs:annotation>
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
@@ -5130,7 +7191,7 @@
   </xs:attribute>
   <xs:attribute name="titleMarginStart">
     <xs:annotation>
-      <xs:documentation></xs:documentation>
+      <xs:documentation>Specifies extra space on the start side of the toolbar's title. If both this attribute and titleMargin are specified, then this attribute takes precedence. Margin values should be positive.</xs:documentation>
     </xs:annotation>
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
@@ -5142,7 +7203,7 @@
   </xs:attribute>
   <xs:attribute name="titleMarginTop">
     <xs:annotation>
-      <xs:documentation></xs:documentation>
+      <xs:documentation>Specifies extra space on the top side of the toolbar's title. If both this attribute and titleMargin are specified, then this attribute takes precedence. Margin values should be positive.</xs:documentation>
     </xs:annotation>
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
@@ -5195,7 +7256,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -5231,7 +7295,14 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="add" />
+            <xs:enumeration value="multiply" />
+            <xs:enumeration value="screen" />
+            <xs:enumeration value="src_atop" />
+            <xs:enumeration value="src_in" />
+            <xs:enumeration value="src_over" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -5243,7 +7314,11 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="alwaysScroll" />
+            <xs:enumeration value="disabled" />
+            <xs:enumeration value="normal" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -5279,7 +7354,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -5339,7 +7417,12 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="monospace" />
+            <xs:enumeration value="normal" />
+            <xs:enumeration value="sans" />
+            <xs:enumeration value="serif" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -5387,7 +7470,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -5399,7 +7485,10 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -5411,7 +7500,11 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="defaultPosition" />
+            <xs:enumeration value="left" />
+            <xs:enumeration value="right" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
@@ -5447,7 +7540,11 @@
     <xs:simpleType>
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
-          <xs:restriction base="xs:string" />
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="gone" />
+            <xs:enumeration value="invisible" />
+            <xs:enumeration value="visible" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>
