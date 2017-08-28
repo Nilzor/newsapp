@@ -3,6 +3,9 @@ using Android.Widget;
 using Android.OS;
 using System;
 using sharedproj;
+using sharedproj.Models;
+using xam_android_news.Views;
+using Android.Views;
 
 namespace xam_android_news
 {
@@ -19,7 +22,7 @@ namespace xam_android_news
             SetContentView (Resource.Layout.Main);
 
             InitViews();
-            BindView();
+            BindView(null);
             LoadDataAsync();
         }
 
@@ -32,14 +35,26 @@ namespace xam_android_news
         {
             var svc = new NewsService();
             var promContent = svc.syncLoadStrong();
+
+            BindView(promContent);
             string title = "?";
             if (promContent.Count > 0) title = promContent[0].promotionContent.title.value;
             resultTextView.SetText(title, TextView.BufferType.Normal);
         }
 
-        private void BindView()
+        private void BindView(ArticleList list)
         {
             resultTextView.SetText("Yay", TextView.BufferType.Normal);
+            ViewGroup scroller = FindViewById<ViewGroup>(Resource.Id.scroller);
+            if (list != null)
+            {
+                foreach (ArticleTeaser teaser in list ) 
+                {
+                    ArticleTeaserView atv = new ArticleTeaserView(this, null);
+                    atv.SetModel(teaser);
+                    scroller.AddView(atv);
+                }
+            }
         }
     }
 }
