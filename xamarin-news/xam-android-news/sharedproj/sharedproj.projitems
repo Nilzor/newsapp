@@ -9,5 +9,8 @@
     <Import_RootNamespace>sharedproj</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ArticleList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ArticleTeaser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NewsService.cs" />
   </ItemGroup>
 </Project>

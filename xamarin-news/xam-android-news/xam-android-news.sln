@@ -5,9 +5,13 @@ VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xam-android-news", "xam-android-news\xam-android-news.csproj", "{3EEBAA3D-ABFE-47DB-9C3D-47F6A1780A8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "netstandard-shared", "netstandard-shared\netstandard-shared.csproj", "{3D139529-DBFD-4B79-B7CA-0BCA5DB058B1}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "sharedproj", "sharedproj\sharedproj.shproj", "{B92C1B0E-E370-451A-BA44-F51E80552F80}"
 EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		sharedproj\sharedproj.projitems*{3eebaa3d-abfe-47db-9c3d-47f6a1780a8d}*SharedItemsImports = 4
+		sharedproj\sharedproj.projitems*{b92c1b0e-e370-451a-ba44-f51e80552f80}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -19,10 +23,6 @@ Global
 		{3EEBAA3D-ABFE-47DB-9C3D-47F6A1780A8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EEBAA3D-ABFE-47DB-9C3D-47F6A1780A8D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3EEBAA3D-ABFE-47DB-9C3D-47F6A1780A8D}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{3D139529-DBFD-4B79-B7CA-0BCA5DB058B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3D139529-DBFD-4B79-B7CA-0BCA5DB058B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3D139529-DBFD-4B79-B7CA-0BCA5DB058B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3D139529-DBFD-4B79-B7CA-0BCA5DB058B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
