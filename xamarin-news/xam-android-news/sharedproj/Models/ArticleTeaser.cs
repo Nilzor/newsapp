@@ -21,6 +21,15 @@ namespace sharedproj.Models
     {
         public Size size { get; set; }
         public List<Url> urls { get; set; }
+        public String GetUrlWithMinHeight(int height)
+        {
+            if (urls == null || urls.Count == 0) return null;
+            foreach (Url url in urls)
+            {
+                if (url.height >= height) return url.url;
+            }
+            return urls[urls.Count - 1].url;
+        }
     }
 
     public class Size

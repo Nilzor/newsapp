@@ -57,7 +57,7 @@ namespace xam_android_news.Views
             {
                 Android.Net.Uri uri = Android.Net.Uri.Parse(model.promotionContent.imageAsset.urls[0].url);
 
-                LoadAsync(model.promotionContent.imageAsset.urls[0].url);
+                LoadAsync(model.promotionContent.imageAsset.GetUrlWithMinHeight(240));
                 Log.Debug("ArticleTeaserView", "Image uri set: " + uri);
                 Log.Debug("ArticleTeaserView", "PROTOCOL: " + uri.Scheme);
                 Log.Debug("ArticleTeaserView", "HOST: " + uri.Host);
