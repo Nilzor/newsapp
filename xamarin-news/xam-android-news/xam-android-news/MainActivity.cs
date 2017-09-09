@@ -28,7 +28,6 @@ namespace xam_android_news
 
         private void InitViews()
         {
-            resultTextView = FindViewById<TextView>(Resource.Id.result_text);
         }
 
         private void LoadDataAsync()
@@ -37,14 +36,10 @@ namespace xam_android_news
             var promContent = svc.syncLoadStrong();
 
             BindView(promContent);
-            string title = "?";
-            if (promContent.Count > 0) title = promContent[0].promotionContent.title.value;
-            resultTextView.SetText(title, TextView.BufferType.Normal);
         }
 
         private void BindView(ArticleList list)
         {
-            resultTextView.SetText("Yay", TextView.BufferType.Normal);
             ViewGroup scroller = FindViewById<ViewGroup>(Resource.Id.scroller);
             if (list != null)
             {
