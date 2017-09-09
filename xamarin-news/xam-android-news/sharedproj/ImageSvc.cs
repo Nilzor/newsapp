@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+using Android.App;
+using Android.Content;
+using Android.OS;
+using Android.Runtime;
+using Android.Views;
+using Android.Widget;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using Android.Graphics;
+using System.Threading.Tasks;
+using Android.Util;
+
+namespace sharedproj
+{
+    class ImageSvc
+    {
+        public async Task<Bitmap> asyncLoadIt(String uri) { 
+            var client = new HttpClient();
+            try
+            {
+                byte[] data = await client.GetByteArrayAsync(uri);
+                Bitmap img = BitmapFactory.DecodeByteArray(data, 0, data.Length);
+                return img;
+            } catch (Exception ex)
+            {
+                Log.Debug("ImageService", String.Format("Failed loading image %s: %s", uri, ex.Message));
+                return null;
+            }
+        }
+    }
+}

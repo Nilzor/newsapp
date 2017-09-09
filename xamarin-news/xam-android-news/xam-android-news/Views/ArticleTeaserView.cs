@@ -11,6 +11,8 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 using sharedproj.Models;
+using Android.Graphics;
+using sharedproj;
 
 namespace xam_android_news.Views
 {
@@ -53,11 +55,36 @@ namespace xam_android_news.Views
         {
             try
             {
-                image.SetImageURI(Android.Net.Uri.Parse(model.promotionContent.imageAsset.urls[0].url));
-            } catch (Exception ex) { }
+                Android.Net.Uri uri = Android.Net.Uri.Parse(model.promotionContent.imageAsset.urls[0].url);
+
+                LoadAsync(model.promotionContent.imageAsset.urls[0].url);
+                Log.Debug("ArticleTeaserView", "Image uri set: " + uri);
+                Log.Debug("ArticleTeaserView", "PROTOCOL: " + uri.Scheme);
+                Log.Debug("ArticleTeaserView", "HOST: " + uri.Host);
+                Log.Debug("ArticleTeaserView", "PATH: " + uri.Path);
+            } catch (Exception ex) {
+                Log.Debug("ArticleTeaserView", ex.Message);
+            }
 
             title.SetText(model.promotionContent.title.value, TextView.BufferType.Normal);
             description.SetText(model.promotionContent.description.value, TextView.BufferType.Normal);
+        }
+
+        private async void LoadAsync(String uri)
+        {
+            ImageSvc imgSvc = new ImageSvc();
+            Bitmap bitmap = await imgSvc.asyncLoadIt(uri);
+            if (bitmap != null)
+            {
+                try
+                {
+                    image.SetImageBitmap(bitmap);
+                }
+                catch (Exception ex)
+                {
+                    Log.Debug("ArticleTeaserView", ex.Message);
+                }
+            }
         }
     }
 }
