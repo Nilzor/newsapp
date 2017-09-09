@@ -6,12 +6,14 @@ using sharedproj;
 using sharedproj.Models;
 using xam_android_news.Views;
 using Android.Views;
+using Android.Util;
 
 namespace xam_android_news
 {
     [Activity(Label = "xam_android_news", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
+        private const string TAG = "MainActivity";
         TextView resultTextView;
 
         protected override void OnCreate(Bundle bundle)
@@ -40,6 +42,7 @@ namespace xam_android_news
 
         private void BindView(ArticleList list)
         {
+            Log.Debug(TAG, "Binding MainActivity");
             ViewGroup scroller = FindViewById<ViewGroup>(Resource.Id.scroller);
             if (list != null)
             {

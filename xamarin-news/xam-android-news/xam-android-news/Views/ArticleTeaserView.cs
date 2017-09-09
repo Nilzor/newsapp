@@ -19,6 +19,7 @@ namespace xam_android_news.Views
     public class ArticleTeaserView : FrameLayout
     {
         LayoutInflater inflater;
+        private const String TAG = "ArticleTeaserView";
 
         private TextView description;
         private TextView title;
@@ -57,13 +58,11 @@ namespace xam_android_news.Views
             {
                 Android.Net.Uri uri = Android.Net.Uri.Parse(model.promotionContent.imageAsset.urls[0].url);
 
+                Log.Debug(TAG, "Image loading starting: " + uri);
                 LoadAsync(model.promotionContent.imageAsset.GetUrlWithMinHeight(240));
-                Log.Debug("ArticleTeaserView", "Image uri set: " + uri);
-                Log.Debug("ArticleTeaserView", "PROTOCOL: " + uri.Scheme);
-                Log.Debug("ArticleTeaserView", "HOST: " + uri.Host);
-                Log.Debug("ArticleTeaserView", "PATH: " + uri.Path);
+                Log.Debug(TAG, "Image loading started: " + uri);
             } catch (Exception ex) {
-                Log.Debug("ArticleTeaserView", ex.Message);
+                Log.Debug(TAG, ex.Message);
             }
 
             title.SetText(model.promotionContent.title.value, TextView.BufferType.Normal);
@@ -74,6 +73,7 @@ namespace xam_android_news.Views
         {
             ImageSvc imgSvc = new ImageSvc();
             Bitmap bitmap = await imgSvc.asyncLoadIt(uri);
+            Log.Debug(TAG, "Image load completed: " + uri);
             if (bitmap != null)
             {
                 try
@@ -82,7 +82,7 @@ namespace xam_android_news.Views
                 }
                 catch (Exception ex)
                 {
-                    Log.Debug("ArticleTeaserView", ex.Message);
+                    Log.Debug(TAG, ex.Message);
                 }
             }
         }
