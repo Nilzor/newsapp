@@ -35,15 +35,15 @@ namespace xam_android_news
         {
         }
 
-        private void LoadDataAsync()
+        private async void LoadDataAsync()
         {
             var svc = new NewsService();
             var promContent = svc.syncLoadStrong();
 
-            BindView(promContent);
+            await BindView(promContent);
         }
 
-        private async void BindView(ArticleList list)
+        private async Task BindView(ArticleList list)
         {
             Log.Debug(TAG, "Binding MainActivity");
             ViewGroup scroller = FindViewById<ViewGroup>(Resource.Id.scroller);
