@@ -19,8 +19,8 @@ namespace sharedproj
 {
     class ImageSvc
     {
-        public async Task<Bitmap> asyncLoadIt(String uri) { 
-            var client = new HttpClient();
+        private static HttpClient client = new HttpClient();
+        public async Task<Bitmap> loadAndDecodeBitmap(String uri) { 
             try
             {
                 byte[] data = await client.GetByteArrayAsync(uri);

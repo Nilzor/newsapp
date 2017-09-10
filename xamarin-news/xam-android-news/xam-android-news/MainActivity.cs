@@ -7,6 +7,9 @@ using sharedproj.Models;
 using xam_android_news.Views;
 using Android.Views;
 using Android.Util;
+using System.Collections.Generic;
+using Android.Graphics;
+using System.Threading.Tasks;
 
 namespace xam_android_news
 {
@@ -40,19 +43,22 @@ namespace xam_android_news
             BindView(promContent);
         }
 
-        private void BindView(ArticleList list)
+        private async void BindView(ArticleList list)
         {
             Log.Debug(TAG, "Binding MainActivity");
             ViewGroup scroller = FindViewById<ViewGroup>(Resource.Id.scroller);
+            var tasks = new List<Task<Bitmap>>();
             if (list != null)
             {
+                int i = 0;
                 foreach (ArticleTeaser teaser in list ) 
                 {
                     ArticleTeaserView atv = new ArticleTeaserView(this, null);
-                    atv.SetModel(teaser);
+                    tasks.Add(atv.SetModel(teaser));
                     scroller.AddView(atv);
                 }
             }
+            await Task.WhenAll(tasks);
         }
     }
 }
