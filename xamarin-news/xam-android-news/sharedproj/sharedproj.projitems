@@ -10,8 +10,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)ImageSvc.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Article.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ArticleList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ArticleTeaser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Components.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)NewsService.cs" />
   </ItemGroup>
 </Project>
