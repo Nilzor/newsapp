@@ -1,5 +1,5 @@
 ﻿using RestSharp;
-using sharedproj.Models;
+using sharedproj.Models;    
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,34 +11,17 @@ namespace sharedproj
     {
         public const string Url = "http://sch.nilsenlabs.com";
 
-        public Task<String> loadIt()
+        public Task<ArticleList> loadLatestList()
         {
-            var t = new TaskCompletionSource<string>();
+            var t = new TaskCompletionSource<ArticleList>();
 
             var client = new RestClient(Url);
             var req = new RestRequest("data/latest");
-            client.ExecuteAsync(req, resp =>
+            client.ExecuteAsync<ArticleList>(req, resp =>
             {
-                t.TrySetResult(resp.Content);
+                t.TrySetResult(resp.Data);
             });
             return t.Task;
-        }
-
-        public String syncLoadIt()
-        {
-            var client = new RestClient(Url);
-            var req = new RestRequest("data/latest");
-            var res = client.Execute(req);
-            return res.Content;
-        }
-
-
-        public ArticleList syncLoadStrong()
-        {
-            var client = new RestClient(Url);
-            var req = new RestRequest("data/latest");
-            var res = client.Execute<ArticleList>(req);
-            return res.Data;
         }
     }
 }

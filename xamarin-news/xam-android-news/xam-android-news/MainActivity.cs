@@ -38,8 +38,7 @@ namespace xam_android_news
         private async void LoadDataAsync()
         {
             var svc = new NewsService();
-            var promContent = svc.syncLoadStrong();
-
+            var promContent = await svc.loadLatestList();
             await BindView(promContent);
         }
 
