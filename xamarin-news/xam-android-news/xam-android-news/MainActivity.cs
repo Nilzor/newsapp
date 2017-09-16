@@ -29,10 +29,16 @@ namespace xam_android_news
             InitViews();
             BindView(null);
             LoadDataAsync();
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<ArticleClickedMessage>(this, OnArticleClicked);
         }
 
         private void InitViews()
         {
+        }
+
+        public void OnArticleClicked(ArticleClickedMessage msg)
+        {
+            Log.Debug("zz", "Yay article clicked: " + msg.Id);
         }
 
         private async void LoadDataAsync()

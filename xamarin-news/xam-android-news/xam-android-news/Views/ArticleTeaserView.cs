@@ -59,11 +59,15 @@ namespace xam_android_news.Views
         private void Container_Click(object sender, EventArgs e)
         {
             // Todo invoke listener
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new ArticleClickedMessage(model.id));
         }
+
+        private ArticleTeaser model;
 
         private static int ctr = 0;
         public Task<Bitmap> SetModel(ArticleTeaser model)
         {
+            this.model = model;
             Task<Bitmap> task = null;
             try
             {
