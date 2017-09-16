@@ -53,7 +53,8 @@ namespace xam_android_news
                 foreach (ArticleTeaser teaser in list ) 
                 {
                     ArticleTeaserView atv = new ArticleTeaserView(this, null);
-                    tasks.Add(atv.SetModel(teaser));
+                    var task = atv.SetModel(teaser);
+                    if (task != null)tasks.Add(task);
                     scroller.AddView(atv);
                 }
             }

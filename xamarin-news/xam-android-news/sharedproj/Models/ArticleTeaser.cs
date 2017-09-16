@@ -48,6 +48,11 @@ namespace sharedproj.Models
 
     public class ValueString
     {
+        public ValueString() { }
+        public ValueString(String text)
+        {
+            value = text;
+        }
         public string value { get; set; }
     }
 }

@@ -25,6 +25,7 @@ namespace xam_android_news.Views
         private TextView description;
         private TextView title;
         private ImageView image;
+        private ViewGroup container;
 
         public ArticleTeaserView(Context context, IAttributeSet attrs) :
             base(context, attrs)
@@ -51,6 +52,13 @@ namespace xam_android_news.Views
             title = FindViewById<TextView>(Resource.Id.teaserTitle);
             description = FindViewById<TextView>(Resource.Id.teaserDescription);
             image = FindViewById<ImageView>(Resource.Id.teaserImage);
+            container = FindViewById<ViewGroup>(Resource.Id.teaserContainer);
+            container.Click += Container_Click;
+        }
+
+        private void Container_Click(object sender, EventArgs e)
+        {
+            // Todo invoke listener
         }
 
         private static int ctr = 0;
@@ -60,7 +68,7 @@ namespace xam_android_news.Views
             try
             {
                 Android.Net.Uri uri = Android.Net.Uri.Parse(model.promotionContent.imageAsset.urls[0].url);
-
+                container.Tag = model.id;
                 //LoadAsync(model.promotionContent.imageAsset.GetUrlWithMinHeight(240));
                 Log.Debug(TAG, "Image " + (++ctr) + " load starting...");
                 task = LoadAsync(model.promotionContent.imageAsset.GetUrlWithMinHeight(240));
