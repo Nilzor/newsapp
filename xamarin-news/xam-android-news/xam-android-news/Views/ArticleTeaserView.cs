@@ -59,7 +59,7 @@ namespace xam_android_news.Views
         private void Container_Click(object sender, EventArgs e)
         {
             // Tod//o invoke listener
-           // GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new ArticleClickedMessage(model.id));
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new ArticleClickedMessage(model.id));
         }
 
         private ArticleTeaser model;
