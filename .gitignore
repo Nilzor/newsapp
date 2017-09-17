@@ -4,3 +4,6 @@
 *.bak
 *.user
 xamarin-news/xam-android-news/.vs
+react-news/android/.idea/mark*
+react-news/.idea/uiDesigner.xml
+react-news/data/RKStorage
