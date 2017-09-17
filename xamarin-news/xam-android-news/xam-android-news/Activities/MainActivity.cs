@@ -10,6 +10,7 @@ using Android.Util;
 using System.Collections.Generic;
 using Android.Graphics;
 using System.Threading.Tasks;
+using xam_android_news.Activities;
 
 namespace xam_android_news
 {
@@ -38,7 +39,7 @@ namespace xam_android_news
 
         public void OnArticleClicked(ArticleClickedMessage msg)
         {
-            Log.Debug("zz", "Yay article clicked: " + msg.Id);
+            StartActivity(ArticleActivity.CreateIntent(this, msg.Id));
         }
 
         private async void LoadDataAsync()

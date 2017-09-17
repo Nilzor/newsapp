@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using RestSharp;
+using sharedproj.FakeData;
 using sharedproj.Models;    
 using System;
 using System.Collections.Generic;
@@ -22,7 +23,8 @@ namespace sharedproj
             var req = new RestRequest("data/latest");
             NewsClient.ExecuteAsync<ArticleList>(req, resp =>
             {
-                t.TrySetResult(resp.Data);
+                t.TrySetResult(new FakeArticleList());
+                //t.TrySetResult(resp.Data);
             });
             return t.Task;
         }
