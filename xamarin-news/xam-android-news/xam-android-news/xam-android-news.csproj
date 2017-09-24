@@ -104,6 +104,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\Article\ArticleTextView.cs" />
     <Compile Include="Views\Article\BlankComponent.cs" />
+    <Compile Include="Views\Article\ImageComponent.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
@@ -131,6 +132,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\comp_text_blockquote.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\comp_image.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

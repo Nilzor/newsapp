@@ -31,6 +31,23 @@ namespace sharedproj.Models
             }
             return urls[urls.Count - 1].url;
         }
+
+        public static ImageAsset FromDynamic(dynamic src)
+        {
+            var asset = new ImageAsset();
+            asset.urls = new List<Url>();
+            asset.size = new Size();
+            asset.size.width = (int) src.size.width;
+            asset.size.height = (int) src.size.height;
+            foreach (dynamic dynUrl in src.urls) {
+                Url url = new Url();
+                url.height = (int) dynUrl.height;
+                url.width = (int) dynUrl.width;
+                url.url = dynUrl.url;
+                asset.urls.Add(url);
+            }
+            return asset;
+        }
     }
 
     public class Size
