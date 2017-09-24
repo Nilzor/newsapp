@@ -3,4 +3,5 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/text_margin"
-    android:textSize="14sp"/>
+    android:textSize="14dp"
+    android:textStyle="italic"/>

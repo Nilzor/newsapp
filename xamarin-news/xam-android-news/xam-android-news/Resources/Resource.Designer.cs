@@ -65,6 +65,9 @@ namespace xam_android_news
 			// aapt resource value: 0x7f040002
 			public const int item_touch_helper_swipe_escape_velocity = 2130968578;
 			
+			// aapt resource value: 0x7f040003
+			public const int text_margin = 2130968579;
+			
 			static Dimension()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -144,7 +147,19 @@ namespace xam_android_news
 			public const int comp_text = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int Main = 2130903043;
+			public const int comp_text_blockquote = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int comp_text_heading = 2130903044;
+			
+			// aapt resource value: 0x7f030005
+			public const int comp_text_lead = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int comp_text_title = 2130903046;
+			
+			// aapt resource value: 0x7f030007
+			public const int Main = 2130903047;
 			
 			static Layout()
 			{

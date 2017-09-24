@@ -25,10 +25,9 @@ namespace xam_android_news.ArticleLogic
             string type = componentSegment.type;
             switch (type)
             {
-                //case "text": return new ArticleTextView(context, null);
-                case "text": return new ArticleTextView(Inflater.Inflate(Resource.Layout.comp_text, null));
+                case "text": return ArticleTextView.Create(Inflater, componentSegment);
+                default: return new BlankComponent(context);
             }
-            return null;
         }
     }
 }

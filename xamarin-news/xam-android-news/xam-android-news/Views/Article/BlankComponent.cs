@@ -11,7 +11,7 @@ using Android.Support.V7.Widget;
 
 namespace xam_android_news.Views.Article
 {
-    public class BlankComponent : RecyclerView.ViewHolder
+    public class BlankComponent : RecyclerView.ViewHolder, ArticleComponent
     {
         public BlankComponent(Context context) : base(CreateView(context))
         {
@@ -23,6 +23,10 @@ namespace xam_android_news.Views.Article
             var lp = new FrameLayout.LayoutParams(0,0);
             fl.LayoutParameters = lp;
             return fl;
+        }
+
+        public void SetData(dynamic data)
+        { 
         }
     }
 }

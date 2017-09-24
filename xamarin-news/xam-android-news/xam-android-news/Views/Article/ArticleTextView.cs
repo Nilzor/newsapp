@@ -26,6 +26,28 @@ namespace xam_android_news.Views.Article
             TextView = (TextView) view;
         }
 
+        /// <summary>
+        /// View constructor which inflates a view based on subtype
+        /// </summary>
+        internal static ArticleTextView Create(LayoutInflater inflater, dynamic component)
+        {
+            int viewId = ResolveViewFromSubtype((string) component.subtype);
+            return new ArticleTextView(inflater.Inflate(viewId, null));
+        }
+
+        private static int ResolveViewFromSubtype(string subType)
+        {
+            switch (subType)
+            {
+                case "title": return Resource.Layout.comp_text_title;
+                case "lead": return Resource.Layout.comp_text_lead;
+                case "heading": return Resource.Layout.comp_text_heading;
+                case "subtitle": return Resource.Layout.comp_text_heading;
+                case "blockquote": return Resource.Layout.comp_text_blockquote;
+                default: return Resource.Layout.comp_text;
+            }
+        }
+
         private void Initialize()
         {
         }

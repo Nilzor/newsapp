@@ -45,12 +45,7 @@ namespace xam_android_news.ArticleLogic
             var context = parent.Context;
             dynamic componentModel = ArticleModel.components[viewPosition];
             var component = Resolver.GetComponentFor(context, componentModel);
-            if (component != null) Log.Info(TAG, "Resolved component of type %s", componentModel.type);
-            else
-            {
-                Log.Warn(TAG, "Unable to resolve component of type %s", componentModel.type);
-                component = new BlankComponent(context);
-            }
+            Log.Info(TAG, "Resolved component of type %s", componentModel.type);
             return component;
         } 
 
