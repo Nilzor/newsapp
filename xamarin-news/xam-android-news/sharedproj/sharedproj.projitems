@@ -11,6 +11,7 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)FakeData\FakeArticleList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ImageSvc.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Messages\ArticleClickedMessage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ArticleList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ArticleTeaser.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)NewsService.cs" />

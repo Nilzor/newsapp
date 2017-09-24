@@ -14,6 +14,7 @@ using sharedproj.Models;
 using Android.Graphics;
 using sharedproj;
 using System.Threading.Tasks;
+using xam_android_news.Messages;
 
 namespace xam_android_news.Views
 {
@@ -58,8 +59,9 @@ namespace xam_android_news.Views
 
         private void Container_Click(object sender, EventArgs e)
         {
-            // Tod//o invoke listener
-            GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new ArticleClickedMessage(model.id));
+            // Todo invoke listener
+            String articleId = model.id;
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new ArticleClickedMessage(articleId));
         }
 
         private ArticleTeaser model;

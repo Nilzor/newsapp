@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using Android.Graphics;
 using System.Threading.Tasks;
 using xam_android_news.Activities;
+using xam_android_news.Messages;
 
 namespace xam_android_news
 {
