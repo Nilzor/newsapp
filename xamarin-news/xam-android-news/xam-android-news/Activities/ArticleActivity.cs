@@ -29,7 +29,7 @@ namespace xam_android_news.Activities
         /// </summary>
         public static Intent CreateIntent(Context context, String articleId)
         {
-            Intent intent = new Intent(context, typeof(Activity));
+            Intent intent = new Intent(context, typeof(ArticleActivity));
             intent.PutExtra("ArticleId", articleId);
             return intent;
         }
