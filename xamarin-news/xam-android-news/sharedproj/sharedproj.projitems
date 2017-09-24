@@ -15,5 +15,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\ArticleList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ArticleTeaser.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)NewsService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ArticleViewModel.cs" />
   </ItemGroup>
 </Project>
