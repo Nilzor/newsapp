@@ -14,6 +14,7 @@ using sharedproj.Models;
 using Android.Graphics;
 using sharedproj;
 using System.Threading.Tasks;
+using xam_android_news.Messages;
 
 namespace xam_android_news.Views
 {
@@ -25,6 +26,7 @@ namespace xam_android_news.Views
         private TextView description;
         private TextView title;
         private ImageView image;
+        private ViewGroup container;
 
         public ArticleTeaserView(Context context, IAttributeSet attrs) :
             base(context, attrs)
@@ -51,16 +53,28 @@ namespace xam_android_news.Views
             title = FindViewById<TextView>(Resource.Id.teaserTitle);
             description = FindViewById<TextView>(Resource.Id.teaserDescription);
             image = FindViewById<ImageView>(Resource.Id.teaserImage);
+            container = FindViewById<ViewGroup>(Resource.Id.teaserContainer);
+            container.Click += Container_Click;
         }
+
+        private void Container_Click(object sender, EventArgs e)
+        {
+            // Todo invoke listener
+            String articleId = model.id;
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new ArticleClickedMessage(articleId));
+        }
+
+        private ArticleTeaser model;
 
         private static int ctr = 0;
         public Task<Bitmap> SetModel(ArticleTeaser model)
         {
+            this.model = model;
             Task<Bitmap> task = null;
             try
             {
                 Android.Net.Uri uri = Android.Net.Uri.Parse(model.promotionContent.imageAsset.urls[0].url);
-
+                container.Tag = model.id;
                 //LoadAsync(model.promotionContent.imageAsset.GetUrlWithMinHeight(240));
                 Log.Debug(TAG, "Image " + (++ctr) + " load starting...");
                 task = LoadAsync(model.promotionContent.imageAsset.GetUrlWithMinHeight(240));

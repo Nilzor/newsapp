@@ -31,12 +31,49 @@ namespace xam_android_news
 		public partial class Attribute
 		{
 			
+			// aapt resource value: 0x7f010000
+			public const int layoutManager = 2130771968;
+			
+			// aapt resource value: 0x7f010002
+			public const int reverseLayout = 2130771970;
+			
+			// aapt resource value: 0x7f010001
+			public const int spanCount = 2130771969;
+			
+			// aapt resource value: 0x7f010003
+			public const int stackFromEnd = 2130771971;
+			
 			static Attribute()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 			}
 			
 			private Attribute()
+			{
+			}
+		}
+		
+		public partial class Dimension
+		{
+			
+			// aapt resource value: 0x7f040000
+			public const int item_touch_helper_max_drag_scroll_per_frame = 2130968576;
+			
+			// aapt resource value: 0x7f040001
+			public const int item_touch_helper_swipe_escape_max_velocity = 2130968577;
+			
+			// aapt resource value: 0x7f040002
+			public const int item_touch_helper_swipe_escape_velocity = 2130968578;
+			
+			// aapt resource value: 0x7f040003
+			public const int text_margin = 2130968579;
+			
+			static Dimension()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Dimension()
 			{
 			}
 		}
@@ -60,17 +97,41 @@ namespace xam_android_news
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050003
-			public const int scroller = 2131034115;
+			// aapt resource value: 0x7f050001
+			public const int article_container = 2131034113;
 			
 			// aapt resource value: 0x7f050002
-			public const int teaserDescription = 2131034114;
+			public const int article_error_view = 2131034114;
+			
+			// aapt resource value: 0x7f050003
+			public const int article_progressbar = 2131034115;
+			
+			// aapt resource value: 0x7f05000a
+			public const int img_byline = 2131034122;
+			
+			// aapt resource value: 0x7f050009
+			public const int img_caption = 2131034121;
+			
+			// aapt resource value: 0x7f050008
+			public const int img_view = 2131034120;
 			
 			// aapt resource value: 0x7f050000
-			public const int teaserImage = 2131034112;
+			public const int item_touch_helper_previous_elevation = 2131034112;
 			
-			// aapt resource value: 0x7f050001
-			public const int teaserTitle = 2131034113;
+			// aapt resource value: 0x7f05000b
+			public const int scroller = 2131034123;
+			
+			// aapt resource value: 0x7f050004
+			public const int teaserContainer = 2131034116;
+			
+			// aapt resource value: 0x7f050007
+			public const int teaserDescription = 2131034119;
+			
+			// aapt resource value: 0x7f050005
+			public const int teaserImage = 2131034117;
+			
+			// aapt resource value: 0x7f050006
+			public const int teaserTitle = 2131034118;
 			
 			static Id()
 			{
@@ -86,10 +147,31 @@ namespace xam_android_news
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int article_teaser = 2130903040;
+			public const int article_activity = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int Main = 2130903041;
+			public const int article_teaser = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int comp_image = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int comp_text = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int comp_text_blockquote = 2130903044;
+			
+			// aapt resource value: 0x7f030005
+			public const int comp_text_heading = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int comp_text_lead = 2130903046;
+			
+			// aapt resource value: 0x7f030007
+			public const int comp_text_title = 2130903047;
+			
+			// aapt resource value: 0x7f030008
+			public const int Main = 2130903048;
 			
 			static Layout()
 			{
@@ -104,11 +186,11 @@ namespace xam_android_news
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int ApplicationName = 2130968577;
+			// aapt resource value: 0x7f060001
+			public const int ApplicationName = 2131099649;
 			
-			// aapt resource value: 0x7f040000
-			public const int Hello = 2130968576;
+			// aapt resource value: 0x7f060000
+			public const int Hello = 2131099648;
 			
 			static String()
 			{
@@ -116,6 +198,45 @@ namespace xam_android_news
 			}
 			
 			private String()
+			{
+			}
+		}
+		
+		public partial class Styleable
+		{
+			
+			public static int[] RecyclerView = new int[] {
+					16842948,
+					16842993,
+					2130771968,
+					2130771969,
+					2130771970,
+					2130771971};
+			
+			// aapt resource value: 1
+			public const int RecyclerView_android_descendantFocusability = 1;
+			
+			// aapt resource value: 0
+			public const int RecyclerView_android_orientation = 0;
+			
+			// aapt resource value: 2
+			public const int RecyclerView_layoutManager = 2;
+			
+			// aapt resource value: 4
+			public const int RecyclerView_reverseLayout = 4;
+			
+			// aapt resource value: 3
+			public const int RecyclerView_spanCount = 3;
+			
+			// aapt resource value: 5
+			public const int RecyclerView_stackFromEnd = 5;
+			
+			static Styleable()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Styleable()
 			{
 			}
 		}

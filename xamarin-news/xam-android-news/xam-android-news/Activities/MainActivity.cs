@@ -10,6 +10,8 @@ using Android.Util;
 using System.Collections.Generic;
 using Android.Graphics;
 using System.Threading.Tasks;
+using xam_android_news.Activities;
+using xam_android_news.Messages;
 
 namespace xam_android_news
 {
@@ -29,10 +31,16 @@ namespace xam_android_news
             InitViews();
             BindView(null);
             LoadDataAsync();
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<ArticleClickedMessage>(this, OnArticleClicked);
         }
 
         private void InitViews()
         {
+        }
+
+        public void OnArticleClicked(ArticleClickedMessage msg)
+        {
+            StartActivity(ArticleActivity.CreateIntent(this, msg.Id));
         }
 
         private async void LoadDataAsync()
@@ -53,7 +61,8 @@ namespace xam_android_news
                 foreach (ArticleTeaser teaser in list ) 
                 {
                     ArticleTeaserView atv = new ArticleTeaserView(this, null);
-                    tasks.Add(atv.SetModel(teaser));
+                    var task = atv.SetModel(teaser);
+                    if (task != null)tasks.Add(task);
                     scroller.AddView(atv);
                 }
             }
