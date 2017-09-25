@@ -68,7 +68,6 @@ StackNav.router.getStateForAction = (action, state) => {
         var route = state.routes ? state.routes[state.index].routeName : "UNKNOWN";
         if (action.type === 'Navigation/BACK' && route === 'Article') {
             // Navigating BACK from Article
-            console.log("HOME!");
             saveAppState();
         }
     }

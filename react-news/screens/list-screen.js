@@ -27,7 +27,6 @@ const styles = StyleSheet.create({
         margin: 4,
     },
     actionBar: {
-        backgroundColor: '#99F'
     }
 });
 
