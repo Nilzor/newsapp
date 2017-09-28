@@ -37,7 +37,7 @@ namespace xam_android_news.Activities
         {
             base.OnCreate(savedInstanceState);
             var articleId = Intent.Extras.GetString("ArticleId");
-            SetContentView(Resource.Layout.article_activity);
+            SetContentView(Resource.Layout.activity_article);
             InitViews();
             ViewModel = new ArticleViewModel(new NewsService());
             ViewModel.PropertyChanged += (sender, e) => Bind();

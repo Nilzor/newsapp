@@ -26,8 +26,7 @@ namespace xam_android_news
             base.OnCreate(bundle);
 
             // Set our view from the "main" layout resource
-            SetContentView (Resource.Layout.Main);
-
+            SetContentView (Resource.Layout.activity_main);
             InitViews();
             BindView(null);
             LoadDataAsync();
