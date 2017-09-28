@@ -59,6 +59,12 @@ namespace xam_android_news
 			// aapt resource value: 0x7f060000
 			public const int main_background = 2131099648;
 			
+			// aapt resource value: 0x7f060002
+			public const int photo_byline = 2131099650;
+			
+			// aapt resource value: 0x7f060001
+			public const int text_color = 2131099649;
+			
 			static Color()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -81,8 +87,11 @@ namespace xam_android_news
 			// aapt resource value: 0x7f040002
 			public const int item_touch_helper_swipe_escape_velocity = 2130968578;
 			
+			// aapt resource value: 0x7f040004
+			public const int padding_horiz_normal = 2130968580;
+			
 			// aapt resource value: 0x7f040003
-			public const int text_margin = 2130968579;
+			public const int padding_vert_normal = 2130968579;
 			
 			static Dimension()
 			{

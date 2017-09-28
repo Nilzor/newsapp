@@ -2,6 +2,10 @@
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/text_margin"
     android:textSize="20dp"
-    android:textStyle="bold"/>
+    android:textStyle="bold"
+    android:paddingLeft="@dimen/padding_horiz_normal"
+    android:paddingRight="@dimen/padding_horiz_normal"
+    android:paddingTop="@dimen/padding_vert_normal"
+    android:paddingBottom="@dimen/padding_vert_normal"
+          />
