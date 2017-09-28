@@ -9,10 +9,10 @@
     android:layout_marginBottom="8dp">
     <ImageView
         android:id="@+id/teaserImage"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:maxHeight="60dp"
-        android:layout_margin="8dp" />
+        android:layout_height="match_parent"
+        android:layout_width="110dp"
+        android:layout_margin="8dp"
+        android:scaleType="centerCrop"/>
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -22,7 +22,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="[title]"
-            android:textSize="20dp" />
+            android:textStyle="bold"
+            android:textSize="18dp" />
         <TextView
             android:id="@+id/teaserDescription"
             android:layout_width="match_parent"
