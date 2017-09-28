@@ -21,7 +21,7 @@ namespace xam_android_news.Activities
     /// <summary>
     /// Activity presenting article content
     /// </summary>
-    [Activity(Label = "Article")]
+    [Activity(Label = "@string/ApplicationName")]
     public class ArticleActivity : Activity
     {
         private static string TAG = "Article";

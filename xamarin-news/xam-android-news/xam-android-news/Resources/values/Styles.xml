@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <style name="MyTextViewStyle" parent="android:Widget.TextView">
+    <item name="android:textColor">#2b2b2b</item>
+    <item name="android:lineSpacingMultiplier">1.1</item>
+  </style>
+  <style name="AppTheme" parent="@android:style/Theme.Material.Light">
+    <item name="android:textViewStyle">@style/MyTextViewStyle</item>
+    <item name="android:textColorPrimary">#060606</item>
+  </style>
+</resources>
