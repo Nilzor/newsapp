@@ -5,6 +5,7 @@ import {
     View,
 } from 'react-native';
 import _ImageHelper from '../../common/imagehelper';
+import commonStyles from '../../styles/common';
 const ImageHelper = new _ImageHelper();
 
 export default class ArticleImage extends Component {
