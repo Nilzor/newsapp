@@ -13,12 +13,11 @@ import {
     View,
     ActivityIndicator,
 } from 'react-native';
+import commonStyles from '../styles/common';
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: '#F5FCFF',
-        margin: 10,
+        flex: 1
     },
     header: {
         color: '#000',
@@ -60,7 +59,7 @@ export default class ListScreen extends Component {
             progressIndicator = <ActivityIndicator size='large' style={{margin: 50 }} />
         }
         return (
-            <ScrollView style={styles.container}>
+            <ScrollView style={commonStyles.main}>
                 <Text style={styles.header}>Latest news:</Text>
                 {progressIndicator}
                 {ids}

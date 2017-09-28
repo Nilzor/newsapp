@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
     Text,
 } from 'react-native';
+import commonStyles from '../../styles/common';
 
 export default class ArticleText extends Component {
     render() {
@@ -15,7 +16,7 @@ export default class ArticleText extends Component {
         }
 
         return (
-            <Text style={style}>
+            <Text style={[commonStyles.stdPadding, commonStyles.text, style]}>
                 {data.text.value}
             </Text>
         )
@@ -24,28 +25,25 @@ export default class ArticleText extends Component {
 
 const styles = {
     standard: {
-        margin: 4,
-        fontSize: 14,
+        fontSize: 18,
     },
     title: {
-        margin: 4,
-        fontSize: 22,
+        fontSize: 28,
         fontWeight: 'bold',
+        fontFamily: 'serif',
     },
     lead: {
-        margin: 4,
         fontWeight: 'bold',
-        fontSize: 16,
+        fontSize: 18,
     },
     heading: {
-        margin: 4,
         fontWeight: 'bold',
-        fontSize: 16,
+        fontSize: 18,
     },
     blockquote: {
-        margin: 4,
         fontStyle: 'italic',
-        fontSize: 14,
+        textColor: '#d00',
+        fontSize: 28,
     },
 
 };

@@ -14,7 +14,8 @@ export default class ArticleImage extends Component {
                 style={{
                    width: 400,
                    height: 200,
-                   margin: 4,
+                   marginTop: 4,
+                   marginBottom: 4,
                    borderWidth: 1,
                    borderColor: '#777',
                }}

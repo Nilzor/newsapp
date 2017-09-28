@@ -3,6 +3,7 @@ import ArticleService from '../common/article-client';
 import ComponentResolver from '../common/component-resolver';
 const cr = new ComponentResolver();
 import getAppState from '../common/state';
+import commonStyles from '../styles/common';
 
 import {
     ScrollView,
@@ -54,7 +55,7 @@ export default class ArticleScreen extends Component {
                 }
             }
             return (
-                <ScrollView style={{padding: 10 }} >
+                <ScrollView style={commonStyles.main} >
                     {elems}
                 </ScrollView>
             )
