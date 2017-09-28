@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/padding_horiz_normal"
+    android:paddingRight="@dimen/padding_horiz_normal"
+    android:paddingTop="@dimen/padding_vert_normal"
+    android:paddingBottom="@dimen/padding_vert_normal"
+>
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="By: "
+    />
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/byline_text"
+    android:textColor="@color/byline_text"
+    android:textAllCaps="true"
+    />
+</LinearLayout>

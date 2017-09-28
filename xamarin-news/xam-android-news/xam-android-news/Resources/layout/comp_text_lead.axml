@@ -7,5 +7,4 @@
     android:paddingLeft="@dimen/padding_horiz_normal"
     android:paddingRight="@dimen/padding_horiz_normal"
     android:paddingTop="@dimen/padding_vert_normal"
-    android:paddingBottom="@dimen/padding_vert_normal"
-          />
+    android:paddingBottom="@dimen/padding_vert_normal" />

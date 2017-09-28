@@ -27,6 +27,7 @@ namespace xam_android_news.ArticleLogic
             {
                 case "text": return ArticleTextView.Create(Inflater, componentSegment);
                 case "image": return ImageComponent.Create(Inflater);
+                case "byline": return BylineComponent.Create(Inflater);
                 default: return new BlankComponent(context);
             }
         }

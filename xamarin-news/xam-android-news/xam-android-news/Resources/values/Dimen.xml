@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <resources>
   <dimen name="padding_vert_normal">4dp</dimen>
+  <dimen name="padding_vert_large">16dp</dimen>
   <dimen name="padding_horiz_normal">16dp</dimen>
 </resources>

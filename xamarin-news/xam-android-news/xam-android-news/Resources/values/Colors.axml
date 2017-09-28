@@ -3,4 +3,5 @@
   <color name="main_background">#FBFBFB</color>
   <color name="text_color">#2b2b2b</color>
   <color name="photo_byline">#555</color>
+  <color name="byline_text">#D00</color>
 </resources>
