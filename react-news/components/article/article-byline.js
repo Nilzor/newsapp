@@ -31,12 +31,10 @@ const styles = {
         paddingTop: 8,
         paddingBottom: 8,
         fontSize: 14,
-        fontStyle: 'italic',
         paddingBottom: 2
     },
     names: {
         fontSize: 14,
-        fontStyle: 'italic',
         color: 'red',
         paddingTop: 0,
     }
