@@ -25,8 +25,6 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         margin: 4,
     },
-    actionBar: {
-    }
 });
 
 export default class ListScreen extends Component {
@@ -34,7 +32,7 @@ export default class ListScreen extends Component {
     // https://reactnavigation.org/docs/navigators/stack
     static navigationOptions = {
         title: 'The Times',
-        headerStyle: styles.actionBar
+        headerStyle: commonStyles.actionBar
     }
 
     componentWillMount() {

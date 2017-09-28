@@ -14,5 +14,8 @@ export default commonStyles = StyleSheet.create({
     text: {
         color: '#2b2b2b',
         fontSize: 18
+    },
+    actionBar: {
+        backgroundColor: '#ACF',
     }
 });

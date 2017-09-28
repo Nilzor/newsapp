@@ -13,6 +13,7 @@ import {
 export default class ArticleScreen extends Component {
     static navigationOptions = {
         title: 'The Times',
+        headerStyle: commonStyles.actionBar
     }
 
     componentWillMount() {
