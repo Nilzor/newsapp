@@ -24,6 +24,8 @@ namespace sharedproj
             try
             {
                 byte[] data = await client.GetByteArrayAsync(uri);
+
+                Log.Info("MainActivity", "Load completed " + uri);
                 Bitmap img = BitmapFactory.DecodeByteArray(data, 0, data.Length);
                 return img;
             } catch (Exception ex)

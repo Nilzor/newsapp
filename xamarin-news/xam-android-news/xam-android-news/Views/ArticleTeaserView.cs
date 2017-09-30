@@ -27,6 +27,7 @@ namespace xam_android_news.Views
         private TextView title;
         private ImageView image;
         private ViewGroup container;
+        private Android.Net.Uri uri;
 
         public ArticleTeaserView(Context context, IAttributeSet attrs) :
             base(context, attrs)
@@ -67,29 +68,30 @@ namespace xam_android_news.Views
         private ArticleTeaser model;
 
         private static int ctr = 0;
-        public Task<Bitmap> SetModel(ArticleTeaser model)
+        public void SetModel(ArticleTeaser model)
         {
             this.model = model;
-            Task<Bitmap> task = null;
             try
             {
-                Android.Net.Uri uri = Android.Net.Uri.Parse(model.promotionContent.imageAsset.urls[0].url);
+                uri = Android.Net.Uri.Parse(model.promotionContent.imageAsset.urls[0].url);
                 container.Tag = model.id;
-                //LoadAsync(model.promotionContent.imageAsset.GetUrlWithMinHeight(240));
-                Log.Debug(TAG, "Image " + (++ctr) + " load starting...");
-                task = LoadAsync(model.promotionContent.imageAsset.GetUrlWithMinHeight(240));
-                Log.Debug(TAG, "Image " + ctr + " load started");
+                
             } catch (Exception ex) {
                 Log.Debug(TAG, ex.Message);
             }
 
             title.SetText(model.promotionContent.title.value, TextView.BufferType.Normal);
             description.SetText(model.promotionContent.description.value, TextView.BufferType.Normal);
-            return task;
         }
 
-        private async Task<Bitmap> LoadAsync(String uri)
+        public Task<Bitmap> LoadImageAsync()
         {
+            return LoadImageAsync(uri.ToString());
+        }
+
+        private async Task<Bitmap> LoadImageAsync(String uri)
+        {
+            Log.Debug(TAG, "Image " + (++ctr) + " load starting...");
             ImageSvc imgSvc = new ImageSvc();
             Bitmap bitmap = await imgSvc.loadAndDecodeBitmap(uri);
             Log.Debug(TAG, "Image " + ctr + " load completed");
@@ -104,6 +106,7 @@ namespace xam_android_news.Views
                     Log.Debug(TAG, ex.Message);
                 }
             }
+            Log.Debug(TAG, "Image " + ctr + " load started");
             return bitmap;
         }
     }

@@ -15,11 +15,12 @@ using xam_android_news.Messages;
 
 namespace xam_android_news
 {
-    [Activity(Label = "@string/ApplicationName", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "@string/ApplicationName", MainLauncher = false, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         private const string TAG = "MainActivity";
         TextView resultTextView;
+        private List<ArticleTeaserView> TeaserList = new List<ArticleTeaserView>();
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -29,8 +30,9 @@ namespace xam_android_news
             SetContentView (Resource.Layout.activity_main);
             InitViews();
             BindView(null);
-            LoadDataAsync();
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<ArticleClickedMessage>(this, OnArticleClicked);
+            //LoadDataAsync();
+            LoadImages();
         }
 
         private void InitViews()
@@ -46,26 +48,41 @@ namespace xam_android_news
         {
             var svc = new NewsService();
             var promContent = await svc.loadLatestList();
-            await BindView(promContent);
+            BindView(promContent);
+            //LoadImages();
         }
 
-        private async Task BindView(ArticleList list)
+        private void BindView(ArticleList list)
         {
             Log.Debug(TAG, "Binding MainActivity");
             ViewGroup scroller = FindViewById<ViewGroup>(Resource.Id.scroller);
-            var tasks = new List<Task<Bitmap>>();
             if (list != null)
             {
                 int i = 0;
-                foreach (ArticleTeaser teaser in list ) 
+                foreach (ArticleTeaser teaser in list)
                 {
                     ArticleTeaserView atv = new ArticleTeaserView(this, null);
-                    var task = atv.SetModel(teaser);
-                    if (task != null)tasks.Add(task);
+                    atv.SetModel(teaser);
                     scroller.AddView(atv);
+                    TeaserList.Add(atv);
                 }
             }
+        }
+
+        private async Task LoadImages()
+        {
+            var tasks = new List<Task<Bitmap>>();
+
+            Log.Debug(TAG, "Starting image list load");
+            foreach (ArticleTeaserView view in TeaserList)
+            {
+                var task = view.LoadImageAsync();
+                if (task != null) tasks.Add(task);
+            }
+            
+            Log.Debug(TAG, "Awaiting images...");
             await Task.WhenAll(tasks);
+
         }
     }
 }

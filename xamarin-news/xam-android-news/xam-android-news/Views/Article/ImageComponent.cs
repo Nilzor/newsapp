@@ -12,6 +12,7 @@ using Android.Widget;
 using Android.Support.V7.Widget;
 using sharedproj;
 using sharedproj.Models;
+using System.Threading.Tasks;
 
 namespace xam_android_news.Views.Article
 {
@@ -41,7 +42,7 @@ namespace xam_android_news.Views.Article
         {
             Caption.Text = data.caption.value;
             Byline.Text = data.byline.title;
-            ParseAndLoadImage(data);
+            Task.Run(() => ParseAndLoadImage(data));
         }
 
         private async void ParseAndLoadImage(dynamic data)
