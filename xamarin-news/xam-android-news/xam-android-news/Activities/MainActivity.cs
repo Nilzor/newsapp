@@ -75,13 +75,8 @@ namespace xam_android_news
             Log.Debug(TAG, "Starting image list load");
             foreach (ArticleTeaserView view in TeaserList)
             {
-                var task = view.LoadImageAsync();
-                if (task != null) tasks.Add(task);
+                await view.LoadImageAsync();
             }
-            
-            Log.Debug(TAG, "Awaiting images...");
-            await Task.WhenAll(tasks);
-
         }
     }
 }
