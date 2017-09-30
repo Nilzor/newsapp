@@ -97,7 +97,6 @@
     <Compile Include="Activities\ArticleActivity.cs" />
     <Compile Include="ArticleLogic\ArticleActivityAdapter.cs" />
     <Compile Include="ArticleLogic\ComponentResolver.cs" />
-    <Compile Include="Activities\StupidActivity.cs" />
     <Compile Include="Views\Article\ArticleComponent.cs" />
     <Compile Include="Views\ArticleTeaserView.cs" />
     <Compile Include="Activities\MainActivity.cs" />
