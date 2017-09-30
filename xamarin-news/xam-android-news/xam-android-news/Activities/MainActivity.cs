@@ -31,8 +31,7 @@ namespace xam_android_news
             InitViews();
             BindView(null);
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<ArticleClickedMessage>(this, OnArticleClicked);
-            //LoadDataAsync();
-            LoadImages();
+            LoadDataAsync();
         }
 
         private void InitViews()
@@ -49,7 +48,7 @@ namespace xam_android_news
             var svc = new NewsService();
             var promContent = await svc.loadLatestList();
             BindView(promContent);
-            //LoadImages();
+            await LoadImages();
         }
 
         private void BindView(ArticleList list)
