@@ -15,7 +15,7 @@ using xam_android_news.Messages;
 
 namespace xam_android_news
 {
-    [Activity(Label = "@string/ApplicationName", MainLauncher = false, Icon = "@drawable/icon")]
+    [Activity(Label = "@string/ApplicationName", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         private const string TAG = "MainActivity";
