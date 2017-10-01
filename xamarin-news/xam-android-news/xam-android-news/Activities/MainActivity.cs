@@ -1,7 +1,6 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
-using System;
 using sharedproj;
 using sharedproj.Models;
 using xam_android_news.Views;

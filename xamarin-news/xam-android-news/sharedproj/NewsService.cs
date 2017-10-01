@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 using RestSharp;
-using sharedproj.FakeData;
 using sharedproj.Models;    
 using System;
 using System.Net.Http;

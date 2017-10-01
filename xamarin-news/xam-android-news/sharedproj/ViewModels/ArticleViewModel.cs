@@ -1,6 +1,5 @@
 ﻿using Android.Util;
 using GalaSoft.MvvmLight;
-using Java.IO;
 using Newtonsoft.Json;
 using System;
 
