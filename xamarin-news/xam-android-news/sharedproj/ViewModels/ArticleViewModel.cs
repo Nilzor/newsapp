@@ -1,5 +1,7 @@
 ﻿using Android.Util;
 using GalaSoft.MvvmLight;
+using Java.IO;
+using Newtonsoft.Json;
 using System;
 
 namespace sharedproj.ViewModels
@@ -15,7 +17,7 @@ namespace sharedproj.ViewModels
         public dynamic Article { get; set; }
         public bool IsProgressBarVisible { get; set; }
         public bool IsErrorMessageVisible { get { return ErrorMessage != null; } }
-
+        
         private NewsService NewsService;
 
         public ArticleViewModel(NewsService newsService)
@@ -53,6 +55,21 @@ namespace sharedproj.ViewModels
             Article = null;
             IsProgressBarVisible = false;
             RaisePropertyChanged();
+        }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string SerializeToString()
+        {
+            return JsonConvert.SerializeObject(this);
+        }
+
+        public static ArticleViewModel Deserialize(string data)
+        {
+            return JsonConvert.DeserializeObject<ArticleViewModel>(data);
         }
     }
 }

@@ -6,11 +6,9 @@ using System.Text;
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using sharedproj;
-using Java.Lang;
 using xam_android_news.ArticleLogic;
 using Android.Support.V7.Widget;
 using Android.Util;
@@ -29,7 +27,6 @@ namespace xam_android_news.Activities
         private RecyclerView RecyclerView { get; set; }
         private TextView ErrorTextView { get; set; }
         private ProgressBar ProgressBar { get; set; }
-        public dynamic Article { get; set; }
 
         private ArticleViewModel ViewModel; 
 
@@ -37,12 +34,33 @@ namespace xam_android_news.Activities
         {
             base.OnCreate(savedInstanceState);
             var articleId = Intent.Extras.GetString("ArticleId");
+            Log.Debug(TAG, "State: OnCreate: Preparing article {0}", articleId);
             SetContentView(Resource.Layout.activity_article);
             InitViews();
-            ViewModel = new ArticleViewModel(new NewsService());
-            ViewModel.PropertyChanged += (sender, e) => Bind();
+            ViewModel = LoadOrCreateViewModel(savedInstanceState);     
             Bind();
-            ViewModel.LoadArticle(articleId);
+            if (ViewModel.Article == null)
+            {
+                ViewModel.LoadArticle(articleId);
+            }
+        }
+
+        private ArticleViewModel LoadOrCreateViewModel(Bundle savedInstanceState)
+        {
+            ArticleViewModel vm;
+            if (savedInstanceState != null)
+            {
+                Log.Debug(TAG, "State: Fetching from bundle...");
+                string serializedVM = savedInstanceState.GetString("ViewModel");
+                Log.Debug(TAG, "State: Deserializing...");
+                vm = ArticleViewModel.Deserialize(serializedVM);
+                Log.Debug(TAG, "State: Revived article {0} from bundle", vm.Article.id);
+            } else
+            {
+                vm = new ArticleViewModel(new NewsService());
+            }
+            vm.PropertyChanged += (sender, e) => Bind();
+            return vm;
         }
 
         private void InitViews()
@@ -76,5 +94,14 @@ namespace xam_android_news.Activities
             intent.PutExtra("ArticleId", articleId);
             return intent;
         }
+
+        protected override void OnSaveInstanceState(Bundle outState)
+        {
+            Log.Debug(TAG, "State: Serializing ViewModel...");
+            string vmAsString = ViewModel.SerializeToString();
+            Log.Debug(TAG, "State: Storing VM in bundle");
+            outState.PutString("ViewModel", vmAsString);
+            base.OnSaveInstanceState(outState);
+        }    
     }
 }
