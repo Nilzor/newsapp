@@ -30,7 +30,7 @@ namespace sharedproj
                 return img;
             } catch (Exception ex)
             {
-                Log.Debug("ImageService", String.Format("Failed loading image %s: %s", uri, ex.Message));
+                Log.Debug("ImageService", String.Format("Failed loading image {0}: {1}", uri, ex.Message));
                 return null;
             }
         }

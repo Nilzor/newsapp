@@ -28,13 +28,13 @@ namespace sharedproj.ViewModels
             ResetState();
 
             if (string.IsNullOrEmpty(articleId)) throw new Exception("ArticleId not set in ArticleActivity.LoadActivity");
-            Log.Info(TAG, "Loading article %s...", articleId); // Todo: Wrap the logger to make class platform agnostic
+            Log.Info(TAG, "Loading article {0}...", articleId); // Todo: Wrap the logger to make class platform agnostic
             try
             {
                 IsProgressBarVisible = true;
                 RaisePropertyChanged();
                 Article = await NewsService.LoadArticle(articleId);
-                Log.Info(TAG, "Presenting article %s...", articleId);
+                Log.Info(TAG, "Presenting article {0}...", articleId);
             }
             catch (HttpRequestError reqErr)
             {
