@@ -1,9 +1,8 @@
-
 import React, { Component } from 'react';
 import ArticleService from '../common/article-client';
 import ArticleTeaser from '../components/article-teaser';import {
     StackNavigator,
-    } from 'react-navigation';
+} from 'react-navigation';
 
 import {
     AppRegistry,
@@ -33,7 +32,7 @@ export default class ListScreen extends Component {
     static navigationOptions = {
         title: 'The Times',
         headerStyle: commonStyles.actionBar
-    }
+    };
 
     componentWillMount() {
         this.setState({articles: []});

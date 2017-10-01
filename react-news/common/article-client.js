@@ -13,7 +13,7 @@ const getArticleList = () => {
 };
 
 const getArticle = (id) => {
-    const sleepSecs = 1; // Tell our mock server to wait at least 1 sec with the reply
+    const sleepSecs = 1; // Tell our mock server to wait at least 1 sec with the reply, illustrating progress indicator
     return fetch('http://www.nilsenlabs.com/newsapp/getArticle.php?id=' + id + '&sleep=' + sleepSecs, {
         method: 'GET',
         headers: {
@@ -33,5 +33,3 @@ const exp = {
 };
 export default exp;
 
-// Fetching article:
-// http://www.nilsenlabs.com/newsapp/getArticle.php?id=8yk1E&sleep=2

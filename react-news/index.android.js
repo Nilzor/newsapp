@@ -27,7 +27,6 @@ const uriPrefix = 'news://app/';
 class App extends React.Component {
     componentDidMount() {
         // Perform initial navigation
-        console.log("COMPONENT MOUNT")
         loadState(this.navigator);
     }
 
@@ -38,9 +37,11 @@ class App extends React.Component {
     }
 }
 
+// Loads the state from permanent storage.
+// Navigates to stored article ID, if any stored
 const loadState = async (navigator) => {
     const storedState = await getAppState();
-    console.log("GOT STATE: ", storedState)
+    console.log("Restored state: ", storedState)
     if (storedState && storedState.currentArticleId != null) {
         navigator.dispatch({
             type: 'Navigation/NAVIGATE',
@@ -52,6 +53,7 @@ const loadState = async (navigator) => {
     }
 };
 
+// Reset "current article id" after coming back from an article
 const saveAppState = async() => {
     const appState = await getAppState();
     appState.currentArticleId = null;

@@ -1,5 +1,3 @@
-
-
 export default class ImageHelper {
     getFittingImage(imageAsset, minWidth) {
         var lastImage = null;
