@@ -13,6 +13,7 @@ using Android.Support.V7.Widget;
 using sharedproj;
 using sharedproj.Models;
 using System.Threading.Tasks;
+using Android.Util;
 
 namespace xam_android_news.Views.Article
 {
@@ -42,7 +43,7 @@ namespace xam_android_news.Views.Article
         {
             Caption.Text = data.caption.value;
             Byline.Text = data.byline.title;
-            Task.Run(() => ParseAndLoadImage(data));
+            ParseAndLoadImage(data);
         }
 
         private async void ParseAndLoadImage(dynamic data)
@@ -55,7 +56,7 @@ namespace xam_android_news.Views.Article
         private string GetUriFrom(dynamic data)
         {
             ImageAsset asset = ImageAsset.FromDynamic(data);
-            return asset.GetUrlWithMinHeight(600);
+            return asset.GetUrlWithMinHeight(800);
         }
     }
 }
