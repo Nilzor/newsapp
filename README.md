@@ -1,12 +1,13 @@
 # Android News app x3
 
-This is the same functionality is implemented twice in these two technologies>
+This is the same functionality is implemented twice in these two technologies:
 
 - Xamarin
 - React Native
 
-I wanted to test the hypothesis that there are so many good native cross-platform technologies now that there is no excuse to write apps for Android only. 
-What better way to test for an Android developer than to dive into two unknown technologies: Xamarin and React Native, and see what the experience is. As a baseline I compared it with my experience working with the [VG](https://play.google.com/store/apps/details?id=com.agens.android.vgsnarvei) and [Aftonbladet](https://play.google.com/store/apps/details?id=se.aftonbladet.start) apps for Schibsted.
+I wanted to test the hypothesis that there are so many good native cross-platform technologies now that there is no excuse to write apps for Android only. What better way to test for an Android developer than to dive into two unknown technologies: Xamarin and React Native, and see what the experience is. The "third app" is the common article presentation layer I've worked with for the [VG](https://play.google.com/store/apps/details?id=com.agens.android.vgsnarvei)* and [Aftonbladet](https://play.google.com/store/apps/details?id=se.aftonbladet.start) apps for Schibsted.
+
+_\*) Native functionality not yet released to the Play Store as of Oct 2nd 2017_
 
 ## Running
 
