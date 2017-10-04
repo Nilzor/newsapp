@@ -39,3 +39,7 @@ Frode Nilsen.
 
 Twitter: [@nilzor](https://twitter.com/Nilzor)
 Mail: frode.nilsen@schibsted.com
+
+## Schibsted Media
+
+[We're hiring](http://jobs.schibsted.com/job/android-software-engineer/)
